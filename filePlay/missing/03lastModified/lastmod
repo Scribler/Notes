@@ -1,0 +1,5 @@
+#!/bin/sh
+curl --head --silent https://missing.csail.mit.edu | grep -i 'last-modified' >> ./last-modified.txt
+echo '"last-modified" line from the head of the missing semester website added to file.'
+echo 'File contents are now:'
+cat ./last-modified.txt

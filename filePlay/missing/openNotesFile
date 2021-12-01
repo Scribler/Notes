@@ -1,0 +1,2 @@
+!#/bin/sh
+nvim -O battery lastmod semester
