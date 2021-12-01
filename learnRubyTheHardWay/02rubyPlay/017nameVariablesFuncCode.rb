@@ -11,4 +11,6 @@ def print_two(*args)
   arg2.close
 end
 
+puts "This is just a test for a commit"
+
 print_two(ARGV[0], ARGV[1])
