@@ -1,16 +1,63 @@
-#this one is like your scripts wtih ARGV
-
-# SHOULD BE ABLE TO MAKE THIS ADD LINE NUMBERS BEFORE EACH LINE
-
+# This one is like your scripts wtih ARGV
 def print_two(*args)
   arg1, arg2 = args
-  arg1 = open(arg1, 'r+')
-  arg2 = open(arg2, 'r+')
-  puts "arg1:\n#{arg1.read}\narg2:\n#{arg2.read}"
-  arg1.close
-  arg2.close
+  puts "arg1:#{arg1}, arg2: #{arg2}"
 end
 
-puts "This is just a test for a commit"
+def print_three(first, second, third)
+  puts first
+  puts first.empty?
+  puts second
+  puts second.empty?
+  puts third
+  puts third.empty?
+end
 
-print_two(ARGV[0], ARGV[1])
+# OK, that *args is actually pointless, we can just do this.
+def print_two_again(arg1, arg2)
+  puts "arg1: #{arg1}, arg2: #{arg2}"
+end
+
+# This just takes one argument
+def print_one(arg1)
+  puts "arg1: #{arg1}"
+end
+
+# This one takes no arguments
+def print_none()
+  puts "I got nothin'."
+end
+
+
+
+######################################################################
+
+# Function that prints a file with line numbers before each line.
+def print_lines_with_num(file)
+  num = 0
+  File.read(file).each_line {|x|
+    puts "LINE ##{num} > #{x}"
+    num = num + 1
+  }
+end
+
+# Does the exact same thing as the code above but reads the file by line,
+# instead of slurping the whole file first, then reading by line.
+def print_lines_with_num_two(file)
+  num = 0
+  File.foreach(file) {|x| puts "LINE##{num = num + 1}> #{x}"}
+end
+
+######################################################################
+
+
+
+print_two 'Argument 1', 'Argument\n2'
+print_two_again "boop1", "boop\n2"
+print_one('this is my argument')
+print_none
+print_three('bing1', '', 'bing3') 
+puts ""
+print_lines_with_num('s.rb')
+puts ""
+print_lines_with_num_two('s.rb')
