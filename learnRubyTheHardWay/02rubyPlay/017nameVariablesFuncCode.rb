@@ -1,3 +1,5 @@
+prompt = -> {puts "> "}
+
 # This one is like your scripts wtih ARGV
 def print_two(*args)
   arg1, arg2 = args
@@ -34,7 +36,7 @@ end
 
 # Function that prints a file with line numbers before each line.
 def print_lines_with_num(file)
-  num = 0
+  num = 1
   File.read(file).each_line {|x|
     puts "LINE ##{num} > #{x}"
     num = num + 1
@@ -46,6 +48,16 @@ end
 def print_lines_with_num_two(file)
   num = 0
   File.foreach(file) {|x| puts "LINE##{num = num + 1}> #{x}"}
+end
+
+def append(file)
+  puts "What would you like to add?"
+  prompt = -> { print "> " }
+  prompt.call
+  # print ": "
+  File.write(file, "#{$stdin.gets}", mode: 'a+')
+  # File.readlines(file) {|x| puts x.read}
+  puts File.read(file)
 end
 
 ######################################################################
@@ -61,3 +73,4 @@ puts ""
 print_lines_with_num('s.rb')
 puts ""
 print_lines_with_num_two('s.rb')
+append 's.rb'
