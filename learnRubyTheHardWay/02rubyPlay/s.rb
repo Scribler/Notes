@@ -1,5 +1,3 @@
-
-Ding
 sooo
 goop
 ddddddddddddddd
