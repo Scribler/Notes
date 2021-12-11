@@ -9,45 +9,63 @@ def subtract(a, b)
   return a - b
 end
 
-line_num = 1
+def multiply(a, b)
+  puts "Multiplying #{a} by #{b}"
+  return a * b
+end
+
+
+
+
 
 words = ["this", "that", "pie", "lorem", "ipsum", "dolar", "set"]
 numbers = [1, 3, 4, 8, 2, 9, 2, 99, 45, 10, 0]
-
-def sort_array (array, lamb, l_adv)
-    line_number = 1
-  array.map { |x|
-    puts "Entry #{line_number}: #{x}"
-    lamb.call(l_adv, 30)
-    line_number += 1
-  }
-    # return lamb.call(1, 30)
-end
+line_num = 1
 
 
-
-line_advance = -> (advance_ammount, advance_limit) { 
-  line_num += advance_ammount
-  if line_num == advance_limit
+def line_advance (line_number, advance_amnt, advance_limit)
+  line_num = line_number
+  if line_num >= advance_limit
+    # return line_num = 1
     line_num = 1
+  else
+    # return line_num += advance_amnt
+    line_num += advance_amnt
   end
-}
-
-[1, 2, 3].each do |x|
-  puts "#{line_num}) #{x * 3}"
-  line_advance.call(1, 4)
 end
 
-puts ""
-[1, 2, 3].each { |x| 
-  puts "#{line_num}) #{x * 9}"
-  line_advance.call(5, 20)
-}
-puts ""
+def sort_array (array)
+  line_number = 1
+  array.sort.each do |x|
+    puts "Entry #{line_number}: #{x}"
+    line_number = line_advance(line_number, 1, array.length)
+  end
+  puts array.length
+end
+
+
 
 age_and_height_added = add(33, 174)
 
 puts "My age:33 and height:174 added together are #{age_and_height_added}."
 puts "20 - 5 = #{subtract(20, 5)}."
-
-sort_array(numbers, line_advance, line_num)
+puts ""
+puts ""
+sort_array(numbers)
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.pop
+numbers.push(111)
+numbers.push(122)
+numbers.push(103)
+sort_array(numbers)
+puts ""
+puts ""
+puts "You accidentally uploaded a huge programming manual on git."
+puts "Figure out how to undo that and put that manual in your 'git ignore'."
