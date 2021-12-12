@@ -1,4 +1,14 @@
-# Method that addes two numbers together and returns an integer.
+#
+# VARIABLES
+#
+words = ["this", "that", "pie", "lorem", "ipsum", "dolar", "set"]
+numbers = [1, 3, 4, 8, 2, 9, 2, 99, 45, 10, 0]
+line_num = 1
+
+
+#
+# METHODS
+#
 def add(a, b)
   puts "Adding #{a} and #{b} together."
   return a + b
@@ -13,15 +23,10 @@ def multiply(a, b)
   puts "Multiplying #{a} by #{b}"
   return a * b
 end
-
-
-
-
-
-words = ["this", "that", "pie", "lorem", "ipsum", "dolar", "set"]
-numbers = [1, 3, 4, 8, 2, 9, 2, 99, 45, 10, 0]
-line_num = 1
-
+def divide(a, b)
+  puts "Dividing #{a} by #{b}"
+  return a / b
+end
 
 def line_advance (line_number, advance_amnt, advance_limit)
   line_num = line_number
@@ -43,7 +48,9 @@ def sort_array (array)
   puts array.length
 end
 
-
+#
+# DECLARATIONS
+#
 
 age_and_height_added = add(33, 174)
 
@@ -54,17 +61,13 @@ puts ""
 sort_array(numbers)
 numbers.pop
 numbers.pop
-numbers.pop
-numbers.pop
-numbers.pop
-numbers.pop
-numbers.pop
-numbers.pop
-numbers.pop
 numbers.push(111)
-numbers.push(122)
-numbers.push(103)
 sort_array(numbers)
+
+
+
+
+
 puts ""
 puts ""
 puts "You accidentally uploaded a huge programming manual on git."
