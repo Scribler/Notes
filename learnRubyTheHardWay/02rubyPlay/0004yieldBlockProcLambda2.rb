@@ -71,10 +71,29 @@ def proc_practice(array, mult_amount)
   array.sort.each{ |x| mult.call(x) }
 end
 
+def counter
+  count = 0
+  return Proc.new { count += 1 }
+  # LAMBDA ALSO WORKS
+  # return lambda { count += 1 }
+  
+  # THE BELOW METHOD doesn't work.  HAS TO BE A PROC / lambda
+  # count += 1
+  # puts count
+end
+
+a = counter
+
+
 puts ""
 puts "PROC"
 puts ""
 puts "You can use a proc to 'return' from the method it is in."
 puts ""
 proc_practice(test_array, 3)
+puts ""
 
+puts a.call
+puts a.call
+puts a.call
+puts a.call

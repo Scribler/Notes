@@ -52,6 +52,12 @@ end
 # DECLARATIONS
 #
 
+age = add(30, 5)
+height = subtract(78, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
+
+
 age_and_height_added = add(33, 174)
 
 puts "My age:33 and height:174 added together are #{age_and_height_added}."
@@ -64,11 +70,7 @@ numbers.pop
 numbers.push(111)
 sort_array(numbers)
 
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 
+puts "That becomes: #{what}. Can you do it by hand?"
 
-
-
-puts ""
-puts ""
-puts "You accidentally uploaded a huge programming manual on git."
-puts "Figure out how to undo that and put that manual in your 'git ignore'."
