@@ -17,6 +17,21 @@ module Ex25
     puts word
   end
 
+  # Prints the last word after popping it off.
+  def Ex25.print_last_word(words)
+    word = words.pop
+    puts word
+  end
+  
+  # Takes in a full sentence and returns the sorted words.
+  def Ex25.sort_sentence(sentence)
+    words = Ex25.breakwords(sentence)
+    return Ex25.sort_words(words)
+  end
+
+
+end
+
 
 
 
