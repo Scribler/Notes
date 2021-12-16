@@ -24,6 +24,7 @@ def string_shift(str)
 
   # LAMBDAS
   
+  
   # Array Shift
   array_shift = -> (from_arr, too_arr, ammount) {
     cycles = 0
@@ -54,4 +55,10 @@ end
 split_s, new, new_reversed = string_shift(string) # Assign results from string_shift method to variables
 puts "String after shift: #{split_s}\n\n"
 puts "New array: #{new}\n\n"
+  def name(string)
+    thiing = 
+  end
+  def name(string)
+    thiing = 
+  end
 puts "New array reversed: #{new_reversed}"
