@@ -7,10 +7,6 @@ require './030modules'
 # Variables
 inventory = []
 
-def check_inventory(inv)
-  puts "Your Inventory is #{inv}"
-  return Uni.input
-end
 
 # START
 def start
@@ -55,20 +51,36 @@ end
 
 # RUN PROGRAM
 
-inventory.push Uni.add_to_inventory(Uni.input)
-puts "#{inventory}"
-inventory.push Uni.add_to_inventory(Uni.input)
-puts "#{inventory}"
-inventory.push Uni.add_to_inventory(Uni.input)
-puts "#{inventory}"
+puts ""
+puts ""
+puts ""
+puts ""
+puts ""
+puts "MOVE ADD TO INVENTORY METHOD TO MAIN FILE?"
+puts ""
+puts ""
+puts ""
+puts ""
+puts ""
+puts ""
 
-puts "Third entry of inventory is #{inventory[2]}"
-puts ""
-puts ""
-puts ""
-check_inventory(inventory)
 
-start
+# inventory.push Uni.add_to_inventory
+# puts "#{inventory}"
+#
+# inventory.push Uni.add_to_inventory
+# puts "#{inventory}"
+#
+# inventory.push Uni.add_to_inventory
+# puts "#{inventory}"
+#
+# puts "Third entry of inventory is #{inventory[2]}"
+# puts ""
+# puts ""
+# puts ""
+# Uni.check_inventory(inventory)
+#
+# start
 
 
 

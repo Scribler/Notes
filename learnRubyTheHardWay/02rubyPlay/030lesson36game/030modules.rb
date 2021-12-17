@@ -1,5 +1,9 @@
 module Uni
   
+  def Uni.check_inventory(inv)
+    puts "Your Inventory is #{inv}"
+  end
+  
   def Uni.input
     print " > "
     input = $stdin.gets.chomp
@@ -8,7 +12,7 @@ module Uni
       print "Try again"
       Uni.input
     elsif input =~ /inventory/
-      check_inventory(inventory)
+      Uni.check_inventory(inventory)
     else
       return input
     end
@@ -19,9 +23,9 @@ module Uni
     puts "Way to go, chucklenuts!"
   end
 
-  def Uni.add_to_inventory(item)
+  def Uni.add_to_inventory
     inventory = []
-    return inventory.push item
+    return inventory.push Uni.input
     # return inventory
   end
 
