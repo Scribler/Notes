@@ -47,7 +47,7 @@ module Uni
     puts method_of_death
     puts "Way to go, chucklenuts!"
   end
-  test
+
 end
 
 
