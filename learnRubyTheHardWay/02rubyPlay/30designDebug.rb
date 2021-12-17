@@ -47,12 +47,9 @@ module Uni
     puts method_of_death
     puts "Way to go, chucklenuts!"
   end
-  this is a test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
-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
-
+  test
 end
 
-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
 
 # FRONT DOOR
 def front_door
