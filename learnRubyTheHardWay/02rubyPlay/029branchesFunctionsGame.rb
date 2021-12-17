@@ -26,19 +26,20 @@ def bear_room
   puts "The fat bear is in front of another door."
   puts "How are you going to move the bear"
   bear_moved = false
-
+  
+  # 'while true' makes an infinite loop
   while true
     print "> "
     choice = $stdin.gets.chomp
 
-    if choice.match /take honey/
+    if (choice.match(/take/) && choice.match(/honey/))
       dead("The bear looks at you then slaps your face off.")
-    elsif choice =~ /taunt bear/ && !bear_moved
+    elsif (choice =~ (/taunt/) && choice =~ (/bear/)) && !bear_moved
       puts "The bear has moved from the door. You can go through it now."
       bear_moved = true
-    elsif choice =~ (/taunt bear/) && bear_moved
+    elsif (choice =~ (/taunt/) && choice =~ (/bear/)) && bear_moved
       dead("The bear gets pissed off and chews your leg off.")
-    elsif choice =~ /open door/ && bear_moved
+    elsif (choice =~ (/open/) && choice =~ (/door/)) && bear_moved
       gold_room
     else
       puts "I got no idea what that means."
@@ -48,11 +49,44 @@ def bear_room
 
 end
 
+def cthulhu_room
+  puts "Here you see the great evil Cthulhu."
+  puts "He, it, whatever stares at you and you go inside."
+  puts "Do you flee for your life or eat your head?"
+
+  print "> "
+  choice = $stdin.gets.chomp
+
+  if choice.include? "flee"
+    start
+  elsif choice.include? "head"
+    dead("Well that was tasty!")
+  else
+    cthulhu_room
+  end
+end
+
 
 def dead(why)
   puts why, "Good job!"
   exit(0)
 end
 
-bear_room
+def start
+  puts "You are in a dark room."
+  puts "There is a door to your right and left."
+  puts "Which one do you take?"
 
+  print"> "
+  choice = $stdin.gets.chomp
+
+  if choice.include? "left"
+    bear_room
+  elsif choice.include? "right"
+    cthulhu_room
+  else
+    dead("You stumble around the room untill you starve.")
+  end
+end
+
+start
