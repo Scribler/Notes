@@ -1,11 +1,10 @@
 require './030modules'
-
+inventory = open('inventory', 'r+')
 
 # A countryside house with a dungeon below with doors into different dimentions.
 # a book leads you to the secret that lets you down into the dungeon, and also contains the secret to escape
 
 # Variables
-inventory = []
 
 
 # START
@@ -19,7 +18,7 @@ def start
   # Ask for user input using input method
   input = Uni.input
   if (input =~ (/door/) && (input =~ (/open/) || input =~ (/through/)))
-    enter_house
+    house_entrance
   else
     Uni.dead("You starve to death")
     exit(0)
@@ -27,7 +26,9 @@ def start
 end
 
 # FRONT DOOR
-def enter_house
+def house_entrance
+  table = ["Greeting Book", "Pen", "Old Rusty Key"]
+
   puts "You try the handle of the door and find it
   unlocked. The door opens stiffly on ancient rusty
   hinges giving off a distinkt SKREEEECH. You step into
@@ -41,7 +42,36 @@ def enter_house
   input = Uni.input
 
   if (input =~ /examine/ && input =~ /table/)
-    puts "There is"
+    puts "The table is a lecturn style table with a keyhole in the front"
+    puts "There are some things on the table"
+    
+    if table[0] == "Greeting Book"
+      book = "a #{table[0]}"
+    else
+      book = ""
+    end
+    
+    if table[1] == "Pen"
+      pen = ", a #{table[1]}"
+    else
+      pen = ""
+    end
+
+    if table[2] == "Old Rusty Key"
+      key = ", an #{table[2]}"
+    else
+      key = ""
+    end
+
+    puts "On the table is #{book}#{pen}#{key} on top of the table."
+    input = Uni.input
+    if ((input =~ /get/ || input =~ /take/) && input =~ /book/)
+      
+      puts "You put the greeting book in your backpack"
+      Uni.add_to_inventory('inventory', table.shift)
+      input = Uni.input
+    end
+  else
  
   end
 end
@@ -51,37 +81,13 @@ end
 
 # RUN PROGRAM
 
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
-puts "MOVE ADD TO INVENTORY METHOD TO MAIN FILE?"
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
-
-
-# inventory.push Uni.add_to_inventory
-# puts "#{inventory}"
-#
-# inventory.push Uni.add_to_inventory
-# puts "#{inventory}"
-#
-# inventory.push Uni.add_to_inventory
-# puts "#{inventory}"
-#
-# puts "Third entry of inventory is #{inventory[2]}"
-# puts ""
-# puts ""
-# puts ""
+# Uni.add_to_inventory(inventory)
 # Uni.check_inventory(inventory)
-#
-# start
 
+start
 
+# puts inventory.closed?
+# inventory.close
+# puts inventory.closed?
 
 
