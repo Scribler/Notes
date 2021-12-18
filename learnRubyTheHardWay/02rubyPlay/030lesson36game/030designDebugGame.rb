@@ -1,3 +1,8 @@
+
+
+#  014 > has relevent notes for this project
+
+
 require './030modules'
 inventory = open('inventory', 'r+')
 
