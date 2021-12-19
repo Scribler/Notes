@@ -2,9 +2,8 @@
 
 #  014 > has relevent notes for this project
 
-
+require './030classes'
 require './030modules'
-inventory = open('inventory', 'r+')
 
 # A countryside house with a dungeon below with doors into different dimentions.
 # a book leads you to the secret that lets you down into the dungeon, and also contains the secret to escape
@@ -14,6 +13,7 @@ inventory = open('inventory', 'r+')
 
 # START
 def start
+  player = Character.new
   # Intro text
   puts "You find yourself at the door of a large dark
   wooden house in the middle of an empty field. There
