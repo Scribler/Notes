@@ -67,8 +67,23 @@ cities.each do |abbrev, city|
   puts "#{abbrev} has the city #{city}."
 end
 
-#
+# puts every city in state
+cities.each do | abbrev, city|
+  puts "#{abbrev} has the city #{city}"
+end
 
+myhash = {
+  "me" => "Steven",
+  "age" => 33,
+  "occupation" => "CSR",
+  "future_occupation" => "Web Developer"
+}
+
+puts myhash
+puts myhash["me"]
+myhash.each do |question, answer|
+  puts "Question: #{question}? Answer: #{answer}"
+end
 
 
 
