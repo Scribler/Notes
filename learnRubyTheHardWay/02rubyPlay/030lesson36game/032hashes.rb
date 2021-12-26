@@ -85,6 +85,13 @@ myhash.each do |question, answer|
   puts "Question: #{question}? Answer: #{answer}"
 end
 
+sym_hash = {this: "tree", that: "bee", :boop => 2}
+
+puts sym_hash
+
+puts sym_hash[:this]
+puts sym_hash[:that]
+puts sym_hash[:boop]
 
 
 
