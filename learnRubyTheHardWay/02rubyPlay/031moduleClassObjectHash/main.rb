@@ -27,6 +27,7 @@ hash_return(mountains)
 # get result
 puts "Vancouver's Mountains are: #{hash_return(vancouver[:mountains])}"
 
+this is a test
 
 
 
