@@ -1,5 +1,4 @@
 module Info
-  @test = "test variable"
   TEST = "second variable"
   def Info.get_input
     # n for normal
@@ -20,6 +19,14 @@ module Info
       puts input.upcase
     else
       puts input
+    end
+  end
+
+  def Info.hash_return(hash, value_num)
+    item_count = 0
+    hash.each do |key, value|
+      item_count += 1
+      puts "Hash item #{item_count}: #{value.values[value_num]}"
     end
   end
 
