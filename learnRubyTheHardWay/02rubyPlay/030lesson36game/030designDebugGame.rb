@@ -86,13 +86,7 @@ end
 
 # RUN PROGRAM
 
-# Uni.add_to_inventory(inventory)
-# Uni.check_inventory(inventory)
-
 start
 
-# puts inventory.closed?
-# inventory.close
-# puts inventory.closed?
 
 

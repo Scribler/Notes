@@ -22,11 +22,6 @@ module Uni
     puts "Way to go, chucklenuts!"
   end
 
-
-
-
-
-
   # inventory
   def Uni.add_to_inventory(inv, item)
     open(inv, 'a+') do |x|
