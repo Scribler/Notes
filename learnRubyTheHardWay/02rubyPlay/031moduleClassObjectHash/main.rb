@@ -2,6 +2,8 @@
 require './user_class.rb'
 require './info_modules.rb'
 
+# This line lets you use Info module methods without the 'Info' prefix
+# This line also allows 'User' class to use 'Info' module methods
 
 # HASHES START
 # define arrays
@@ -46,13 +48,19 @@ vancouver = {
 
 
 # ACCESSING MODULES START
-# Info.add_to_inventory
-# Info.hash_return(mountains, 0)
-# puts ""
+
+puts Info::Test_var
+Hashes.hash_return(mountains, 1)
+
 # ACCESSING MODULES END
 
 
 # ACCESSING CLASSES START
+# ***IMPORTAINT***
+# module must "NOT" have module prefix on methods ex. "def Mod.method"
+# If prefixed, you will not be able to call those methods on the class later on as done below
+# player.Info.add_to_inventory << THIS DOESN'T WORK
+
 player = User.new
 player.add_to_inventory
 player.print_user_info
