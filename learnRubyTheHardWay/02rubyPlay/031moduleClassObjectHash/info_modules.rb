@@ -10,8 +10,9 @@ module Info
     return info
   end
 
+
   def add_to_inventory
-    print "What do you want to add to your inventory?: "
+    print "#{@name}, from #{@home}; What do you want to add to your inventory?: "
     answer = get_input
     string_split = answer.split.pop
     @inventory[string_split.to_sym] = answer
@@ -47,5 +48,20 @@ module Hashes
       puts "Hash item #{item_count}: #{value.values[value_num]}"
     end
   end
-
 end
+
+module External
+  extend Info
+  def External.pick_user(hash)
+    print "Which player are you?"
+    answer = get_input
+    if (answer.include?('one') || answer.include?('1'))
+      return hash[:first_player]
+    elsif (answer.include?('two') || answer.include?('2'))
+      return hash[:second_player]
+    else 
+      return
+    end
+  end
+end
+

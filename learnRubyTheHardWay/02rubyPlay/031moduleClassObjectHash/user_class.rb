@@ -9,11 +9,16 @@ class User
     @name = get_input_cap
     print "Where do you live?: "
     @home = get_input_cap
-    @inventory= {
-      bag: 'Leather Golf Bag',
-      wallet: 'Snakeskin Wallet',
-      glasses: 'Black Rayband Sunglasses'
-    }
+    @inventory = {}
+  end
+end
+
+class Song
+  def initialize(lyrics)
+    @lyrics = lyrics
   end
 
+  def sing_song
+    @lyrics.each{|line| puts line}
+  end
 end

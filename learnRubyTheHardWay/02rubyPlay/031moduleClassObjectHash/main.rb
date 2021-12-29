@@ -56,13 +56,33 @@ Hashes.hash_return(mountains, 1)
 
 
 # ACCESSING CLASSES START
+
+tweet = Song.new(["This is a song",
+"Kindof", 
+"I suppose", "I guess"])
+tweet.sing_song
+
+other_song = ["Ding", "Dong", "sing", "song"]
+
+short_song = Song.new(other_song)
+short_song.sing_song
+
 # ***IMPORTAINT***
 # module must "NOT" have module prefix on methods ex. "def Mod.method"
 # If prefixed, you will not be able to call those methods on the class later on as done below
 # player.Info.add_to_inventory << THIS DOESN'T WORK
 
-player = User.new
-player.add_to_inventory
-player.print_user_info
-
+# initialize players
+player1 = User.new
+player2 = User.new
+# Add players to hash
+players = {:first_player => player1, :second_player => player2}
+# add items to inventory's
+External.pick_user(players).add_to_inventory
+External.pick_user(players).add_to_inventory
+# players[:first_player].add_to_inventory
+# players[:second_player].add_to_inventory
+#print inventories
+player1.print_user_info
+player2.print_user_info
 # ACCESSING CLASSES END
