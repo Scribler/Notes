@@ -1,0 +1,11 @@
+Program Loop
+
+#BEGIN LOOP (loop do)
+
+# assign (1)snippets variable
+1) snippets = PHRASES.keys().sort_by {rand}
+
+# start for-loop and initialize snippet variable in loop
+2) for (2)snippet in (1)snippets
+
+
