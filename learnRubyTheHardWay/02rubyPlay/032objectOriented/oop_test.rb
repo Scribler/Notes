@@ -1,5 +1,5 @@
 # Load words website
-require 'open-uri'
+# require 'open-uri'
 
 # Assign Constants
 WORD_URL = "http://learncodethehardway.org/words.txt"
@@ -18,8 +18,14 @@ PHRASES = {
   "***.*** = '***'" => 
     "From *** get the *** attribute and set it to '***'."
 }
+# check to see if 'english' was passed to the program and store boolean in variable
 PHRASE_FIRST = ARGV[0] == "english"
-URI.open(WORD_URL) {|f|
+
+# Comment below is the originial version using the file imported from a website.
+# I wrote a script to copy that file so I don't need to rely upon the website for
+# the script to work.
+# URI.open(WORD_URL) {|f|
+File.open('words.txt', 'r+') {|f|
   f.each_line {|word| WORDS.push(word.chomp)}
 }
 
@@ -42,6 +48,9 @@ def craft_params(rand_words, snippet, pattern)
 
   return names * 2
 end
+
+
+
 
 def convert(snippet, phrase)
   rand_words = WORDS.sort_by {rand}
@@ -80,6 +89,8 @@ loop do
   # store PHRASES(keys) in an array.
   snippets = PHRASES.keys().sort_by {rand}
   puts snippets
+
+
   # step through the now randomized snippets one by one.
   for snippet in snippets
     phrase = PHRASES[snippet]
