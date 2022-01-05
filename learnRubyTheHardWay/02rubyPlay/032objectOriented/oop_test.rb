@@ -1,5 +1,5 @@
 # Load words website
-# require 'open-uri'
+# require 'open-uri
 
 # Assign Constants
 WORD_URL = "http://learncodethehardway.org/words.txt"
@@ -100,8 +100,9 @@ loop do
   # step through the now randomized snippets one by one.
   for snippet in snippets
     phrase = PHRASES[snippet]
+    # This takes the snippet and phrase//converts them//stores them in question and answer variables
     question, answer = convert(snippet, phrase)
-
+    # if the PHRASE_FIRST variable is true ('english' entered at program runtime) then swap the question and answer
     if PHRASE_FIRST
       question, answer = answer, question
     end
