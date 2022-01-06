@@ -20,20 +20,8 @@ FLASH_CARDS = {
        "From *** get the *** attribute and set it to '***'."
 }
 
-models = FLASH_CARDS.keys().sort_by {rand}
+puts "this is a test"
 
-for model in models do
-  description = FLASH_CARDS[model]
-  
-  # substitute symbols in model
-  model = model.gsub(/###/) {|x| "HASHES"}
-  model.gsub!(/\*\*\*/) {|x| "STARS"}
-  model.gsub!(/@@@/) {|x| "AT'S" }
-  # substitute symbols in description
-  description = description.gsub(/###/) {|x| "HASHES"}
-  description.gsub!(/\*\*\*/) {|x| "STARS"}
-  description.gsub!(/@@@/) {|x| "AT'S" }
-  # print model and description
-  puts "model is:\n#{model}\n"
-  puts "description is:\n#{description}\n\n"
-end
+keys = FLASH_CARDS.keys.each {|key|
+  puts key
+}
