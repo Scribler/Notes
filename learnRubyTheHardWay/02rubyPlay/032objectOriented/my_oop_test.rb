@@ -1,5 +1,5 @@
-# building my own version of the oop_test project
-
+# VARIABLES AND CONSTANTS
+#
 FLASH_CARDS = {
   "class ### < ###\nend" =>
        "Make a class named ### that is-a ###.",
@@ -19,9 +19,46 @@ FLASH_CARDS = {
   "***.*** = '***'" =>
        "From *** get the *** attribute and set it to '***'."
 }
+ANSWERS_SUBBED = []
+QUESTIONS = []
+words = open('./words.txt', 'r+')
+answers = FLASH_CARDS.keys.sort_by {rand}
+# questions = answers.each{|key| FLASH_CARDS[key]}
 
-puts "this is a test"
+# METHODS MODULES CLASSES 
+#
+# list the randomized answer and question pairs
 
-keys = FLASH_CARDS.keys.each {|key|
-  puts key
-}
+def sub_words(answers)
+  answers.each do |x|
+    subbed = []
+    subbed << x.gsub(/\*\*\*/, "STARS")
+    subbed << x.gsub!(/###/, "HASHES")
+    subbed << x.gsub!(/@@@/, "AT'S")
+    puts subbed
+  end
+end
+
+
+def list_pairs(answers, hash)
+  puts "Here are the questions and answers"
+  puts ""
+  answers.each do |key|
+    puts "Question: "
+    puts FLASH_CARDS[key]
+    puts "Answer: "
+    puts key
+    puts ""
+  end
+end
+
+
+# PROGRAM RUN
+#
+
+# list_pairs(answers, FLASH_CARDS)
+# sub_words(answers)
+
+
+
+
