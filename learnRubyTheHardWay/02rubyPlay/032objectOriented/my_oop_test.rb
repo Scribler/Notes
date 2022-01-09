@@ -19,24 +19,31 @@ FLASH_CARDS = {
   "***.*** = '***'" =>
        "From *** get the *** attribute and set it to '***'."
 }
-ANSWERS_SUBBED = []
 QUESTIONS = []
 words = open('./words.txt', 'r+')
-answers = FLASH_CARDS.keys.sort_by {rand}
+ANSWERS = FLASH_CARDS.keys.sort_by {rand}
+answers_subbed = []
 # questions = answers.each{|key| FLASH_CARDS[key]}
 
 # METHODS MODULES CLASSES 
 #
 # list the randomized answer and question pairs
 
-def sub_words(answers)
-  answers.each do |x|
-    subbed = []
-    subbed << x.gsub(/\*\*\*/, "STARS")
-    subbed << x.gsub!(/###/, "HASHES")
-    subbed << x.gsub!(/@@@/, "AT'S")
-    puts subbed
+
+# STILL DOESN'T WORK
+# USE '.scan'
+
+
+
+def sub_words
+  # puts ANSWERS
+  ANSWERS.each_line do |answer|
+    answers_subbed = []
+    answers_subbed.gsub!(/\*\*\*/, "SSS")
+    answers_subbed.gsub!(/###/, "HHH")
+    answers_subbed.gsub!(/@@@/, "AAA")
   end
+  puts answers_subbed
 end
 
 
@@ -51,13 +58,10 @@ def list_pairs(answers, hash)
     puts ""
   end
 end
-
-
 # PROGRAM RUN
 #
-
 # list_pairs(answers, FLASH_CARDS)
-# sub_words(answers)
+sub_words
 
 
 
