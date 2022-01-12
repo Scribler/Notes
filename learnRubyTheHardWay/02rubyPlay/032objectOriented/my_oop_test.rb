@@ -38,12 +38,11 @@ answers_subbed = []
 def sub_words
   # puts ANSWERS
   ANSWERS.each_line do |answer|
-    answers_subbed = []
-    answers_subbed.gsub!(/\*\*\*/, "SSS")
-    answers_subbed.gsub!(/###/, "HHH")
-    answers_subbed.gsub!(/@@@/, "AAA")
+    answer.scan(/\*\*\*/) {|x| gsub!(x, 'SSS')} 
+    answer.scan(/###/) {|x| gsub!(x, 'GGG')} 
+    answer.scan(/@@@/) {|x| gsub!(x, 'HHH')} 
   end
-  puts answers_subbed
+  puts answer
 end
 
 

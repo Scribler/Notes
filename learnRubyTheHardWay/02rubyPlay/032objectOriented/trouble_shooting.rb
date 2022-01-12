@@ -1,41 +1,40 @@
-# PROGRAM NOTES
-#
-# - get words
-# - get phrases & randomize
-# - fill in substitutions (each sentence)
+# Load words website
+require 'open-uri'
 
-# VARIABLES
-#
-words = ['this', 'blurp', 'zap', 'trill', 'gill', 'dill']
-# rwords = words.rand()
-STRING = "Start ###, ***, @@@, ###, end."
+# Assign Constants
+WORD_URL =  "http://learncodethehardway.org/words.txt"
+WORDS = []
+# check to see if 'english' was passed to the program and store boolean in variable
+PHRASE_FIRST = ARGV[0] == "english"
+PHRASES = {
+  # ### == class
+  # *** == method
+  # @@@ == parameter
+  "class ### < ###\nend" => 
+    "Make a class named ### that is-a ###.",
 
-# puts rwords
+  "class ###\n\tdef initialize(@@@)\n\tend\nend" => 
+    "class ### has-a initialize that takes @@@ parameters.",
 
-# CLASSES
-class Test
-  def initialize
-    @name = "bob"
-  end
-  attr_accessor :name
+  "class ###\n\tdef ***(@@@)\n\tend\nend" => 
+    "class ### has-a function named *** that takes @@@ parameters.",
+      
+  "*** = ###.new()" => 
+    "Set *** to an instance of class ###.",
+
+  "***.***(@@@)" => 
+    "From *** get the *** function, and call it with parameters @@@.",
+
+  "***.*** = '***'" => 
+    "From *** get the *** attribute and set it to '***'."
+}
+# store words in 'WORDS'
+URI.open(WORD_URL) do |file|
+  file.each_line {|word| WORDS.push(word.chomp)}
 end
+# p WORDS
 
-# METHODS
+test = ['dog', 'mog', 'slog']
 
-def sub(rand_words)
-  puts STRING
-  STRING.gsub!(/###/, rand_words.pop)
-  STRING.gsub!(/\*\*\*/, rand_words.pop)
-  STRING.gsub!(/@@@/, rand_words.pop)
-  puts "Do you want to print the string?"
-  exit(0) unless $stdin.gets
-  puts STRING
-end
-
-
-# RUN PROGRAM
-this = Test.new
-puts this.name
-
-sub(words)
+p test * 2
 

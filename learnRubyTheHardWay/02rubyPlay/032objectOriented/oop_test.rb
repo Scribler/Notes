@@ -41,6 +41,7 @@ File.open('words.txt', 'r+') {|f|
 def craft_names(rand_words, snippet, pattern, caps=false)
   names = snippet.scan(pattern).map do
     word = rand_words.pop()
+    # If caps=true(capitalize) IF caps=false(word)
     caps ? word.capitalize : word
   end
 
