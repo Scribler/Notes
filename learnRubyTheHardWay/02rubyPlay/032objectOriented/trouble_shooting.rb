@@ -29,12 +29,38 @@ PHRASES = {
     "From *** get the *** attribute and set it to '***'."
 }
 # store words in 'WORDS'
+#
+# PROGRAM RUN
 URI.open(WORD_URL) do |file|
   file.each_line {|word| WORDS.push(word.chomp)}
 end
-# p WORDS
 
 test = ['dog', 'mog', 'slog']
 
 p test * 2
+
+# program blueprint
+#
+#
+#
+# get words from website
+#
+# craft = words / sentence / patter / caps?
+
+# craft parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
