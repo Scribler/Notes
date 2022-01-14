@@ -26,26 +26,7 @@ Lines that include 'motorcycle'.
                     <img src="/Content/motorcycle.honda.ca/f5526616-8803-474f-9663-e0d42146f88b/ModelCategoryHomeTout/21_GoldWing-CATEGORY-TOUT-1440x605-EN.jpg" alt="" class="page-tout-img category-tout-image touring" />
 
 
-                    <img src="/Content/motorcycle.honda.ca/f5526616-8803-474f-9663-e0d42146f88b/ModelCategoryHomeTout/21_Rebel1100_CatRollOverHero_1440x605_en.jpg" alt="" class="page-tout-img category-tout-image cruiser" />
+                    <img src="/Content/motorcycle.honda.ca/f5526616-8803-474f-9663-e0d42146f88b/ModelCategoryHomeTout/22_Rebel1100_CatRollOverHero_1440x605_en.jpg" alt="" class="page-tout-img category-tout-image cruiser" />
 
-________________________________________
-
-________________________________________
-
-These are the viewport related tags
-          <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-          <meta name="viewport" content="width=device-width,initial-scale=1">
-________________________________________
-
-________________________________________
-
-These are the meta tags
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-          <meta name="viewport" content="width=device-width,initial-scale=1">
-          <meta name="generator" content="Webby" >
-          <meta name="description" content="Fast, searchable Ruby documentation for core and standard libraries. Plus, links to tutorials, guides, books, and related sites." >
-          <meta name="robots" content="NOODP" >
-          <meta http-equiv="content-type" content="text/html; charset=utf-8" >
 ________________________________________
 
