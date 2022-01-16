@@ -1,6 +1,8 @@
 # Flashcards application
+require 'open-uri'
 
 WORD_URL =  "http://learncodethehardway.org/words.txt"
+WORDS = []
 
 FLASHCARDS = {
   # ### == class
@@ -25,7 +27,17 @@ FLASHCARDS = {
     "From *** get the *** attribute and set it to '***'."
 }
 
-FLASHCARDS.keys.each do |key|
-  puts "" 
-  p key
+URI.open(WORD_URL) do |file|
+  file.each_line {|line| WORDS.push(line.chomp)}
 end
+
+
+FLASHCARDS.keys.each do |key|
+  random_words = WORDS.sort_by {rand}
+  results = key.gsub(/###/){|x| random_words.pop }
+  results.gsub!(/@@@/){|x| random_words.pop }
+  results.gsub!(/\*\*\*/){|x| random_words.pop }
+  puts ""
+  p results
+end
+
