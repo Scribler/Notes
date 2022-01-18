@@ -27,17 +27,34 @@ FLASHCARDS = {
     "From *** get the *** attribute and set it to '***'."
 }
 
-URI.open(WORD_URL) do |file|
-  file.each_line {|line| WORDS.push(line.chomp)}
+URI.open(WORD_URL) do |f|
+  f.each_line {|line| WORDS.push line.chomp}
 end
 
+#
+# DEFINE METHODS
+#
 
-FLASHCARDS.keys.each do |key|
-  random_words = WORDS.sort_by {rand}
-  results = key.gsub(/###/){|x| random_words.pop }
-  results.gsub!(/@@@/){|x| random_words.pop }
-  results.gsub!(/\*\*\*/){|x| random_words.pop }
+def pick_pairs
   puts ""
-  p results
+  puts ""
 end
+
+def pick_words(question)
+end
+
+
+#
+# RUN PROGRAM 
+#
+
+p FLASHCARDS.keys.sort_by {rand}
+
+
+
+
+
+
+
+
 

@@ -32,8 +32,8 @@ PHRASE_FIRST = ARGV[0] == "english"
 # Comment below is the originial version using the file imported from a website.
 # I wrote a script to copy that file so I don't need to rely upon the website for
 # the script to work.
-# URI.open(WORD_URL) {|f|
-File.open('words.txt', 'r+') {|f|
+URI.open(WORD_URL) {|f|
+# File.open('words.txt', 'r+') {|f|
   f.each_line {|word| WORDS.push(word.chomp)}
 }
 
