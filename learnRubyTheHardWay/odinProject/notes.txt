@@ -1,0 +1,5 @@
+ODIN PROJECT
+
+Starting with basics of git and html
+I will work through the ruby/ruby on rails
+stack.
