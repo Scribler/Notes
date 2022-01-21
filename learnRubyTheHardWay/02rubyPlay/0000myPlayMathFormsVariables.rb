@@ -31,6 +31,13 @@ brand = gets.chomp.upcase
 print "So your #{motorcycle} is a #{brand}."
 
 
+print "\nWhat Motorcycle do you drive?: "
+motorcycle = gets.chomp.upcase
+puts "So you drive a #{motorcycle}."
+print "What brand is it?: "
+brand = gets.chomp.upcase
+print "So your #{motorcycle} is a #{brand}."
+
 
 
 
