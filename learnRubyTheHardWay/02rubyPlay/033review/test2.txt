@@ -1,9 +1,0 @@
-# Contents of test 2
-# This is a longer file
-# With multiple lines
-This that another thing, but mostly just a really really long line like this!this another thing and some other stuff like this that is really really long?bbbasld;fjasl;dfkja;sldding ding
-
-bbb
- jjj
-bbbsss
-this is test2.txt
