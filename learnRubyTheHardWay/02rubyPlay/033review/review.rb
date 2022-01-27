@@ -54,7 +54,7 @@ def process_answer(answer, the_file_hash)
     puts ""
   elsif answer == '3'
     puts "You answered: #{answer}"
-    # placeholder for 'concatonate' method
+    concatonate_answer(the_file_hash)
     puts ""
   elsif answer == '4'
     puts "You answered: #{answer}"
@@ -64,7 +64,7 @@ def process_answer(answer, the_file_hash)
     puts "#{answer} is not an answer, try again."
     start
   end
-endof 
+end
 
 def print_text_files
   file_num = 0
@@ -106,19 +106,22 @@ end
 
 
 
-def delete_file_contents
+def concatonate_answer(file_hash)
   print_text_files
   puts "Which file would you like to clear? (enter the file's number)"
   print "> "
   answer = $stdin.gets.chomp
-
-
-  # get file
-  # Concatonate
-  # Confirm file is empty
+  file = open(file_hash[answer.to_i], "w+")
+  file.write()
+  file.rewind
+  puts "File contents are now:"
+  puts "-" * 20
+  puts file.read
+  puts "-" * 20
+  file.close
 end
 
-def write_to_file
+def write_to_file_answer(file_hash)
   # get file
   # check if empty
   # ask for input
