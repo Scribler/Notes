@@ -35,7 +35,19 @@ def populate_file_list
 end
 
 hash = populate_file_list
-p hash
+
+
+# RUN PROGRAM
+# hash do |key, value|
+  # puts "#{key}) #{value}"
+# end
+
+this = "this"
+p this.to_sym
+
+
+
+
 
 
 

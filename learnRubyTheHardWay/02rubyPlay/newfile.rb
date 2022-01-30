@@ -1,3 +1,4 @@
-This is something different
-much different
-It should have many more than 15 bytes. Maybe even 16. :P
+formatter = "My name is %{name}, and I live in %{country}"
+
+puts formatter % {name: "Joe", country: "USA"}
+puts formatter % {name: "Dale", country: "Australia"}

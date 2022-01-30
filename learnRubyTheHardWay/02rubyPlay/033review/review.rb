@@ -6,6 +6,7 @@ def return_text_file_names
   files_list = Dir["*.txt"]
   return files_list
 end
+
 # return a hash with numbers for keys and filenames for values
 def populate_file_list
   files = return_text_file_names
@@ -17,10 +18,11 @@ def populate_file_list
   end
   return file_hash
 end
+
 #------------------------------------------------------
 #
 # DEFINE FILE LIST HASH
-file_list = populate_file_list
+File_list = populate_file_list
 #
 #------------------------------------------------------
 
@@ -40,7 +42,7 @@ def questions_prompt
   puts "4) Edit Specific Lines of of specific files."
 end
 
-def process_answer(answer, the_file_hash)
+def process_answer(answer)
   if answer == '1'
     puts "You answered: #{answer}"
     puts ""
@@ -50,11 +52,11 @@ def process_answer(answer, the_file_hash)
     puts ""
   elsif answer == '2'
     puts "You answered: #{answer}"
-    list_file_contents(the_file_hash)
+    list_file_contents
     puts ""
   elsif answer == '3'
     puts "You answered: #{answer}"
-    concatonate_answer(the_file_hash)
+    concatonate_answer
     puts ""
   elsif answer == '4'
     puts "You answered: #{answer}"
@@ -75,18 +77,17 @@ def print_text_files
   end
 end
 
-
-def list_file_contents(file_hash)
+def list_file_contents
   puts "The files available to view are:"
   puts "0) ALL FILES"
-  file_hash.each do |key, value|
+  File_list.each do |key, value|
     puts "#{key}) #{value}"
   end
   puts ""
   puts "Which files contents would you like to view? (enter the file's number)"
   answer = get_answer.to_i
   puts ""
-  puts "Printing: #{file_hash[answer]}"
+  puts "Printing: #{File_list[answer]}"
   puts ""
   if answer == 0
     files_array = return_text_file_names
@@ -98,20 +99,18 @@ def list_file_contents(file_hash)
       file.close
     end
   else
-    file = open(file_hash[answer])
+    file = open(File_list[answer])
     puts file.read
     file.close
   end
 end
 
-
-
-def concatonate_answer(file_hash)
+def concatonate_answer
   print_text_files
   puts "Which file would you like to clear? (enter the file's number)"
   print "> "
   answer = $stdin.gets.chomp
-  file = open(file_hash[answer.to_i], "w+")
+  file = open(File_list[answer.to_i], "w+")
   file.write()
   file.rewind
   puts "File contents are now:"
@@ -121,21 +120,20 @@ def concatonate_answer(file_hash)
   file.close
 end
 
-def write_to_file_answer(file_hash)
+def write_to_file_answer
   # get file
   # check if empty
   # ask for input
   # write input to file
 end
 
-# RUN PROGRAM
-
-p file_list
+# RUN PROGRAM----------------------------------------------------------------------------
+p File_list
 loop do
   questions_prompt
-  process_answer(get_answer, file_list)
+  process_answer(get_answer)
   puts "To do another opperation press 'ENTER', to exit press 'CTRL-C'"
   $stdin.gets
 end
 
-
+#----------------------------------------------------------------------------------------
