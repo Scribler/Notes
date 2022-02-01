@@ -136,15 +136,15 @@
 
 
 
-# ARGV / ARGF START
+# ARGV START
     #
     # VARIABLES START
     #
-    # f_names, l_names, cit = ARGV
-    # first_names = open(f_names, 'a+')
-    # last_names = open(l_names, 'a+')
-    # cities = open(cit, 'a+')
-    # full_names = {}
+    f_names, l_names, cit = ARGV
+    first_names = open(f_names, 'a+')
+    last_names = open(l_names, 'a+')
+    cities = open(cit, 'a+')
+    full_names = {}
     #
     # VARIABLES END
     #
@@ -184,7 +184,7 @@
     # PROGRAM RUN
     #
 
-    # make_names_hash(first_names, last_names, full_names)
+    make_names_hash(first_names, last_names, full_names)
 
     #
     # PROGRAM STOP
@@ -193,15 +193,11 @@
 
 
 
+# NEXT START
 
 
 
-
-
-
-
-
-
+# NEXT END
 
 
 

@@ -1,3 +1,3 @@
-formatter = "%{this} then %{that}"
+p ARGF.readlines
 
-puts formatter %{this: "DING", that: "DONG"}
+
