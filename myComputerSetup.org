@@ -1,0 +1,40 @@
+COMPUTER SETUP
+
+* Terminal
+ 0) [UN-NECESSARY]bash shell(already installed)
+    - starship [un-neccesary](cross shell prompt >> for bash)
+ 1) Cool Retro Term - [INSTALL - pop-shop]
+ 2) zsh - 
+    - first) ohmyzsh [INSTALL - curl command]
+    - second) Powerlevel10k [INSTALL - curl command](Install with 'ohmyzsh' and enable in 'ohmyzsh settings')
+
+
+
+INSTALL METHODS
+* CURL
+  ** fnm(fast node manager)
+      *** node
+          **** npm (installed with node)
+          **** tldr (simple man pages)
+  ** homebrew
+      *** SASS (Dart-SASS)
+      *** neoVIM (install pip/pip3>python for org mode, etc.)
+      *** ruby
+
+* apt
+  ** htop
+  ** brave-browser (check brave website)
+
+* apt-get
+  ** Xclip (for copy/paste from neovim to terminal)-IMPORTANT-
+
+* pop-store
+  ** touche' (touchpad gestures)
+  ** RubyMine (flatpack)
+  ** VLC (deb - first in list)
+
+* Eddy
+  ** vivaldi(browser)
+  ** Skype
+  ** minecraft
+

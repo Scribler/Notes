@@ -1,0 +1,4 @@
+!#/bin/sh
+/* nvim -Oc "normal @j" -c "colorscheme gruvbox" workingGoalList.org jan2022on.txt install-methods.org */
+nvim -Oc "normal @j" -c "colorscheme gruvbox" workingGoalList.org jan2022on.txt myComputerSetup.org
+/* nvim -p jan2022on.txt install-methods.org workingGoalList.org */
