@@ -1,3 +1,157 @@
+/* ---------- colors ---------- */
+colors {
+  color: red; /*headings*/
+  color: blue; /*links*/
+  color: green; /*hover'd links*/
+  color: lightblue; /* border colors */
+}
+
+/* ---------- universal styles ---------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+article {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ---------- hacks ---------- */
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ---------- headings ---------- */
 h1 {
   color: red;
 }
+
+.mainheading {
+  float: left;
+}
+/* testing.html */
+.testing h2 {
+  text-decoration: 5px underline darkgreen;
+}
+.testing h3 {
+  text-decoration: 3px underline darkgreen;
+}
+
+/* ---------- links ---------- */
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/* ---------- lists ---------- */
+ul {
+  list-style: none;
+}
+dl {
+  border: 20px solid lightblue;
+  background-color: lightgray;
+  min-width: 400px;
+  max-width: 800px;
+  padding: 20px;
+}
+dt {
+}
+dd {
+  padding-left: 30px;
+}
+
+
+.titlespace {
+  border: 2px solid lightblue;
+  display: inline;
+}
+
+header {
+  padding: 10px 0;
+  border-bottom: 5px solid lightblue;
+}
+
+.navigation {
+  float: right;
+  padding: 10px 0;
+}
+
+.navigation li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* ------------- RECIEPE ------------ */
+.reciepe p {
+  padding: 30px 0px;
+}
+.pic1 {
+  float: left;
+  border: 3px solid red;
+  margin: 30px;
+}
+.pic2 {
+  float: right;
+  border: 4px dashed orange;
+  margin: 30px;
+}
+
+/* ------------- FLOATS ------------ */
+.floats-section {
+  background-color: lightgrey;
+}
+
+/* ------------- MOCHI ------------ */
+
+.mochi {
+  background-color: lightyellow;
+  padding: 10px;
+}
+/* .mochi h2 { */
+  /* text-decoration: 5px underline darkgreen; */
+/* } */
+.mochi-section {
+  padding: 10px;
+}
+.mochi-section p {
+  padding: 30px 0px;
+}
+/* .mochi-section h3 { */
+  /* text-decoration: 3px underline darkgreen; */
+/* } */
+
+.gif {
+  width: 350px;
+}
+
+.jpg {
+  width: 350px;
+}
+
+.png {
+  width: 350px;
+}
+
+.svg {
+  width: 350px;
+}
+
+/* ------------- QUOTES ------------ */
+.quotes-section {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+
