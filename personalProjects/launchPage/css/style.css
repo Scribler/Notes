@@ -9,13 +9,21 @@ colors {
 /* ---------- universal styles ---------- */
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
+}
+
+html {
+  font-family: "Lucida Sans", "sans-serif"
 }
 
 article {
   max-width: 800px;
   margin: auto;
+  padding: 10px;
+}
+article div {
+  padding: 5px 10px;
 }
 
 /* ---------- hacks ---------- */
@@ -117,13 +125,12 @@ header {
 
 .mochi {
   background-color: lightyellow;
-  padding: 10px;
+  /* padding: 10px; */
 }
 /* .mochi h2 { */
   /* text-decoration: 5px underline darkgreen; */
 /* } */
 .mochi-section {
-  padding: 10px;
 }
 .mochi-section p {
   padding: 30px 0px;
@@ -151,6 +158,8 @@ header {
 /* ------------- QUOTES ------------ */
 .quotes-section {
   background-color: lightgrey;
-  padding: 10px;
+}
+.quotes {
+  /* padding: 10px; */
 }
 
