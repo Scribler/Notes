@@ -163,3 +163,21 @@ header {
   /* padding: 10px; */
 }
 
+
+/* ------------- TEST ------------ */
+
+.one.two { /* this only works if the element has both classes 'one' & 'two'. */
+  background-color: green;
+}
+
+.one {
+  background-color: blue;
+}
+
+.one .three { /* This displays on something with class 'three' nested within a class 'one' ONLY. */
+  background-color: purple;
+}
+
+.three {
+  background-color: orange;
+}
