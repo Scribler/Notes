@@ -7,18 +7,21 @@ colors {
 }
 
 /* ---------- universal styles ---------- */
-* {
+html {
+  font-family: "Lucida Sans", "sans-serif";
   box-sizing: border-box;
-  /* padding: 0; */
-  /* margin: 0; */
+  padding: 0;
+  margin: 0;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  /* padding: inherit; */
+  /* margin: inherit; */
 }
 
-html {
-  font-family: "Lucida Sans", "sans-serif"
-}
 
 article {
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
   padding: 10px;
 }
@@ -140,18 +143,23 @@ header {
 /* } */
 
 .gif {
+  /* height and width should be set even if you aren't changing the size, so that the page knows to leave space for it while it is loading.  If you don't do this the page will jump around jerkily as everything is trying to load and jumping into their respective places. */
+  height: auto;
   width: 350px;
 }
 
 .jpg {
+  height: auto;
   width: 350px;
 }
 
 .png {
+  height: auto;
   width: 350px;
 }
 
 .svg {
+  height: auto;
   width: 350px;
 }
 
@@ -165,6 +173,13 @@ header {
 
 
 /* ------------- TEST ------------ */
+.one, /* Comma separated classes apply to every class included regardless of if the other ones are present. */
+.two,
+.three,
+.four {
+  color: white;
+  display: inline-block;
+}
 
 .one.two { /* this only works if the element has both classes 'one' & 'two'. */
   background-color: green;
@@ -181,3 +196,4 @@ header {
 .three {
   background-color: orange;
 }
+
