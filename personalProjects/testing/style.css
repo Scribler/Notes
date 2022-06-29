@@ -61,7 +61,15 @@ nav li {
   flex: 1;
 }
 
-
+.flex-container .one {
+  flex: 5;
+}
+.flex-container .two {
+  flex: 2 1 0%;
+}
+.flex-container .three {
+  flex: 4 1 0%;
+}
 
 
 
