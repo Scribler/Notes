@@ -16,6 +16,12 @@ header {
   justify-content: space-between;
 }
 
+.main-flex {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 h1 {
   display: inline-block;
   align-self: center;
@@ -52,6 +58,7 @@ nav li {
 
 .flex-container {
   display: flex;
+  flex: 1 1 auto;
 }
 
 .flex-container div {
@@ -82,5 +89,8 @@ nav li {
 .flex-container .six {
 }
 
+footer {
+  margin-top: auto;
+}
 
 
