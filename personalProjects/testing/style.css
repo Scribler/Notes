@@ -80,7 +80,7 @@ nav li {
 
 /******** TEST AREA ********/
 .main-flex-wrapper {
-  /* background-color: peachpuff; */
+  background-color: peachpuff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -98,7 +98,7 @@ nav li {
   /* color: #fafafa; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 10px 0;
 }
 .flex-container div {
@@ -109,33 +109,18 @@ nav li {
   border-radius: 10px;
   min-width: 100px;
   box-shadow: none;
-  transition: box-shadow .2s;
+  transition: box-shadow .4s, background-color .4s;
   padding: 10px;
 }
 .flex-container div img {
   border-radius: 22px;
   padding: 15px;
-  width: 250px;
+  width: 100px;
 }
 .flex-container div:hover {
-  box-shadow: 0 2px 18px rgba(34, 34, 34, 0.8);
+  box-shadow: 0 2px 18px rgba(34, 34, 34, 0.5);
+  background-color: #fff;
 }
-.flex-container .one {
-  /* background-color: #be7c4d; */
-}
-.flex-container .two {
-  /* background-color: #92140c; */
-}
-.flex-container .three {
-  /* background-color: #353238; */
-}
-.middle-content {
-  /* background-color: orange; */
-}
-.flex-container .four {
-  /* background-color: #be5a38; */
-}
-
 
 /******** FOOTER ********/
 
