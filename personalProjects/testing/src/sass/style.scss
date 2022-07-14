@@ -1,17 +1,21 @@
 /******** COLORS ****353238****/
 :root {
   /*** MAIN COLORS ***/
+  --white: #fafafa;
   --onyx: #3e3e3e;
-  --eerie-black-text: #131313;
-  --light-blue: lightblue;
-  --dark-red: rgb(179,57,81);
-  --peach: background-color: peachpuff;
-  --light-green: background-color: #a9fdac;
+  --eerieBlackText: #131313;
+  --lightBlue: lightblue;
+  --darkRed: rgb(179,57,81);
+  --darkerRed: rgb(66, 28, 40);
+  --darkRedBackground: #92140c;
+  --peach: rgb(255, 218, 185);
+  --darkPeach: rgb(245, 178, 145);
+  --lightGreen: #a9fdac;
   /*** CONTENT-COLORS ***/
-  --copper: background-color: #be7c4d;
-  --dark-red: background-color: #92140c;
-  --jet-grey: background-color: #353238;
-  --cedar-chest-orange: background-color: #be5a38;
+  --copper: #be7c4d;
+  --jetGrey: #353238;
+  --darkGrey: darkgrey;
+  --cedarChestOrange: #be5a38;
 }
 
 /******** UNIVERSAL STYLES ********/
@@ -33,7 +37,7 @@ h1 {
 
 /******** HEADER ********/
 header {
-  background-color: lightblue;
+  background-color: var(--lightBlue);
   padding: 30px 10px;
   display: flex;
   justify-content: space-between;
@@ -47,27 +51,24 @@ nav li {
 }
 .links-list {
   a {
-    background-color: rgb(179,57,81);
-    // WHY DOESN'T THE BELOW DARK RED WORK??????
-    // background-color: var(--dark-red);
-    color: #fff;
+    color: var(--white);
+    background-color: var(--darkRed);
     text-decoration: none;
     padding: 1em 2em;
-  }
-  a:hover {
-    border: 5px outset darkgrey;
-    padding: 11px 27px;
-    color: #fff;
-  }
-  a:active {
-    border: 5px inset darkgrey;
-    background-color: rgb(66, 28, 40);
+    hover {
+      border: 5px outset var(--darkGrey);
+      padding: 11px 27px;
+    }
+    active {
+      border: 5px inset var(--darkGrey);
+      background-color: var(--darkerRed);
+    }
   }
 }
 
 /******** TEST AREA ********/
 .main-flex-wrapper {
-  background-color: peachpuff;
+  background-color: var(--peach);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -82,37 +83,38 @@ nav li {
 }
 
 .flex-container {
-  /* color: #fafafa; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 10px 0;
   div {
+    background-color: var(--darkPeach);
+    margin: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* border: 4px solid brown; */
     border-radius: 10px;
     min-width: 100px;
     box-shadow: none;
     transition: box-shadow .4s, background-color .4s;
     padding: 10px;
-    hover {
-      box-shadow: 0 2px 18px rgba(34, 34, 34, 0.5);
-      background-color: #fff;
-    }
     img {
       border-radius: 22px;
       padding: 15px;
       width: 100px;
+      align-self: center;
     }
+  }
+  div:hover {
+    box-shadow: 0 2px 18px rgba(34, 34, 34, 0.5);
+    background-color: var(--white);
   }
 }
 
 /******** FOOTER ********/
 
 .footer {
-  background-color: #a9fdac;
+  background-color: var(--lightGreen);
   margin-top: auto;
   display: flex;
   justify-content: center;
@@ -126,7 +128,7 @@ nav li {
 }
 .links {
   padding: 10px;
-}
-.links a {
-  padding: 0 5px;
+  a {
+    padding: 0 5px;
+  }
 }
