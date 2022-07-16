@@ -1,0 +1,32 @@
+// Main Sass file
+// @use 'abstracts/variables';
+// @use 'abstracts/functions';
+// @use 'abstracts/mixins';
+//
+// @use 'vendors/bootstrap';
+// @use 'vendors/jquery-ui';
+//
+// @use 'base/reset';
+// @use 'base/typography';
+//
+// @use 'layout/navigation';
+// @use 'layout/grid';
+// @use 'layout/header';
+// @use 'layout/footer';
+// @use 'layout/sidebar';
+// @use 'layout/forms';
+//
+// @use 'components/buttons';
+// @use 'components/carousel';
+// @use 'components/slider';
+//
+// @use 'pages/home';
+// @use 'pages/about';
+// @use 'pages/contact';
+//
+// @use 'themes/theme';
+// @use 'themes/admin';
+h1 {
+  color: red;
+  text-decoration: underline;
+}
