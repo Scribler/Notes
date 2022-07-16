@@ -1,13 +1,13 @@
 // Main Sass file
-// @use 'abstracts/variables';
+@use 'abstracts/variables';
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
 //
 // @use 'vendors/bootstrap';
 // @use 'vendors/jquery-ui';
 //
-// @use 'base/reset';
-// @use 'base/typography';
+@use 'base/reset';
+@use 'base/typography';
 //
 // @use 'layout/navigation';
 // @use 'layout/grid';
@@ -26,7 +26,14 @@
 //
 // @use 'themes/theme';
 // @use 'themes/admin';
+html {
+  background-color: var(--grey);
+}
 h1 {
-  color: red;
-  text-decoration: underline;
+  background-color: var(--yellow);
+  color: var(--teal);
+  text-decoration: underline var(--pinkurple);
+}
+h2 {
+  color: var(--blue);
 }
