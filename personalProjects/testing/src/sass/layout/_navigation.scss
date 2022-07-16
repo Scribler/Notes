@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+// Navigation
+nav {
+  display: inline-block;
+  align-self: center;
+}
+li {
+  display: inline-block;
+}
+.links-list {
+  a {
+    color: var(--white);
+    background-color: var(--darkRed);
+    text-decoration: none;
+    padding: 1em 2em;
+  }
+  a:hover {
+    border: 5px outset var(--darkGrey);
+    padding: 11px 27px;
+  }
+  a:active {
+    border: 5px inset var(--darkGrey);
+    background-color: var(--darkerRed);
+  }
+}

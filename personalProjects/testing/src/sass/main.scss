@@ -1,0 +1,107 @@
+// Main Sass file
+// @use 'test';
+@use 'abstracts/variables';
+// @use 'abstracts/functions';
+// @use 'abstracts/mixins';
+//
+@use 'base/reset';
+@use 'base/typography';
+//
+// @use 'components/buttons';
+// @use 'components/carousel';
+// @use 'components/slider';
+//
+@use 'layout/navigation';
+// @use 'layout/grid';
+@use 'layout/header';
+// @use 'layout/footer';
+// @use 'layout/sidebar';
+// @use 'layout/forms';
+//
+// @use 'pages/home';
+// @use 'pages/about';
+// @use 'pages/contact';
+//
+// @use 'themes/theme';
+// @use 'themes/admin';
+//
+// @use 'vendors/bootstrap';
+// @use 'vendors/jquery-ui';
+
+/******** UNIVERSAL STYLES ********/
+h1 {
+  display: inline-block;
+  align-self: center;
+}
+
+/******** TEST AREA ********/
+.main-flex-wrapper {
+  background-color: var(--peach);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.content-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 10px 0;
+  div {
+    background-color: var(--darkPeach);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: none;
+    transition: box-shadow .4s, background-color .4s;
+    padding: 5px;
+    height: 220px;
+    width: 220px;
+    figcaption {
+      padding: 10px;
+      font-size: 20px;
+    }
+    img {
+      border-radius: 10px;
+      width: 210px;
+      align-self: center;
+    }
+  }
+  div:hover {
+    box-shadow: 0 2px 18px rgba(34, 34, 34, 0.5);
+    background-color: var(--white);
+  }
+}
+
+/******** FOOTER ********/
+
+.footer {
+  background-color: var(--lightGreen);
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.center-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  padding: 10px;
+  a {
+    padding: 0 5px;
+  }
+}
