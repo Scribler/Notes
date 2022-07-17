@@ -1,1 +1,14 @@
 // Header
+@use '../abstracts/variables' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 3px solid $pinkurple;
+
+}
+
+.header-heading {
+  display: inline-block;
+}

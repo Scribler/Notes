@@ -1,1 +1,44 @@
 // Navigation
+
+@use '../abstracts/variables' as *;
+
+.header-nav {
+  display: inline-block;
+  li {
+    color: $black;
+    display: inline-block;
+    padding: 10px;
+    background-color: $teal;
+    border-radius: 10px;
+    a {
+      color: $black;
+      &:visited {
+        color: $black;
+      }
+    }
+  }
+}
+.projects {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  li {
+    padding: 20px 20px;
+    margin: 20px 20px;
+    background-color: $teal;
+    border-radius: 10px;
+    max-width: 130px;
+    text-align: center;
+    a {
+      color: $black;
+    }
+    img {
+      height: 90px;
+      max-width: 80px;
+    }
+    figcaption {
+      font-size: 1.2em;
+    }
+  }
+}
+

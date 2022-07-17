@@ -1,5 +1,5 @@
 // Main Sass file
-@use 'abstracts/variables';
+@use 'abstracts/variables' as v;
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
 //
@@ -9,9 +9,9 @@
 @use 'base/reset';
 @use 'base/typography';
 //
-// @use 'layout/navigation';
+@use 'layout/navigation';
 // @use 'layout/grid';
-// @use 'layout/header';
+@use 'layout/header';
 // @use 'layout/footer';
 // @use 'layout/sidebar';
 // @use 'layout/forms';
@@ -23,17 +23,31 @@
 // @use 'pages/home';
 // @use 'pages/about';
 // @use 'pages/contact';
+@use 'pages/readinglinks';
 //
 // @use 'themes/theme';
 // @use 'themes/admin';
+
+// UNIVERSAL COMPONENTS
 html {
   background-color: var(--grey);
 }
 h1 {
-  background-color: var(--yellow);
-  color: var(--teal);
-  text-decoration: underline var(--pinkurple);
+  // background-color: var(--yellow);
+  color: var(--black);
 }
 h2 {
   color: var(--blue);
+}
+// MAIN
+main {
+  padding: 10px;
+}
+.main-heading {
+  font-size: 2em;
+  padding: 20px 30px;
+  text-decoration: underline black;
+}
+.projects {
+  padding-left: 30px;
 }
