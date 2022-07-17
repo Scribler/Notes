@@ -4,9 +4,26 @@
 
 .header-nav {
   display: inline-block;
+  .menu-hover {
+    // display: none;
+  }
+  @media only screen and (max-width: 900px) {
+    .menu-hover {
+      display: inline-block;
+      &:hover .header-menu-item {
+      display: inline-block;
+      }
+    }
+    .header-menu-item {
+      display: none;
+    }
+  }
+      display: flex;
+      flex-direction: column;
   li {
     color: $black;
     display: inline-block;
+    margin: 1px;
     padding: 10px;
     background-color: $teal;
     border-radius: 10px;
