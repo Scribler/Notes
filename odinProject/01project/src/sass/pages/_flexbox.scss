@@ -1,0 +1,96 @@
+// Flexbox page specific styles
+@use '../base/reset';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.flex-main {
+  @include reset
+}
+
+.flexbox-flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flexbox-flexitem {
+  color: #00105A;
+  display: flex;
+  justify-content: center;
+  background-color: $blue;
+  border-radius: 5px;
+  height: 140px;
+  max-width: 150px;
+  flex: 1 1 120px;
+  // min-width: 100px;
+  margin: 10px;
+  transition: color .3s, background-color .3s;
+  &:active {
+    background-color: $yellow;
+    color: $black;
+  }
+  p {
+    align-self: center;
+  }
+}
+.one {
+  background-color: red;
+}
+.two {
+  background-color: green;
+}
+.three {
+  background-color: blue;
+}
+.four {
+  background-color: yellow;
+}
+.five {
+  background-color: orange;
+}
+.six {
+  background-color: purple;
+}
+.seven {
+  background-color: pink;
+}
+.eight {
+  background-color: teal;
+}
+// SECOND FLEX CONTAINER
+.flexbox-flex-container-two {
+  display: flex;
+  div {
+    height: 100px;
+    border: 5px solid $teal;
+    flex: 1;
+  }
+}
+.twenty {
+  background-color: #990F33;
+}
+.twenty-one {
+  background-color: #78990F;
+}
+.twenty-two {
+  background-color: #990F6D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
