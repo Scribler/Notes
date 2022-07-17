@@ -6,32 +6,31 @@
   @include menu-buttons;
   display: none;
 }
-.menu-items a {
+.menu-item a {
   @include menu-buttons;
+  position: absolute right 30px left 0;
+  margin: 30px;
 }
 
 .menu-contents {
-  display: block;
-  width: 200px;
-  overflow: hidden;
-}
-.menu-item {
+  display: flex;
 }
 
 @media only screen and (max-width: 900px) {
   .menu-contents {
     flex-direction: column;
   }
-  .menu-items {
+  .menu-item {
     display: none;
   }
   .menu-button {
     @include menu-buttons;
   }
-  .menu-contents:hover .menu-items{
+  .menu-contents:hover .menu-item{
     display: block;
+    position: absolute;
+    float: right;
     text-align: left;
-    z-index: 1;
   }
 }
 
