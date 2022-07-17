@@ -1,40 +1,39 @@
 // Navigation
-
 @use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
 
-.header-nav {
-  display: inline-block;
-  .menu-hover {
-    // display: none;
+.menu-button {
+  @include menu-buttons;
+  display: none;
+}
+.menu-item a {
+  @include menu-buttons;
+}
+
+.menu-contents {
+  display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-contents {
+    flex-direction: column;
   }
-  @media only screen and (max-width: 900px) {
-    .menu-hover {
-      display: inline-block;
-      &:hover .header-menu-item {
-      display: inline-block;
-      }
-    }
-    .header-menu-item {
-      display: none;
-    }
+  .menu-item {
+    display: none;
   }
-      display: flex;
-      flex-direction: column;
-  li {
-    color: $black;
+  .menu-button {
+    @include menu-buttons;
+  }
+  .menu-contents:hover .menu-item{
     display: inline-block;
-    margin: 1px;
-    padding: 10px;
-    background-color: $teal;
-    border-radius: 10px;
-    a {
-      color: $black;
-      &:visited {
-        color: $black;
-      }
-    }
+    position: relative;
+    float: right;
   }
 }
+
+
+
+
 .projects {
   display: flex;
   justify-content: flex-start;

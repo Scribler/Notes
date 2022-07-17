@@ -1,1 +1,16 @@
 // Buttons
+@use '../abstracts/variables' as *;
+@mixin menu-buttons {
+  color: $black;
+  display: inline-block;
+  margin: 1px;
+  padding: 10px;
+  background-color: $teal;
+  border-radius: 10px;
+  a {
+    color: $black;
+    &:visited {
+      color: $black;
+    }
+  }
+}
