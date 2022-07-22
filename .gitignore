@@ -6,3 +6,5 @@ filePlay/
 img/
 assets/
 assets/**/*
+*.pdf
+*.zip

@@ -1,0 +1,28 @@
+// Flexbox page specific styles
+@use '../base/reset';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-two {
+  display: inline-block;
+  position: relative;
+  float: right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+  background-color: white;
+}
+
+.drop-button:focus ~ .dropdown-content{
+  display: block;
+}

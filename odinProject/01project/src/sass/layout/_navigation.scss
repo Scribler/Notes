@@ -2,36 +2,40 @@
 @use '../abstracts/variables' as *;
 @use '../components/buttons' as *;
 
-.menu-button {
-  @include menu-buttons;
-  display: none;
+.header-nav {
+  float: right;
+  display: flex;
 }
-.menu-items a {
-  @include menu-buttons;
+.nav-button, .nav-items a {
+  @include menu-buttons
 }
+.nav-button {display: none;}
 
-.menu-contents {
-  display: block;
-  width: 200px;
-  overflow: hidden;
-}
-.menu-item {
+.nav-items {
+  display: flex;
 }
 
 @media only screen and (max-width: 900px) {
-  .menu-contents {
+  .header-nav {
+    display: flex;
     flex-direction: column;
+    flex-basis: 145px;
+    cursor: pointer;
   }
-  .menu-items {
+  .nav-items {
     display: none;
   }
-  .menu-button {
-    @include menu-buttons;
+  .nav-button {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
   }
-  .menu-contents:hover .menu-items{
-    display: block;
-    text-align: left;
-    z-index: 1;
+  .nav-button:focus~.nav-items { // drop down on click, BUT  Can not 
+                                 // click links due to loosing focus.
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 40px;
   }
 }
 
