@@ -3,13 +3,21 @@
 
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  // justify-content: space-between;
+  // padding: 10px;
   border-bottom: 3px solid $pinkurple;
+  align-items: center;
 
 }
 
 .header-heading {
-  display: inline-block;
+  // display: inline-block;
+  padding-left: 10px;
+  padding-right: auto;
+  width: 100%;
 }
 
+.header-nav {
+  display: flex;
+  position: relative;
+}

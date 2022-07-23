@@ -2,20 +2,23 @@
 @use '../abstracts/variables' as *;
 @use '../components/buttons' as *;
 
-.header-nav {
-  float: right;
-  display: flex;
-}
 .nav-button, .nav-items a {
   @include menu-buttons
 }
-.nav-button {display: none;}
+.nav-button {
+  display: none;
+}
 
 .nav-items {
   display: flex;
+  align-items: center;
+  a {
+    width: 140px;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
   .header-nav {
     display: flex;
     flex-direction: column;
@@ -26,16 +29,25 @@
     display: none;
   }
   .nav-button {
+    text-align: center;
     display: inline-block;
-    width: 100%;
+    width: 120%;
+    margin-left: -30px;
     cursor: pointer;
+    justify-self: flex-end;
+    &:hover {
+      background-color: green;
+    }
   }
-  .nav-button:focus~.nav-items { // drop down on click, BUT  Can not 
-                                 // click links due to loosing focus.
+  .nav-button:focus~.nav-items {
     display: flex;
     flex-direction: column;
     position: absolute;
     margin-top: 40px;
+    margin-left: -30px;
+    a:hover {
+      background-color: green;
+    }
   }
 }
 
