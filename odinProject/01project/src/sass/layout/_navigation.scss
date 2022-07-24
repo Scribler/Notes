@@ -13,16 +13,17 @@
   display: flex;
   align-items: center;
   a {
+    padding: 10px 0;
     width: 140px;
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1020px) {
   .header-nav {
     display: flex;
     flex-direction: column;
-    flex-basis: 145px;
+    flex-basis: 130px;
     cursor: pointer;
   }
   .nav-items {
@@ -30,14 +31,10 @@
   }
   .nav-button {
     text-align: center;
-    display: inline-block;
-    width: 120%;
+    display: block;
     margin-left: -30px;
     cursor: pointer;
-    justify-self: flex-end;
-    &:hover {
-      background-color: green;
-    }
+    padding: 10px 0;
   }
   .nav-button:focus~.nav-items {
     display: flex;
@@ -45,14 +42,8 @@
     position: absolute;
     margin-top: 40px;
     margin-left: -30px;
-    a:hover {
-      background-color: green;
-    }
   }
 }
-
-
-
 
 .projects {
   display: flex;
