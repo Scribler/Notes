@@ -2,8 +2,9 @@
 @use '../abstracts/variables' as *;
 @use '../components/buttons' as *;
 
+// NAVIGATION BASE STYLES
 .nav-button, .nav-items li a {
-  @include menu-buttons
+  @include menu-buttons;
 }
 .nav-button {
   display: none;
@@ -21,7 +22,7 @@
     text-align: center;
   }
 }
-
+// SWAP STATIONARY NAV FOR DROPDOWN NAV (HEADER NAVIGATION)
 @media only screen and (max-width: 1020px) {
   .header-nav {
     display: flex;
@@ -48,6 +49,7 @@
     z-index: 1;
   }
 }
+// Resize Header
 @media only screen and (max-width: 775px) {
   .header-heading {
     font-size: 21px;
@@ -56,6 +58,7 @@
   }
 }
 
+// MAIN PAGE PROJECT NAVIGATION
 .projects {
   display: flex;
   justify-content: flex-start;
