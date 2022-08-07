@@ -1,29 +1,50 @@
-// Flexbox page specific styles
+// Dropmenu page specific styles
 @use '../base/reset';
 @use '../components/buttons' as *;
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-.dropdown-two {
-  display: inline-block;
-  position: relative;
-  float: right;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  width: 100%;
-  overflow: auto;
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  z-index: 1;
-  background-color: white;
-}
-
-.drop-button, .dropdown-content {
+// universal dropdown styles
+.drop-button, .nav-items li a {
   @include menu-buttons;
+    padding: 10px 0;
+    width: 144.117px;
+    text-align: center;
+    .drop-button {
+      background-color: teal;
+    }
+}
+
+// left dropdown
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
+  .drop-button {
+    align-self: center;
+  }
+  .drop-button, .nav-items {
+    box-shadow: 5px 5px 15px black;
+  }
+  .nav-items {
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  .drop-button:focus~.nav-items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 509px;
+    z-index: 1;
+  }
+  // float: left;
+}
+
+// right dropdown
+.dropdown-two {
+  // float: right;
 }
