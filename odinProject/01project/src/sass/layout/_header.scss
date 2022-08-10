@@ -3,7 +3,10 @@
 
 header {
   display: flex;
+  position: relative;
   border-bottom: 3px solid $pinkurple;
+  box-shadow: 0 1px 5px black;
+  z-index: 1;
 }
 
 .header-heading {

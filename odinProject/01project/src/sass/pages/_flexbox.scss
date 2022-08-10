@@ -2,85 +2,139 @@
 @use '../base/reset';
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+//colors
+$white: #FFFFFF;
+$light-grey: #E4E6EB;
+$grey: #F0F2F5;
+$light-blue: #E7F3FF;
+$dark-blue: #1877F2;
 
-.flex-main {
-  @include reset
-}
 
-.flexbox-flex-container {
+//FLEX CONTAINER
+.main-container {
+  @include reset;
+  background-color: $grey;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
-.flexbox-flexitem {
-  color: #00105A;
+// LEFT MENU AREA
+.left-menu-container {
+  background-color: $white;
+  flex: 0 0 250px;
+  height: 100vh;
+}
+
+.menu-item-container {
+  .left-menu-list {
+    display: none;
+  }
+  &:hover {
+  .left-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+ }
+}
+
+.left-menu-button {
+  background-color: $light-grey;
+  position: relative;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  &:hover {
+    box-shadow: 0px 0px 5px black;
+    background-color: $grey;
+    z-index: 1;
+  }
+}
+
+
+// MAIN CONTENT AREA
+.content-container {
+  width: 100%;
+  // display: flex;
+  // flex: 1;
+  // z-index: 0;
+  // justify-content: flex-start;
+  // flex-wrap: wrap;
+  background-color: $light-grey;
+}
+.inner-content-container {
+  display: flex;
+  flex: 1;
+  z-index: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: $light-grey;
+}
+
+// CARDS SECTION
+.cards-title {
+  margin: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $grey;
+  flex: 1 1 auto;
+  max-width: 330px;
+  img {
+    padding: 8px 0;
+    width: 100%;
+    // max-width: 320px;
+  }
+  .img-caption {
+  }
+}
+
+// JUSTIFY CONTENT SECTION
+.justify {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.section {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  // justify-content: center;
+  // align-content: top;
+  border: 3px solid black;
+
+  div {
+    height: 80px;
+    width: 80px;
+  }
+  .one {
+    background-color: green;
+  }
+  .two {
+    background-color: blue;
+  }
+  .three {
+    background-color: orange;
+  }
+}
+.start {
+  display: flex;
+  justify-content: flex-start;
+}
+.center{
   display: flex;
   justify-content: center;
-  background-color: $blue;
-  border-radius: 5px;
-  height: 140px;
-  max-width: 150px;
-  flex: 1 1 120px;
-  // min-width: 100px;
-  margin: 10px;
-  transition: color .3s, background-color .3s;
-  &:active {
-    background-color: $yellow;
-    color: $black;
-  }
-  p {
-    align-self: center;
-  }
 }
-.one {
-  background-color: red;
-}
-.two {
-  background-color: green;
-}
-.three {
-  background-color: blue;
-}
-.four {
-  background-color: yellow;
-}
-.five {
-  background-color: orange;
-}
-.six {
-  background-color: purple;
-}
-.seven {
-  background-color: pink;
-}
-.eight {
-  background-color: teal;
-}
-// SECOND FLEX CONTAINER
-.flexbox-flex-container-two {
+.end {
   display: flex;
-    flex-wrap: wrap;
-  div {
-    margin: 5px 5px;
-    height: 100px;
-    border: 5px solid $teal;
-    flex: 1 1 350px;
-  }
+  justify-content: flex-end;
 }
-.twenty {
-  background-color: #990F33;
-}
-.twenty-one {
-  background-color: #78990F;
-}
-.twenty-two {
-  background-color: #990F6D;
-}
-
-
-
-
 
 
 

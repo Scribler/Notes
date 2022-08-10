@@ -1,5 +1,5 @@
 // Main Sass file
-@use 'abstracts/variables' as v;
+@use 'abstracts/variables' as *;
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
 //
@@ -33,7 +33,7 @@
 
 // UNIVERSAL COMPONENTS
 html {
-  background-color: var(--grey);
+  background-color: $grey;
 }
 h1 {
   // background-color: var(--yellow);
