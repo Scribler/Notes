@@ -1,6 +1,8 @@
 // Buttons
 @use '../abstracts/variables' as *;
-@mixin menu-buttons {
+@mixin menu-buttons { 
+  // background matched button
+  // dark-grey on hover
   color: $black;
   display: block;
   height: 100%;

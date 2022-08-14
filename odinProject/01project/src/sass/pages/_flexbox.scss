@@ -2,13 +2,6 @@
 @use '../base/reset';
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
-//colors
-$white: #FFFFFF;
-$light-grey: #E4E6EB;
-$grey: #F0F2F5;
-$light-blue: #E7F3FF;
-$dark-blue: #1877F2;
-
 
 //FLEX CONTAINER
 .main-container {
@@ -118,12 +111,18 @@ $dark-blue: #1877F2;
   }
   .one {
     background-color: green;
+    flex: 0 1 0;
   }
   .two {
     background-color: blue;
+    // if flex NOT SET TO auto, width WILL NOT BE SEEN 
+    width: 120px;
+    flex: 0 2 auto; // auto tells it to look for a width
   }
   .three {
     background-color: orange;
+    width: 75px;
+    flex: 0 1 auto;
   }
 }
 //
