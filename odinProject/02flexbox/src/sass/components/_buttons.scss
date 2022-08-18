@@ -1,0 +1,16 @@
+// Buttons
+@use '../abstracts/variables' as *;
+@mixin menu-buttons { 
+  // background matched button
+  // dark-grey on hover
+  color: $black;
+  display: block;
+  height: 100%;
+  background-color: $grey;
+  &:hover {
+    background-color: $dark-grey;
+  }
+  &:visited {
+    color: $black;
+  }
+}

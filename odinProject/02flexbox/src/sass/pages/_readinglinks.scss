@@ -1,0 +1,17 @@
+// Reading Links specific styles
+@use '../abstracts/variables' as *;
+
+.reading-topics-list {
+  list-style: none;
+  padding: 10px 20px;
+  li {
+    border: 2px solid $pinkurple;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    text-decoration: underline 2px $pinkurple;
+    padding-bottom: 10px;
+  }
+}
