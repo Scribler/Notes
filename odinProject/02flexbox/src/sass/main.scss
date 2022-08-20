@@ -1,5 +1,5 @@
 // Main Sass file
-@use 'abstracts';
+@use 'abstracts' as *;
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
 @use 'vendors';
@@ -22,3 +22,33 @@
 @use 'themes';
 // @use 'themes/theme';
 // @use 'themes/admin';
+
+// UNIVERSAL STYLES
+body {
+  display: flex;
+  flex-direction: column;
+}
+.site-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header, .intro {
+  background: $dark-background;
+  color: $hero-secondary;
+}
+
+.hero_main_text { // main hero text(this website is awesome)
+  font-size: 48px;
+  color: $hero-main-text;
+  font-weight: 900;
+}
+.header-logo {
+  color: $hero-main-text;
+  font-size: 24px;
+}
+
+.hero_secondary_text {
+  color: $hero-secondary;
+}
+
