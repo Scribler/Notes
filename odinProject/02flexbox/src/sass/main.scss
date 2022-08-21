@@ -120,13 +120,13 @@ header {
   display: flex;
   justify-content: center;
   padding-bottom: 90px;
+  gap: 40px;
 }
 .card {
   display: flex;
   flex-direction: column;
   width: 150px;
   text-align: center;
-  margin: 0 30px;
   img {
     width: 150px;
     height: 150px;
