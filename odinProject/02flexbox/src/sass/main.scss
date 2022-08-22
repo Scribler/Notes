@@ -34,7 +34,7 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 1100px;
   margin: 0 auto;
   background-color: var(--light-grey);
@@ -78,36 +78,102 @@ header {
 
 // MAIN
 .main-content-container {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 140px);
 }
 .main-heading{
   font-size: 40px;
-  margin: 20px 0;
+  margin: 40px 0;
   font-weight: 600;
   color: var(--black);
+  text-align: center;
+  text-decoration: underline;
 }
 .testing-area {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 30px;
 }
 .card {
   background-color: var(--light-blue);
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 200px;
   border-radius: 20px;
-  border: 3px solid var(--dark-blue);
+  border: 5px solid var(--dark-blue);
   display: flex;
-  p {
-    margin: auto auto;
+  flex-direction: column;
+  transition: all .3s;
+  &:hover {
+    border: 1px solid var(--dark-blue);
+    transition: all .3s;
   }
+  &:active {
+    border: 5px solid var(--dark-blue);
+    transition: all .2s;
+  }
+  .picture {
+    width: 150px;
+    height: 160px;
+    background-color: black;
+    margin: 20px auto;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+// Card Colors
+#card1 {
+  background-color: #BFF4E6;
+}
+#card2 {
+  background-color: #F4BFCD;
+}
+#card3 {
+  background-color: #E7F4BF;
+}
+#card4 {
+  background-color: #CCBFF4;
+}
+#card5 {
+  background-color: #BFDCF4;
+}
+#card6 {
+  background-color: #F4D7BF;
+}
+#card7 {
+  background-color: #C1F4BF;
+}
+#card8 {
+  background-color: #F1BFF4;
+}
+#card9 {
+  background-color: #F4C5BF;
+}
+#card10 {
+  background-color: #BFEEF4;
+}
+#card11 {
+  background-color: #D3F4BF;
+}
+#card12 {
+  background-color: #E0BFF4;
 }
 
 // FOOTER
 footer {
   margin-top: auto;
+  background-color: var(--dark-grey);
+  color: var(--hero-secondary);
+  display: flex;
+  height: 60px;
+  margin: 0 -5px;
+  p {
+    margin: auto auto;
+    font-size: 20px;
+  }
 }
 
 
