@@ -53,7 +53,24 @@ console.log(--num1); // 11
 console.log(--num1); // 10
 console.log(--num1); // 9
 
+console.log(.2 + .1);
+console.log((.2 * 10 + .1 * 10)/10);
 
+
+// As long as the arithmetic is NOT addition it WILL WORK with 'string numbers' Since '+' is ALSO used for concatonation, you can't use it to add numbers stored in strings;
+let numString1 = "5";
+let numString2 = "7";
+console.log("First number: " + numString1);
+console.log("Second number: " + numString2);
+let numStringResult1 = numString1 + numString2;
+let numStringResult2 = numString1 - numString2;
+let numStringResult3 = numString1 * numString2;
+let numStringResult4 = numString1 / numString2;
+console.log("num1 + num2 in console.log: " + numString1 + numString2);
+console.log("Result of num1 + num2: " + numStringResult1);
+console.log("Result of num1 - num2: " + numStringResult2);
+console.log("Result of num1 * num2: " + numStringResult3);
+console.log("Result of num1 / num2: " + numStringResult4);
 
 
 
