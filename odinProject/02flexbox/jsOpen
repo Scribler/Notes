@@ -1,0 +1,6 @@
+!#/bin/sh
+/* nvim -Oc "normal @j" -c "colorscheme gruvbox" workingGoalList.org jan2022on.txt install-methods.org */
+/* nvim -p jan2022on.txt install-methods.org workingGoalList.org */
+
+nvim -Oc "normal @j" -c "colorscheme neodark" src/index.html src/sass/main.scss src/js/scripts.js
+
