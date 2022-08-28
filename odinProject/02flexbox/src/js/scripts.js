@@ -52,10 +52,20 @@ console.log(num1); // 12
 console.log(--num1); // 11
 console.log(--num1); // 10
 console.log(--num1); // 9
+console.log(" ");
+console.log(" ");
+console.log(" ");
+console.log(" ");
+console.log(".2 + .1 = " + (0.2 + 0.1));// does not compute correctly
+console.log(" ");
+console.log(" ");
+console.log("(.2 * 10 + .1 * 10)/10 = " + ((.2 * 10 + .1 * 10)/10)); // multiply by ten to fix above equation
 
-console.log(.2 + .1);
-console.log((.2 * 10 + .1 * 10)/10);
-
+console.log(" ");
+console.log(" ");
+console.log(" ");
+console.log(" ");
+console.log(" ");
 
 // As long as the arithmetic is NOT addition it WILL WORK with 'string numbers' Since '+' is ALSO used for concatonation, you can't use it to add numbers stored in strings;
 let numString1 = "5";
@@ -71,9 +81,12 @@ console.log("Result of num1 + num2: " + numStringResult1);
 console.log("Result of num1 - num2: " + numStringResult2);
 console.log("Result of num1 * num2: " + numStringResult3);
 console.log("Result of num1 / num2: " + numStringResult4);
+// nan = not a number (error)
+console.log(num1 * "string");
 
-
-
+console.log(isNaN(5));
+console.log(isNaN("5"));
+console.log(isNaN("five"));
 
 
 
