@@ -92,10 +92,35 @@ header {
 }
 .testing-area {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 30px;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid blue;
+  // border-radius: 10px;
+  padding: 20px 40px;
+}
+#machineButton {
+  box-shadow: 0px 0px 10px black;
+}
+.aniButton {
+  cursor: pointer;
+  padding: 20px 40px;
+  color: white;
+  border: none;
+  background-color: #3759F9;
+  border: 7px outset #6F88FF;
+  box-shadow: none;
+}
+.aniButton:active {
+  color: #BCBCBC;
+  background-color: #0C37FF;
+  border: 7px inset #6F88FF;
 }
 .card {
   background-color: var(--light-blue);
