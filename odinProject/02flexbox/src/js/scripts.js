@@ -57,6 +57,44 @@ checkNum(numToTest);
 
 
 
+// !!!NEXT PROJECT!!!
+
+//
+//
+//
+
+// BUILD - a text-area where you can input a number
+
+// BUILD - a button to click to check the number.
+
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
