@@ -37,3 +37,26 @@ let second = 2;
 
 const result = first === second ? 'first is same as second' : 'First is different than second';
 console.log(result);
+
+numToTest= 563;
+
+function checkNum(numToCheck) {
+  let result;
+  let reduced = (numToCheck % 2);
+  console.log(reduced);
+  result = reduced === 0 ? "It's EVEN!!!" : "It's odd....";
+  console.log(result);
+}
+
+evenOrOdd = 0 === 0 ? 'It is even' : 'It is odd';
+console.log(evenOrOdd);
+
+console.log('Running number testing script');
+checkNum(numToTest);
+
+
+
+
+
+
+
