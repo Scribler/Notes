@@ -29,3 +29,11 @@ function updateCounter() {
 function resetCounter() {
   counter.innerHTML = 0;
 }
+
+// TESTING EQUALITY
+
+let first = 2;
+let second = 2;
+
+const result = first === second ? 'first is same as second' : 'First is different than second';
+console.log(result);

@@ -203,14 +203,40 @@ footer {
     font-size: 20px;
   }
 }
-.numberedHeadings {
-  counter-reset: my-counter;
+
+//
+// CSS NUMBERED HEADINGS SECTION --START--
+//
+
+// numbered headings and subheadings.
+.numberedHeadings { // reset MAIN heading numbers to zero
+  counter-reset: section;
 }
-h3::before {
-  counter-increment: my-counter;
-  content: counter(my-counter) ". ";
+h3 { // reset sub-heading numbers to zero
+  counter-reset: sub-section;
+  padding: 3px 0px;
+  font-size: 18px;
+  font-weight:bold;
+}
+h4 {
+  padding: 1px 0px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight:bold;
+
+}
+h3::before { // before HEADING insert counter incremented by 1
+  counter-increment: section;
+  content: counter(section) ": ";
+}
+h4::before { // before SUB-HEADING insert counter with subsection # incremented by 1
+  counter-increment: sub-section;
+  content: counter(section) "." counter(sub-section)" ";
 }
 
+//
+// CSS NUMBERED HEADINGS SECTION --END--
+//
 
 
 
