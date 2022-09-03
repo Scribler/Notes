@@ -54,7 +54,66 @@ console.log(evenOrOdd);
 console.log('Running number testing script');
 checkNum(numToTest);
 
-
+// Unary plus '+'
+console.log("'true': evaluates to...");
+console.log(true);
+console.log("'+true': evaluates to...");
+console.log(+true);
+console.log("'+false': evaluates to...");
+console.log(+false);
+console.log("'\"\"': evaluates to...");
+console.log(+"");
+console.log("this is the same as using 'Number(...)'");
+console.log("ex...'number(\"\")' equals...");
+console.log(Number(""));
+console.log(" ");
+console.log(" ");
+console.log("This can be used for shortening the notation for adding numbers in string form")
+console.log(" ");
+let numStringOne = "45";
+let numStringTwo= "55";
+console.log("adding the variables without '+'.")
+console.log("console.log(numStringOne + numStringTwo); // =4555")
+console.log(numStringOne + numStringTwo); // =4555
+console.log(" ");
+console.log("adding the variables with 'Number();'.")
+console.log("console.log(Number(numStringOne) + Number(numStringTwo)); // = 100");
+console.log(Number(numStringOne) + Number(numStringTwo)); // = 100
+console.log(" ");
+console.log("adding the variables with '+'.")
+console.log("console.log(+numStringOne + +numStringTwo); // =4555")
+console.log(+numStringOne + +numStringTwo); // = 100
+console.log(" ");
+let anum = +numStringOne;
+console.log(anum);
+++anum;
+++anum;
+anum++;
+// ++ anum ++; < This doesn't work.
+let numTwo = 0;
+exponent = 1;
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(2 * numTwo++**exponent++);
+console.log(null +1);
+console.log((4+6+9)/77);
+let a = 10;
+console.log(a);
+9 * a;
+let b = 7 * a;
+console.log(b);
+let max = 57.0000;
+let actual = max - 13.0000;
+let percentage = actual / max;
+console.log(percentage);
 
 
 // !!!NEXT PROJECT!!!
