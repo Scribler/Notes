@@ -202,19 +202,6 @@ header {
   background-color: #E0BFF4;
 }
 
-// FOOTER
-footer {
-  margin-top: auto;
-  background-color: var(--dark-grey);
-  color: var(--hero-secondary);
-  display: flex;
-  height: 60px;
-  margin: 0 -5px;
-  p {
-    margin: auto auto;
-    font-size: 20px;
-  }
-}
 
 //
 // CSS NUMBERED HEADINGS SECTION --START--
@@ -258,4 +245,17 @@ h4::before { // before SUB-HEADING insert counter with subsection # incremented 
 
 
 
+// FOOTER
+footer {
+  margin-top: auto;
+  background-color: var(--dark-grey);
+  color: var(--hero-secondary);
+  display: flex;
+  height: 60px;
+  margin: 0 -5px;
+  p {
+    margin: auto auto;
+    font-size: 20px;
+  }
+}
 
