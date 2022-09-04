@@ -116,6 +116,7 @@ let percentage = actual / max;
 console.log(percentage);
 
 
+console.log(1/0); // Infinity
 // !!!NEXT PROJECT!!!
 
 //
