@@ -14,4 +14,11 @@ console.log(firstStr);
 console.log(`double embeding!!! ${firstStr}`);
 console.log(`The following is \${1+2} embedded which should display '3': ${1 + 2}`);
 
+console.log(typeof undefined); // undefined
+console.log(typeof 0);  // number
+console.log(typeof 'a'); // string
+console.log(typeof true); // boolean
+console.log(typeof Math); // object
+console.log(typeof null); // object
+console.log(typeof alert); // function
 
