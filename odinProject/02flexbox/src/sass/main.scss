@@ -80,7 +80,7 @@ header {
 .main-content-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
 }
 .main-heading{
   font-size: 40px;
