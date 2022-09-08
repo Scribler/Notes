@@ -36,6 +36,43 @@ console.log(`Hello ${firstName}.`);
 const longString = "This needs to wrap \n and I wonder if it will work \n I guess we are going to find out!";
 console.log(longString);
 
-const getTele = document.getElementById('tele');
 
-getTele.innerHTML = "Figure out how to put emoji's in html using utf-16 surrogate pairs.";
+//
+// CHECK MY NUMBER --START--
+//
+
+// assigning variables
+const yesButton = document.getElementById('yesCheckMyNumber');
+const noButton = document.getElementById('noCheckMyNumber');
+const testName = "Tomoyo Yamazaki";
+// add click event pointing to functions
+yesButton.addEventListener('click', getInput);
+noButton.addEventListener('click', displayExitMessage);
+
+function getInput() {
+  alert(`Your name is ${testName}.`);
+}
+function displayExitMessage() {
+  alert("You Chose 'NO'.")
+}
+
+
+
+//
+// CHECK MY NUMBER --END--
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

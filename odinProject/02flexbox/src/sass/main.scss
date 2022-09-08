@@ -127,14 +127,6 @@ header {
 }
 
 //
-// CHECK MY NUMBER
-//
-
-
-
-
-
-//
 // CARD AREA
 //
 .card {
@@ -211,6 +203,11 @@ header {
 .numberedHeadings { // reset MAIN heading numbers to zero
   counter-reset: section;
 }
+.numHead {
+  display: flex;
+  justify-content: space-around;
+  background-color: yellow;
+}
 h3 { // reset sub-heading numbers to zero
   counter-reset: sub-section;
   padding: 3px 0px;
@@ -237,7 +234,35 @@ h4::before { // before SUB-HEADING insert counter with subsection # incremented 
 // CSS NUMBERED HEADINGS SECTION --END--
 //
 
+//
+// CHECK MY NUMBER --START--
+//
 
+.checkMyNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // min-height: 300px;
+  background-color: teal;
+  padding: 0px 50px;
+  h1 {
+    font-size: 2em;
+    margin: 20px;
+  }
+  h2 {
+    font-size: 2.5em;
+    margin: 3px;
+    color: yellow;
+  }
+  .buttons {
+    margin: 20px;
+  }
+}
+
+
+//
+// CHECK MY NUMBER --END--
+//
 
 
 
