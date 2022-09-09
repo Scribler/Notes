@@ -44,25 +44,37 @@ console.log(longString);
 // assigning variables
 const yesButton = document.getElementById('yesCheckMyNumber');
 const noButton = document.getElementById('noCheckMyNumber');
-const testName = "Tomoyo Yamazaki";
 // add click event pointing to functions
-yesButton.addEventListener('click', getInput);
-noButton.addEventListener('click', displayExitMessage);
 
-function getInput() {
-  alert(`Your name is ${testName}.`);
+function greeting() {
+  const name = prompt('What is your name?'); // get name
+  alert(`Your name is ${name}.`);
+  alert("Your possible greetings are,\n 1\) Hello, 'name'!\n2\) Greetings, 'name'!\n3\)Salutations, 'name'!") // Give possible greeting choices
+  const greetingChoice = prompt('Which Greeting would you like? 1, 2, or 3?'); // store choice
+  if (greetingChoice == 1) { // insert name into chosen greeting and display in an alert.
+    alert(`Hello, ${name}!`);
+  } else if (greetingChoice == 2) {
+    alert(`Greetings, ${name}!`)
+  } else if (greetingChoice == 3) {
+    alert(`Salutations, ${name}!`)
+  } else {
+    alert('Invalid Choice!')
+    greeting();
+  }
 }
 function displayExitMessage() {
   alert("You Chose 'NO'.")
 }
 
 
+yesButton.addEventListener('click', greeting);
+noButton.addEventListener('click', displayExitMessage);
 
 //
 // CHECK MY NUMBER --END--
 //
 
-
+console.log('This is appostrophy\'s test....yes I know that doesn\'t have one :P.');
 
 
 
