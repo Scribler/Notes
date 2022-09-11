@@ -49,13 +49,18 @@ const noButton = document.getElementById('noCheckMyNumber');
 function greeting() {
   const name = prompt('What is your name?'); // get name
   alert(`Your name is ${name}.`);
-  alert("Your possible greetings are,\n 1\) Hello, 'name'!\n2\) Greetings, 'name'!\n3\)Salutations, 'name'!") // Give possible greeting choices
-  const greetingChoice = prompt('Which Greeting would you like? 1, 2, or 3?'); // store choice
-  if (greetingChoice == 1) { // insert name into chosen greeting and display in an alert.
+  // alert("Your possible greetings are,\n 1\) Hello, 'name'!\n2\) Greetings, 'name'!\n3\)Salutations, 'name'!") // Give possible greeting choices
+  // The below template literal keeps formatting so you don't need escaped line breaks like above.
+  alert(`Your possible greetings are,
+    1\) Hello, 'name'!
+    2\) Greetings, 'name'!
+    3\)Salutations, 'name'!`) // Give possible greeting choices
+  const greetingChoice = Number(prompt('Which Greeting would you like? 1, 2, or 3?')); // store choice AFTER converting it to a number.
+  if (greetingChoice === 1) { // insert name into chosen greeting and display in an alert.
     alert(`Hello, ${name}!`);
-  } else if (greetingChoice == 2) {
+  } else if (greetingChoice === 2) {
     alert(`Greetings, ${name}!`)
-  } else if (greetingChoice == 3) {
+  } else if (greetingChoice === 3) {
     alert(`Salutations, ${name}!`)
   } else {
     alert('Invalid Choice!')
@@ -74,11 +79,21 @@ noButton.addEventListener('click', displayExitMessage);
 // CHECK MY NUMBER --END--
 //
 
-console.log('This is appostrophy\'s test....yes I know that doesn\'t have one :P.');
+// index of and slice
 
+sentenceToCheck = "This is a sentence with a few I's in it.";
+actualIValues = [2,5,20,34,37];
+let pos = 0;
+let num = -1;
+let i = -1;
 
-
-
+for (let j=0; j<60; j++) {
+  pos = sentenceToCheck.indexOf('i', i + 1);
+  num += 1;
+  i += 1;
+  console.log(pos);
+  console.log(`number of times run: `+num);
+}
 
 
 
