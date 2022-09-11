@@ -80,20 +80,61 @@ noButton.addEventListener('click', displayExitMessage);
 //
 
 // index of and slice
+console.log("This is the lesson's version of the assignment....");
+const tagline = 'MDN - Resources for developers, by developers';
+console.log(tagline.indexOf('developers')); // 20
+console.log(tagline.indexOf('x')); // -1
+const firstOccurrence = tagline.indexOf('developers');
+const secondOccurrence = tagline.indexOf('developers', firstOccurrence + 1);
+console.log(firstOccurrence); // 20
+console.log(secondOccurrence); // 35
 
-sentenceToCheck = "This is a sentence with a few I's in it.";
-actualIValues = [2,5,20,34,37];
-let pos = 0;
-let num = -1;
-let i = -1;
 
-for (let j=0; j<60; j++) {
-  pos = sentenceToCheck.indexOf('i', i + 1);
-  num += 1;
-  i += 1;
-  console.log(pos);
-  console.log(`number of times run: `+num);
+console.log(" ");
+console.log("This is my Version of the assignment....");
+console.log("Instances of bob should be located at: 14,31,63,78");
+const taglineTwo = 'This sentance bob has the word bob in it a few different times bob as you can bob see.';
+console.log(taglineTwo);
+console.log(taglineTwo.indexOf('bob')); // 14
+console.log(taglineTwo.indexOf('x')); // -1 If the string is not present 'indexOf()' returns '-1'
+const firstTime = taglineTwo.indexOf('bob');
+const secondTime = taglineTwo.indexOf('bob', firstTime + 1);
+const thirdTime = taglineTwo.indexOf('bob', secondTime + 1);
+const fourthTime = taglineTwo.indexOf('bob', thirdTime + 1);
+const fifthTime = taglineTwo.indexOf('bob', fourthTime + 1);
+console.log(`First occurance: ${firstTime}`); // 14
+console.log(`Second occurance: ${secondTime}`); // 31
+console.log(`Third occurance: ${thirdTime}`); // 63
+console.log(`Fourth occurance: ${fourthTime}`); // 78
+console.log(`Fifth occurance?: ${fifthTime}`); // -1 (doesn't exist)
+console.log(" ");
+console.log(`
+That required all of this code!
+const taglineTwo = 'This sentance bob has the word bob in it a few different times bob as you can bob see.';
+const firstTime = taglineTwo.indexOf('bob');
+const secondTime = taglineTwo.indexOf('bob', firstTime + 1);
+const thirdTime = taglineTwo.indexOf('bob', secondTime + 1);
+const fourthTime = taglineTwo.indexOf('bob', thirdTime + 1);
+console.log(\`First occurance: ${firstTime}\`); // 14
+console.log(\`Second occurance: ${secondTime}\`); // 31
+console.log(\`Third occurance: ${thirdTime}\`); // 63
+console.log(\`Fourth occurance: ${fourthTime}\`); // 78
+`);
+console.log(" ");
+console.log("Now to write a function that will do all that work automatically");
+console.log(" ");
+
+function searching (string, findme) { // Search given string:'string', for given word:'findme'.
+  indexNum = string.indexOf(findme);  // Set indexNum to first occurance of 'findme'.
+  while (indexNum != -1) {
+    console.log(indexNum); // log the current location of given word.
+    indexNum = string.indexOf(findme, indexNum + 1); // Store next location of 'findme' in 'indexNum'.
+  }
 }
+
+searching(taglineTwo, 'bob');
+searching(taglineTwo, 'se');
+
 
 
 
