@@ -126,14 +126,24 @@ console.log(" ");
 
 function searching (string, findme) { // Search given string:'string', for given word:'findme'.
   indexNum = string.indexOf(findme);  // Set indexNum to first occurance of 'findme'.
+  sliceArray = [];
   while (indexNum != -1) {
     console.log(indexNum); // log the current location of given word.
+    sliceArray.push(`${string.slice(indexNum, indexNum+findme.length)}`);
     indexNum = string.indexOf(findme, indexNum + 1); // Store next location of 'findme' in 'indexNum'.
   }
+  console.log(sliceArray);
 }
 
 searching(taglineTwo, 'bob');
 searching(taglineTwo, 'se');
+
+let sliceable = "ThingToSlice";
+console.log(sliceable.length);
+let sliceOne = sliceable.slice(5, 7);
+// console.log(sliceable.slice(5,7));
+console.log(sliceOne);
+console.log(sliceable);
 
 
 
