@@ -1,3 +1,5 @@
+// / const { default: createDependencyGraph } = require("postcss-cli/lib/DependencyGraph");
+
 str = "This string is embeded.";
 firstStr = `The following string is embeded: '${str}'`; // USE backtics to EMBED!!! 
 
@@ -149,18 +151,52 @@ console.log("This is the substring: " + subOne);
 
 let mystring = "This is your name: yourname";
 console.log(mystring.replace("yourname", "Thomas"));
-console.log(taglineTwo.replace(/bob/g, "David"));
+console.log(taglineTwo.replace(/bob/g, "David")); // '/bob/g' > THIS IS REGEX hence it doesn't use quotes
+
+console.log(" ");
+console.log("testing");
+console.log("THIS".toLowerCase());
+console.log(mystring.toUpperCase());
+
+let conOne = "This";
+let conTwo = "That";
+let conStart = "Concatonating three strings:";
+
+console.log(conStart.concat(" ", conOne, " ", conTwo)); // concatonation is the same as using  the '+' opperator.
+console.log(conStart + " " + conOne + " " + conTwo);
+
+// NOTE - 'strings' are IMMUTABLE, ie. they cannot be changed ONLY replaced.
+
+// 'trim' removes white space
+
+let spacedOut = "     To be trimmed       ";
+console.log(spacedOut);
+console.log(spacedOut.trim()); // both front and back whitespace trimmed (not white space between words)
+console.log(spacedOut.trim().length);
+console.log(spacedOut.trimStart()); // only white space at start trimmed
+console.log(spacedOut.trimStart().length);
+console.log(spacedOut.trimEnd()); // only white space at end trimmed
+console.log(spacedOut.trimEnd().length);
+console.log(spacedOut.padStart(5, "0"));
+
+padded = "padded".padEnd(2,"x");
+console.log(padded);
 
 
+let probAnswer = document.getElementById("problemAnswer");
+let probAnswerInner = "My writen answer".toString().padStart(22, 'x')+" " + "This: character at '2': " + "This".charAt(2);
+let problemTwo = document.getElementById("problemTwo");
+let problemTwoInner = "This: character at 1: " + "This".charAt(1);
+let problemTwoInnerTwo = "This: character code at 1: " + "This".charCodeAt(1);
 
-
-
-
-        // {
-        //   "before": ["<C-u>"],
-        //   "after": ["<C-k>"]
-        // },
-        // {
-        //   "before": ["<C-d>"],
-        //   "after": ["<C-j>"]
-        // }
+function setProblemAnswer (myidtag, mycontent, mycontentTwo) {
+  let answer = undefined;
+  if (mycontentTwo != undefined) {
+    answer = mycontent + " " + mycontentTwo;
+  } else {
+    answer = mycontent;
+  }
+  myidtag.innerHTML = answer;
+}
+setProblemAnswer(probAnswer, probAnswerInner);
+setProblemAnswer(problemTwo, problemTwoInner, problemTwoInnerTwo);
