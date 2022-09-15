@@ -141,16 +141,26 @@ searching(taglineTwo, 'se');
 let sliceable = "ThingToSlice";
 console.log(sliceable.length);
 let sliceOne = sliceable.slice(5, 7);
+let subOne = sliceable.substring(5,7);
 // console.log(sliceable.slice(5,7));
-console.log(sliceOne);
-console.log(sliceable);
+console.log("Thing to slice: " + sliceable);
+console.log("This is the slice: " + sliceOne);
+console.log("This is the substring: " + subOne);
+
+let mystring = "This is your name: yourname";
+console.log(mystring.replace("yourname", "Thomas"));
+console.log(taglineTwo.replace(/bob/g, "David"));
 
 
 
 
 
 
-
-
-
-
+        // {
+        //   "before": ["<C-u>"],
+        //   "after": ["<C-k>"]
+        // },
+        // {
+        //   "before": ["<C-d>"],
+        //   "after": ["<C-j>"]
+        // }
