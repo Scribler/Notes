@@ -1,0 +1,21 @@
+Topics of Interest Mentioned.
+
+
+Topics of Interest
+
+
+
+ARTIE MAX COMMANDS
+
+artie.forward(###) move ###mm forward
+
+artie.left(###) move ###mm left
+
+artie.right(###) move ###mm right
+
+artie.movearc(100,-30) move 100 units, arc at 30 degrees to the left
+Note - Values of -90, 0, 90 will error since they will not draw a curve. Use .left, .right respectively
+
+artie.penup() - lift the marker dup
+
+artie.pendown(1) - lower a marker to draw
