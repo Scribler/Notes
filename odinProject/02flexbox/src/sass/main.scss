@@ -67,12 +67,12 @@ header {
     padding: 18px 30px;
     // background: black;
     border-radius: 30px;
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
   li:hover {
     background-color: var(--hero-secondary);
     color: var(--dark-blue);
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 }
 
@@ -99,36 +99,16 @@ header {
   gap: 30px;
   margin-bottom: 30px;
 }
-.button {
-  cursor: pointer;
-  border: 1px solid blue;
-  // border-radius: 10px;
-  padding: 20px 40px;
-}
-#machineButton {
-  box-shadow: 0px 0px 10px black;
-}
-.aniButton {
-  cursor: pointer;
-  padding: 20px 40px;
-  color: white;
-  border: none;
-  background-color: #3759F9;
-  border: 7px outset #6F88FF;
-  box-shadow: none;
-}
-.aniButton:hover {
-  background-color: #2241D3;
-}
-.aniButton:active {
-  color: #BCBCBC;
-  background-color: #0C37FF;
-  border: 7px inset #6F88FF;
-}
 
 //
 // CARD AREA
 //
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+}
 .card {
   background-color: var(--light-blue);
   height: 250px;
@@ -138,6 +118,7 @@ header {
   display: flex;
   flex-direction: column;
   transition: all .3s;
+  margin-bottom: 25px;
   &:hover {
     border: 1px solid var(--dark-blue);
     transition: all .3s;
@@ -229,15 +210,9 @@ h4::before { // before SUB-HEADING insert counter with subsection # incremented 
   counter-increment: sub-section;
   content: counter(section) "." counter(sub-section)" ";
 }
-
-//
 // CSS NUMBERED HEADINGS SECTION --END--
-//
 
-//
 // CHECK MY NUMBER --START--
-//
-
 .checkMyNumber {
   display: flex;
   flex-direction: column;
@@ -258,16 +233,7 @@ h4::before { // before SUB-HEADING insert counter with subsection # incremented 
     margin: 20px;
   }
 }
-
-
-//
 // CHECK MY NUMBER --END--
-//
-
-
-
-
-
 
 // FOOTER
 footer {
