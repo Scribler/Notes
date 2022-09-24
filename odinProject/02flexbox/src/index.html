@@ -40,11 +40,13 @@
         <section class="testing-area"></section>
           <h2 class="main-heading">Counter Button</h2>
           <div class="counterButtonContainer">
-            <button id="animatedButton" class="aniButton">Counter Plus One</button>
-            <button id="animatedButtonTwo" class="aniButton">Reset Counter</button>
+            <div class="contentCont">
+              <button id="animatedButton" class="aniButton">Counter Plus One</button>
+              <button id="animatedButtonTwo" class="aniButton">Reset Counter</button>
+            </div>
+              <h2>Counter</h2>
+              <p id="counter" class="counter">0</p>
           </div>
-          <h2>Counter</h2>
-          <p id="counter" class="counter">0</p>
         </section>
 
         <section class="testing-area">
@@ -86,7 +88,7 @@
         <section class="testing-area">
           <h2 class="main-heading">PETS</h2>
           <label for="hat-styles">Select your prefered Pet.</label>
-          <select id="pet">
+          <select id="pet" autocomplete="off">
             <option value="" selected>--Make a choice--</option>
             <option value="catCardArea">Cat</option>
             <option value="dogCardArea">Dog</option>

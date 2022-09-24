@@ -101,6 +101,19 @@ header {
   padding-bottom: 30px;
   border-bottom: 1px solid black;
 }
+//
+// COUNTER BUTTON AREA
+//
+.counterButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2, p {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
 
 //
 // CARD AREA
@@ -125,15 +138,12 @@ header {
 }
 #catArea {
   @include cardAreaActive();
-  background-color: yellow;
 }
 #dogArea {
   @include cardAreaActive();
-  background-color: red;
 }
 #lamaArea {
   @include cardAreaActive();
-  background-color: blue;
 }
 @mixin cards {
   background-color: var(--light-blue);
