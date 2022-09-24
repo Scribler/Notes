@@ -97,28 +97,54 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
 }
 
 //
 // CARD AREA
 //
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px;
+#pet {
+  appearance: default;
 }
-.card {
+.cards {
+  width: 100%;
+  min-height: 300px;
+  &:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+@mixin cardAreaActive {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#catArea {
+  @include cardAreaActive();
+  background-color: yellow;
+}
+#dogArea {
+  @include cardAreaActive();
+  background-color: red;
+}
+#lamaArea {
+  @include cardAreaActive();
+  background-color: blue;
+}
+@mixin cards {
   background-color: var(--light-blue);
   height: 250px;
   width: 200px;
+  padding: 20px;
   border-radius: 20px;
   border: 5px solid var(--dark-blue);
   display: flex;
   flex-direction: column;
   transition: all .3s;
-  margin-bottom: 25px;
   &:hover {
     border: 1px solid var(--dark-blue);
     transition: all .3s;
@@ -128,10 +154,38 @@ header {
     transition: all .2s;
   }
   .picture {
-    width: 150px;
+    // width: 150px;
     height: 160px;
-    background-color: black;
-    margin: 20px auto;
+    // background-color: black;
+    // margin: 20px auto;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+.card {
+  background-color: var(--light-blue);
+  height: 250px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  transition: all .3s;
+  &:hover {
+    border: 1px solid var(--dark-blue);
+    transition: all .3s;
+  }
+  &:active {
+    border: 5px solid var(--dark-blue);
+    transition: all .2s;
+  }
+  .picture {
+    // width: 150px;
+    height: 160px;
+    // background-color: black;
+    // margin: 20px auto;
   }
   p {
     margin: 0 auto;

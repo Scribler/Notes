@@ -31,21 +31,25 @@
     </header>
     <main>
       <div class="main-content-container">
-        <h2 class="main-heading">Testing Area</h2>
         <section class="testing-area">
-
+        <h2 class="main-heading">Box Shadow Machine</h2>
           <button id="machineButton" class="machineButton">Start Machine</button>
           <p id="machineStatus">Machine stopped.</p>
-          
+        </section>  
+
+        <section class="testing-area"></section>
+          <h2 class="main-heading">Counter Button</h2>
           <div class="counterButtonContainer">
             <button id="animatedButton" class="aniButton">Counter Plus One</button>
             <button id="animatedButtonTwo" class="aniButton">Reset Counter</button>
           </div>
           <h2>Counter</h2>
           <p id="counter" class="counter">0</p>
+        </section>
 
+        <section class="testing-area">
           <div class="numberedHeadings">
-            <h1>CSS Numbering!</h1>
+            <h2 class="main-heading">CSS Numbering!</h2>
             <ul class="numHead">
               <li>
                 <h3>test</h3>
@@ -64,7 +68,10 @@
               </li>
             </ul>
           </div>
+        </section>
 
+        <section class="testing-area">
+          <h2 class="main-heading">User Input</h2>
           <div class="checkMyNumber">
             <h1>Do you want to display your name?</h1>
             <div class="buttons">
@@ -72,51 +79,106 @@
               <button id="noCheckMyNumber"class="aniButton">NO</button>
             </div>
           </div>
-          <p>"Figure out how to put emoji's in html using utf-16 surrogate pairs."</p>
 
           <h3 id="problemAnswer"></h3>
-          <h3 id="problemTwo"></h3>
-          
+        <h3 id="problemTwo"></h3>
+        </section>
+        <section class="testing-area">
+          <h2 class="main-heading">PETS</h2>
+          <label for="hat-styles">Select your prefered Pet.</label>
+          <select id="pet">
+            <option value="" selected>--Make a choice--</option>
+            <option value="catCardArea">Cat</option>
+            <option value="dogCardArea">Dog</option>
+            <option value="lamaCardArea">Lama</option>
+          </select>
           <div class="cards">
-            <div id="card1" class="card"><div class="picture"></div> <p id="card1text">card 1</p> </div>
-            <div id="card2" class="card"> <div class="picture"></div><p id="card2text">card 2</p> </div>
-            <div id="card3" class="card"><div class="picture"></div> <p id="card3text">card 3</p> </div>
-            <div id="card4" class="card"><div class="picture"></div> <p id="card4text">card 4</p> </div>
-            <div id="card5" class="card"><div class="picture"></div> <p id="card5text">card 5</p> </div>
-            <div id="card6" class="card"><div class="picture"></div> <p id="card6text">card 6</p> </div>
-            <div id="card7" class="card"><div class="picture"></div> <p id="card7text">card 7</p> </div>
-            <div id="card8" class="card"><div class="picture"></div> <p id="card8text">card 8</p> </div>
-            <div id="card9" class="card"><div class="picture"></div> <p id="card9text">card 9</p> </div>
-            <div id="card10" class="card"><div class="picture"></div> <p id="card10text">card 10</p> </div>
-            <div id="card11" class="card"><div class="picture"></div> <p id="card11text">card 11</p> </div>
-            <div id="card12" class="card"><div class="picture"></div> <p id="card12text">card 12</p> </div>
-            <div id="card1" class="card"><div class="picture"></div> <p>card 1</p> </div>
-            <div id="card2" class="card"><div class="picture"></div> <p>card 2</p> </div>
-            <div id="card3" class="card"><div class="picture"></div> <p>card 3</p> </div>
-            <div id="card4" class="card"><div class="picture"></div> <p>card 4</p> </div>
-            <div id="card5" class="card"><div class="picture"></div> <p>card 5</p> </div>
-            <div id="card6" class="card"><div class="picture"></div> <p>card 6</p> </div>
-            <div id="card7" class="card"><div class="picture"></div> <p>card 7</p> </div>
-            <div id="card8" class="card"><div class="picture"></div> <p>card 8</p> </div>
-            <div id="card9" class="card"><div class="picture"></div> <p>card 9</p> </div>
-            <div id="card10" class="card"><div class="picture"></div> <p>card 10</p> </div>
-            <div id="card11" class="card"><div class="picture"></div> <p>card 11</p> </div>
-            <div id="card12" class="card"><div class="picture"></div> <p>card 12</p> </div>
-            <div id="card1" class="card"><div class="picture"></div> <p>card 1</p> </div>
-            <div id="card2" class="card"><div class="picture"></div> <p>card 2</p> </div>
-            <div id="card3" class="card"><div class="picture"></div> <p>card 3</p> </div>
-            <div id="card4" class="card"><div class="picture"></div> <p>card 4</p> </div>
-            <div id="card5" class="card"><div class="picture"></div> <p>card 5</p> </div>
-            <div id="card6" class="card"><div class="picture"></div> <p>card 6</p> </div>
-            <div id="card7" class="card"><div class="picture"></div> <p>card 7</p> </div>
-            <div id="card8" class="card"><div class="picture"></div> <p>card 8</p> </div>
-            <div id="card9" class="card"><div class="picture"></div> <p>card 9</p> </div>
-            <div id="card10" class="card"><div class="picture"></div> <p>card 10</p> </div>
-            <div id="card11" class="card"><div class="picture"></div> <p>card 11</p> </div>
-            <div id="card12" class="card"><div class="picture"></div> <p>card 12</p> </div>
+            <div id="catArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 5</p>
+              </div>
+            </div>
+            <div id="dogArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 5</p>
+              </div>
+            </div>
+            <div id="lamaArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 5</p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </main>

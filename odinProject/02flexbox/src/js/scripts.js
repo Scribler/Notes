@@ -298,9 +298,6 @@ console.log(spacedOut.padStart(5, "0"));
 
 padded = "padded".padEnd(2,"x");
 console.log(padded);
-
-
-
 function setProblemAnswer (myidtag, mycontent, mycontentTwo) {
   let answer = undefined;
   if (mycontentTwo != undefined) {
@@ -328,7 +325,6 @@ switch (num) {
   default:
     console.log("No cases match");
 }
-
 switch (new Date().getDay()) {
   case 0:
     day = "Sunday";
@@ -339,7 +335,6 @@ switch (new Date().getDay()) {
   default:
     day = "Looking forward to the weekend!";
 }
-
 console.log(day);
 console.log(new Date().getDay());
 switch (daynum) {
@@ -393,10 +388,41 @@ if (theage >= 14 && theage <= 90) {
 //   alert("You monster! Go away!");
 // }
 
+const select = document.getElementById('pet');
 
+const catCardArea = document.getElementById('catArea');
+const dogCardArea = document.getElementById('dogArea');
+const lamaCardArea = document.getElementById('lamaArea');
 
+select.addEventListener('change', updateList);
+catCardArea.style.display = 'none';
+dogCardArea.style.display = 'none';
+lamaCardArea.style.display = 'none';
 
-
+function updateList () {
+  const choice = select.value;
+  switch (choice) {
+    case 'catCardArea':
+      dogCardArea.style.display = 'none';
+      lamaCardArea.style.display = 'none';
+      catCardArea.style = '#cardAreaActive';
+      break;
+    case 'dogCardArea':
+      catCardArea.style.display = 'none';
+      lamaCardArea.style.display = 'none';
+      dogCardArea.style = '#cardAreaActive';
+      break;
+    case 'lamaCardArea':
+      catCardArea.style.display = 'none';
+      dogCardArea.style.display = 'none';
+      lamaCardArea.style = '#cardAreaActive';
+      break;
+    default:
+      catCardArea.style.display = 'none';
+      dogCardArea.style.display = 'none';
+      lamaCardArea.style.display = 'none';
+  }
+}
 
 
 
