@@ -163,6 +163,24 @@
             </div>
           </div>
         </section>
+        <section class="testing-area">
+          <h2>Changing Text</h2>
+          <fieldset>
+            <legend>Weather Types</legend>
+            <!-- choose weather type (will change description in weatherDisplay) -->
+            <div>
+              <input type="radio" name="weather" id="sunny" value="sunny" checked autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="sunny">Sunny</label>
+              <input type="radio" name="weather" id="cloudy" value="cloudy" autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="cloudy">Cloudy</label>
+              <input type="radio" name="weather" id="rainy" value="rainy" autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="rainy">Rainy</label>
+            </div>
+          </fieldset>
+
+          <textarea name="weatherDisplay" id="weatherDisplay" cols="50" rows="10">Display Weather Here.</textarea>
+            
+        </section>
       </div>
 
 

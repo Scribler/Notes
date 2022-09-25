@@ -424,5 +424,23 @@ function updateList () {
   }
 }
 
+// changing weather displayed 
+
+function weatherSelect (weatherType) {
+  const textbox = document.getElementById('weatherDisplay');
+  switch (weatherType) {
+    case 'sunny':
+      textbox.textContent += " It is Sunny Outside.";
+      break;
+    case 'cloudy':
+      textbox.textContent += " It is Cloudy Outside.";
+      break;
+    case 'rainy':
+      textbox.textContent += " It is Rainy Outside!";
+      break;
+    default:
+      textbox.textContent += " Select a weather type."
+  }
+}
 
 

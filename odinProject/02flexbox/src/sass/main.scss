@@ -299,6 +299,21 @@ h4::before { // before SUB-HEADING insert counter with subsection # incremented 
 }
 // CHECK MY NUMBER --END--
 
+// CHANGING TEXT WITH RADIO BUTTONS
+
+fieldset {
+  border: solid black 2px;
+  padding: 0 50 20 0;
+}
+#weatherDisplay {
+  background-color: #EEEFF2;
+  padding: 20px;
+  border: solid grey 2px;
+}
+input, label, fieldset {
+  cursor: pointer;
+}
+
 // FOOTER
 footer {
   margin-top: auto;
