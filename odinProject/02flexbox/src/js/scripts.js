@@ -430,17 +430,69 @@ function weatherSelect (weatherType) {
   const textbox = document.getElementById('weatherDisplay');
   switch (weatherType) {
     case 'sunny':
-      textbox.textContent += " It is Sunny Outside.";
+      textbox.textContent += "\nIt is Sunny Outside.";
       break;
     case 'cloudy':
-      textbox.textContent += " It is Cloudy Outside.";
+      textbox.textContent += "\nIt is Cloudy Outside.";
       break;
     case 'rainy':
-      textbox.textContent += " It is Rainy Outside!";
+      textbox.textContent += "\nIt is Rainy Outside!";
+      break;
+    case 'windy':
+      textbox.textContent += "\n It is windy outside."
+      break;
+    case 'humid':
+      textbox.textContent += "\n It is humid outside."
       break;
     default:
-      textbox.textContent += " Select a weather type."
+      textbox.textContent += "\nSelect a weather type."
   }
 }
+function backgroundSelect (color) {
+  const textbox = document.getElementById('weatherDisplay');
+  switch (color) {
+    case 'white':
+      textbox.style.backgroundColor = 'white';
+      break;
+    case 'black':
+      textbox.style.backgroundColor = 'black';
+      break;
+    default:
+      textbox.style.backgroundColor = 'blue';
+  }
+}
+function textColorSelect (color) {
+  const textbox = document.getElementById('weatherDisplay');
+  switch (color) {
+    case 'whitet':
+      textbox.style.color = 'white';
+      break;
+    case 'blackt':
+      textbox.style.color = 'black';
+      break;
+    default:
+      textbox.style.color = 'green';
+  }
+}
+
+const birthday = false;
+
+// this abbreviated syntax is an if else statement essentially
+birthday ? console.log("happybirthday") : console.log("It's not your birthday. :(");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

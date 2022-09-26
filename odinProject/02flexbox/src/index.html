@@ -177,6 +177,33 @@
               <label for="rainy">Rainy</label>
             </div>
           </fieldset>
+          <fieldset>
+            <legend>Other</legend>
+            <div>
+              <input type="checkbox" name="other" id="windy" value="windy" onclick="weatherSelect(this.value)">
+              <label for="cold">Windy</label>
+              <input type="checkbox" name="other" id="humid" value="humid" onclick="weatherSelect(this.value)">
+              <label for="cold">Humid</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Background Color</legend>
+            <div>
+              <input type="radio" name="background" id="black" value="black" onclick="backgroundSelect(this.value)">
+              <label for="black">Black</label>
+              <input type="radio" name="background" id="white" value="white" onclick="backgroundSelect(this.value)">
+              <label for="white">white</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Color</legend>
+            <div>
+              <input type="radio" name="textColor" id="blackt" value="blackt" onclick="textColorSelect(this.value)">
+              <label for="blackt">Black</label>
+              <input type="radio" name="textColor" id="whitet" value="whitet" onclick="textColorSelect(this.value)">
+              <label for="whitet">White</label>
+            </div>
+          </fieldset>
 
           <textarea name="weatherDisplay" id="weatherDisplay" cols="50" rows="10">Display Weather Here.</textarea>
             
