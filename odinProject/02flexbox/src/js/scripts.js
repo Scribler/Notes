@@ -463,16 +463,8 @@ function backgroundSelect (color) {
 }
 function textColorSelect (color) {
   const textbox = document.getElementById('weatherDisplay');
-  switch (color) {
-    case 'whitet':
-      textbox.style.color = 'white';
-      break;
-    case 'blackt':
-      textbox.style.color = 'black';
-      break;
-    default:
-      textbox.style.color = 'green';
-  }
+  // replaced switch statement with 'ternary' operator
+  color == 'white' ? textbox.style.color = 'white' : textbox.style.color = 'black';
 }
 
 const birthday = false;
@@ -480,7 +472,10 @@ const birthday = false;
 // this abbreviated syntax is an if else statement essentially
 birthday ? console.log("happybirthday") : console.log("It's not your birthday. :(");
 
+const mytest = 'green';
+console.log(mytest);
 
+mytest == 'blue' ? console.log("It's blue!") : console.log("It's not blue...");
 
 
 
