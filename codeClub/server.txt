@@ -1,0 +1,186 @@
+
+web socket > socket.io (for constant update website as opposed to static that you can't update on the go.)
+web socket > bidirectional communication  as opposed to a load once static connection.
+
+-json > a strikt piece of javascript, used for sending info back and forth in a simple efficient way.
+
+package.json extensions
+    - passport ( package for logins)
+    - cookie parser ( helps the site know if you are logged in. )
+    - handlebars
+
+
+STUFF DONE ON DATABASE
+- (salt) randomize names etc. before hashing for additional security.
+- hashing function is in the server js
+- dealing with timezones
+- logic around updating, and generally manipulating data.
+-creating rows, or tables.
+
+*** do not overwrite data (you may need it later)
+
+get, put, post ( methods for communicating with server)
+
+- make fallbacks incase they don't use javascript
+
+*** initialize DATABASE
+*** tell it it's structure
+
+-sql is just the protocol for talking to sql databases, It isn't the actual database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ディスプレイに戻るには、/display.htmlをURLのあとにつける
+import express from "express";
+import fs from "fs"; //The fs module provides a lot of very useful functionality to access and interact with the file system.
+import { createServer } from "http";
+import { Server } from "socket.io";
+let stories = {};
+const MAX_STORIES = 15;
+
+// is actually part of a larger construct beginning with try{
+//If you write some code and something goes wrong, like you
+//"try" to access a variable that doesn't exist, or divide by zero,
+//something like that, it will throw an exception, which means there is a message
+//about what went wrong and the computer stops trying to process your code
+//after that because it doesn't know what to do.
+function loadStories() {
+  try {
+    stories = JSON.parse(fs.readFileSync("stories.json", "utf8"));
+    // handle switch from array to object for stories
+  } catch (e) {
+    console.error("failed to load stories");
+    stories = {};
+  }
+}
+
+function saveStories() {
+  fs.writeFileSync("stories.json", JSON.stringify(stories), "utf8");
+}
+// express is a  common js library
+const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer);
+loadStories();
+// starts webserver running
+io.listen(httpServer); //socket.on(eventName, listener)
+
+app.use("/", express.static("public"));
+
+function newStory(story) {
+  //adding new story
+  io.emit("new-story", story); //emit is sending (to everyone)
+  console.log("new %s story added: %s", story.mood, story.story);
+  if (!stories[story.mood]) {
+    stories[story.mood] = [];
+  }
+  stories[story.mood].push(story.story); //The push() method adds more elements to the end of an array and returns the new length of the array.
+  while (stories[story.mood].length > MAX_STORIES) { // use while loop instead of if because multiple user issues it is better.
+    removeStory({mood: story.mood, story: stories[story.mood][0]})
+  }
+  saveStories();
+}
+
+function removeStory(story) {
+  let index = stories[story.mood].indexOf(story.story);
+  // we've removed the first item from the array on the server, so index is almost certainly 0
+  // but we're coding defensively here in case the server and visualizer get out of sync
+  console.log('removing story "%s" at index %s', story.story, index);
+  if (index !== -1) {
+    // actually remove the story
+    stories[story.mood].splice(index, 1);
+    io.emit("remove-story", story);
+  }
+}
+
+
+function populateFully(allStories) {
+  stories = allStories;
+  io.emit("stories-so-far", stories);
+  saveStories();
+}
+
+function clear() {
+  console.log("clearing old stories");
+  stories = {};
+  saveStories();
+  io.emit("stories-so-far", stories);
+}
+
+function sum(array) {
+  return array.reduce((a, b) => a + b, 0);
+}
+
+function moods() {
+  return Object.keys(stories);
+}
+
+function countStories() {
+  return sum(moods().map((mood) => stories[mood].length));
+}
+
+function pickRandom(array) {
+  let index = Math.floor(Math.random() * array.length);
+  return array[index];
+}
+
+function allStories(){
+  let all = [];
+  moods().forEach(mood => all.push(...(stories[mood].map(story => ({mood, story})))));
+  return all;
+}
+
+function randomStory() {
+  return pickRandom(allStories());
+}
+
+function explodeAll() {
+  let all = allStories();
+  while (all.length) {
+    let story = all.pop();
+    removeStory(story);
+  }
+}
+
+function explodeRandom(){
+  let story = randomStory();
+  if (story){
+    io.emit("remove-story", story);
+  }
+}
+// every time someone connects it calls this code (gives them these options)
+io.on("connection", (socket) => {
+  console.log("a user joined");
+  socket.on("disconnect", () => console.log("user disconnected"));
+  socket.on("new-story", newStory);
+  socket.on("clear", clear);
+  socket.on("populate-fully", populateFully);
+  socket.on("remove-story", (story) => io.emit("remove-story", story));
+  socket.on("explodeRandom", explodeRandom);
+  socket.on("explode-all", explodeAll);
+  socket.on("mood-rotation", value => {
+    console.log('mood-rotation, %s', value);
+    io.emit("mood-rotation", value);
+  });
+  socket.on("story-rotation", value => io.emit("story-rotation", value));
+  socket.on('mood-zoom', value => io.emit("mood-zoom", value));
+  socket.on("story-speed", value => io.emit("story-speed", value));
+  socket.emit("stories-so-far", stories);
+});
+
+httpServer.listen(3000);
+console.log("listening on port 3000");
