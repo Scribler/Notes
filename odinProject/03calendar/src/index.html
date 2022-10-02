@@ -25,16 +25,340 @@
 </head>
 <body>
   <header>
-    <h1 class="hero-heading">Hero Heading</h1>
+    <div class="hero">
+      <h1 class="hero-heading">My Calendar</h1>
+      <select name="month" id="month" onchange="changemonth(this.value)" autocomplete="off">
+        <option value="default">Choose A Month</option>
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+      </select>
+    </div>
+    <div id="whichMonth">MONTH</div>
     <ul class="main-nav">
-      <li><a href="">link1</a></li>
+      <li><a href="">Add Event</a></li>
     </ul>
   </header>
 
   <main>
     <section class="calendarContainer">
-      <h2 class="monthName">Month</h2>
-      <h2 class="year">YEAR</h2>
+      <div class="calendarHeading">
+        <h2 id="monthName" class="monthName">Month</h2>
+        <h2 id="thisYear" class="year">YEAR</h2>
+      </div>
+      <div class="calendarDays">
+        <div class="dayName"><h3>Sunday</h3></div>
+        <div class="dayName"><h3>Monday</h3></div>
+        <div class="dayName"><h3>Tuesday</h3></div>
+        <div class="dayName"><h3>Wednesday</h3></div>
+        <div class="dayName"><h3>Thursday</h3></div>
+        <div class="dayName"><h3>Friday</h3></div>
+        <div class="dayName"><h3>Saturday</h3></div>
+        <!-- .day*35>.daynum>(.triangle+.num{$})+.dayContent{plans} -->
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, assumenda.</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+        <div class="day">
+          <div class="daynum">
+            <div class="triangle"></div>
+            <div class="num"></div>
+          </div>
+          <div class="dayContent">plans</div>
+        </div>
+      </div>
     </section>
   </main>
 

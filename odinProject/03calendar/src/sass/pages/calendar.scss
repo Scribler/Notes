@@ -1,3 +1,73 @@
-h1 {
-    background-color: blue;
+body {
+    margin: 0 auto;
+    max-width: (180px * 7) + 80px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.hero {
+    width: 22em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendarHeading {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.dayName {
+    // background-color: aqua;
+    background-color: #459A0B;
+    display: flex;
+    width: 180px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.calendarDays {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: (180px * 7) + 80px;
+}
+.day {
+    height: 150px;
+    width: 180px;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+}
+.daynum {
+    width: 70px;
+    height: 70px;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 70px solid #FFFFA1;
+    border-bottom: 70px solid transparent;
+}
+.num {
+    position: relative;
+    left: 10px;
+    top: -55px;
+}
+.dayContent {
+    width: 130px;
+    height: 100px;
+    position: relative;
+    top: -25px;
+    left: 35px;
+
+}
+
+#whichMonth {
+    font-size: 50px;
+    color: blue;
 }
