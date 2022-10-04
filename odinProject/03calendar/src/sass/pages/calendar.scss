@@ -20,6 +20,35 @@ header {
     display: flex;
     justify-content: space-around;
 }
+#addevent_button {
+    padding: 10px 20px;
+}
+#addevent {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    background-color: white;
+    z-index: 1;
+    border: 1px solid black;
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    width: 330px;
+    height: 290px;
+    padding: 30px;
+    h3 {
+        margin: 15px;
+    }
+}
+#event-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: right;
+    gap: 20px;
+}
+.save-button {
+    margin: 20px auto;
+}
 .dayName {
     // background-color: aqua;
     background-color: #459A0B;

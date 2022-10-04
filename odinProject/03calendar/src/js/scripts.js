@@ -59,51 +59,51 @@ const setMonthDays = function(month,year) {
     monthName.textContent = month;
     thisYear.textContent = year;
     switch(month) {
-        case 'JANUARY':
+        case 'JANUARY': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 6, 11);
             break;
-        case 'FEBRUARY':
+        case 'FEBRUARY': // 28 days (29 every 4 years)
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 2, 14);
             break;
-        case 'MARCH':
+        case 'MARCH': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 2, 11);
             break;
-        case 'APRIL':
+        case 'APRIL': // 30 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 5, 12);
             break;
-        case 'MAY':
+        case 'MAY': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 0, 11);
             break;
-        case 'JUNE':
+        case 'JUNE': // 30 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 3, 12);
             break;
-        case 'JULY':
+        case 'JULY': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 5, 11);
             break;
-        case 'AUGUST':
+        case 'AUGUST': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 1, 11);
             break;
-        case 'SEPTEMBER':
+        case 'SEPTEMBER': // 30 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 4, 12);
             break;
-        case 'OCTOBER':
+        case 'OCTOBER': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 6, 11);
             break;
-        case 'NOVEMBER':
+        case 'NOVEMBER': // 30 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 2, 12);
             break;
-        case 'DECEMBER':
+        case 'DECEMBER': // 31 days
             setTriangles(daynumArray, daynum, triangle);
             setDays(daynumArray, daynum, dayContent, triangle, 4, 11);
             break;
@@ -119,7 +119,23 @@ const setMonthDays = function(month,year) {
 function changemonth () {
     const month = document.getElementById('month');
     const uppercase = month.value.toUpperCase();
-    document.getElementById('whichMonth').innerHTML = uppercase;
     setMonthDays(month.value.toUpperCase(), currentYear);
 }
 document.getElementById('month').addEventListener(InputEvent, changemonth());
+
+const eventButton = document.getElementById('addevent_button');
+const saveButton = document.getElementById('save-event');
+const eventDetails = document.getElementById('addevent');
+eventButton.addEventListener('click', showModal);
+saveButton.addEventListener('click', hideModal);
+function showModal () {
+    eventDetails.style.display = "flex";
+}
+function hideModal () {
+    eventDetails.style.display = "none";
+}
+
+function advanceYear () {
+    console.log();
+
+}

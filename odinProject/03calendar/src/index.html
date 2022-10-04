@@ -43,13 +43,24 @@
         <option value="december">December</option>
       </select>
     </div>
-    <div id="whichMonth">MONTH</div>
     <ul class="main-nav">
-      <li><a href="">Add Event</a></li>
+      <button id="addevent_button" class="button">Add Event</button>
     </ul>
   </header>
 
   <main>
+    <div id="addevent" class="event-modal">
+      <h3>Add Event Details</h3>
+      <form action="" id="event-form">
+        <label for="eventname">Your Event:</label>
+        <input type="text" name="eventname" id="eventname" value="What is your event?">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+        <label for="color">Color:</label>
+        <input type="color" name="color" id="color">
+      </form>
+        <button id="save-event" class="save-button">Save</button>
+    </div>
     <section class="calendarContainer">
       <div class="calendarHeading">
         <h2 id="monthName" class="monthName">Month</h2>
