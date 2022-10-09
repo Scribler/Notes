@@ -126,6 +126,7 @@ document.getElementById('month').addEventListener(InputEvent, changemonth());
 const eventButton = document.getElementById('addevent_button');
 const saveButton = document.getElementById('save-event');
 const eventDetails = document.getElementById('addevent');
+const htmlBackground = document.getElementById('mainContainer');
 eventButton.addEventListener('click', showModal);
 saveButton.addEventListener('click', hideModal);
 function showModal () {
