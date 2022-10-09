@@ -1,5 +1,6 @@
 // Main Sass file
 @use './abstracts'; 
+@use './abstracts/flexAssignJsPractice';
 // @use 'abstracts' as *;
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
@@ -23,7 +24,4 @@
 @use './themes';
 // @use 'themes/theme';
 // @use 'themes/admin';
-
-// PAGES
-@use './pages/home';
-@use './pages/calendar';
+@use './pages/javascriptPractice';

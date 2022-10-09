@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Practice</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="../assets/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <link rel="stylesheet" type="text/css" href="css/javascriptPracticeMain.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1 class="hero-heading">Javascript Practice</h1>
+      <ul class="main-nav">
+        <button id="home" class="button"><a href="index.html">HOME</a></button>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li><a href="">link3</a></li>
+      </ul>
+
+    </header>
+    <main>
+      <div class="main-content-container">
+        <section class="testing-area">
+        <h2 class="main-heading">Box Shadow Machine</h2>
+          <button id="machineButton" class="machineButton">Start Machine</button>
+          <p id="machineStatus">Machine stopped.</p>
+        </section>  
+
+        <section class="testing-area"></section>
+          <h2 class="main-heading">Counter Button</h2>
+          <div class="counterButtonContainer">
+            <div class="contentCont">
+              <button id="animatedButton" class="aniButton">Counter Plus One</button>
+              <button id="animatedButtonTwo" class="aniButton">Reset Counter</button>
+            </div>
+              <h2>Counter</h2>
+              <p id="counter" class="counter">0</p>
+          </div>
+        </section>
+
+        <section class="testing-area">
+          <div class="numberedHeadings">
+            <h2 class="main-heading">CSS Numbering!</h2>
+            <ul class="numHead">
+              <li>
+                <h3>test</h3>
+                  <h4>test2</h4>
+              </li>
+              <li>
+                <h3>test</h3>
+                  <h4>test2</h4>
+                  <h4>test2</h4>
+              </li>
+              <li>
+                <h3>test</h3>
+                  <h4>test2</h4>
+                  <h4>test2</h4>
+                  <h4>test2</h4>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="testing-area">
+          <h2 class="main-heading">User Input</h2>
+          <div class="checkMyNumber">
+            <h1>Do you want to display your name?</h1>
+            <div class="buttons">
+              <button id="yesCheckMyNumber"class="aniButton">YES</button>
+              <button id="noCheckMyNumber"class="aniButton">NO</button>
+            </div>
+          </div>
+
+          <h3 id="problemAnswer"></h3>
+        <h3 id="problemTwo"></h3>
+        </section>
+        <section class="testing-area">
+          <h2 class="main-heading">PETS</h2>
+          <label for="hat-styles">Select your prefered Pet.</label>
+          <select id="pet" autocomplete="off">
+            <option value="" selected>--Make a choice--</option>
+            <option value="catCardArea">Cat</option>
+            <option value="dogCardArea">Dog</option>
+            <option value="lamaCardArea">Lama</option>
+          </select>
+          <div class="cards">
+            <div id="catArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/cat.jpg" alt="cat"></div>
+                <p>Cat 5</p>
+              </div>
+            </div>
+            <div id="dogArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/dog.jpg" alt="dog"></div>
+                <p>Dog 5</p>
+              </div>
+            </div>
+            <div id="lamaArea">
+              <div id="card1" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 1</p>
+              </div>
+              <div id="card2" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 2</p>
+              </div>
+              <div id="card3" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 3</p>
+              </div>
+              <div id="card4" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 4</p>
+              </div>
+              <div id="card5" class="card">
+                <div class="picture"><img src="/assets/img/lama.jpg" alt="lama"></div>
+                <p>Lama 5</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testing-area">
+          <h2>Changing Text</h2>
+          <fieldset>
+            <legend>Weather Types</legend>
+            <!-- choose weather type (will change description in weatherDisplay) -->
+            <div>
+              <input type="radio" name="weather" id="sunny" value="sunny" checked autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="sunny">Sunny</label>
+              <input type="radio" name="weather" id="cloudy" value="cloudy" autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="cloudy">Cloudy</label>
+              <input type="radio" name="weather" id="rainy" value="rainy" autocomplete="off" onclick="weatherSelect(this.value)">
+              <label for="rainy">Rainy</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Other</legend>
+            <div>
+              <input type="checkbox" name="other" id="windy" value="windy" onclick="weatherSelect(this.value)">
+              <label for="windy">Windy</label>
+              <input type="checkbox" name="other" id="humid" value="humid" onclick="weatherSelect(this.value)">
+              <label for="humid">Humid</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Background Color</legend>
+            <div>
+              <input type="radio" name="background" id="black" value="black" onclick="backgroundSelect(this.value)" autocomplete="off">
+              <label for="black">Black</label>
+              <input type="radio" name="background" id="white" value="white" onclick="backgroundSelect(this.value)" autocomplete="off">
+              <label for="white">white</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Color</legend>
+            <div>
+              <input type="radio" name="textColor" id="blackt" value="black" onclick="textColorSelect(this.value)" autocomplete="off">
+              <label for="blackt">Black</label>
+              <input type="radio" name="textColor" id="whitet" value="white" onclick="textColorSelect(this.value)" autocomplete="off">
+              <label for="whitet">White</label>
+            </div>
+          </fieldset>
+
+          <textarea name="weatherDisplay" id="weatherDisplay" cols="50" rows="10">Display Weather Here.</textarea>
+            
+        </section>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+      <p>footer</p>
+
+
+    </footer>
+
+
+
+
+  </div>
+  <script src="js/javascriptPractice.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@
     "watch:js": "onchange 'src/js/**/*' -- npm run copy:js",
     "watch:assets": "onchange 'src/assets/**/**/*' -- npm run copy:assets",
     "watch:html": "onchange 'src/*.html' -- npm run copy:html",
-    "watch:sass": "sass  --no-source-map --watch src/sass/main.scss:public/css/main.css src/sass/dropmenu.scss:public/css/dropmenu.css src/sass/calendarMain.scss:public/css/calendarMain.css",
+    "watch:sass": "sass  --no-source-map --watch src/sass/main.scss:public/css/main.css src/sass/dropmenuMain.scss:public/css/dropmenuMain.css src/sass/calendarMain.scss:public/css/calendarMain.css src/sass/readingMain.scss:public/css/readingMain.css src/sass/flexboxMain.scss:public/css/flexboxMain.css src/sass/flexAssignmentMain.scss:public/css/flexAssignmentMain.css src/sass/javascriptPracticeMain.scss:public/css/javascriptPracticeMain.css",
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
