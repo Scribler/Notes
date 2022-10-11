@@ -6,13 +6,13 @@
 //FLEX CONTAINER
 .main-container {
   @include reset;
-  background-color: $grey;
+  background-color: var(--grey);
   display: flex;
 }
 
 // LEFT MENU AREA
 .left-menu-container {
-  background-color: $white;
+  background-color: var(--white);
   flex: 0 0 250px;
   height: 100vh;
 }
@@ -31,7 +31,7 @@
 }
 
 .left-menu-button {
-  background-color: $light-grey;
+  background-color: var(--light-grey);
   position: relative;
   padding: 20px;
   margin: 10px;
@@ -39,7 +39,7 @@
   z-index: 1;
   &:hover {
     box-shadow: 0px 0px 5px black;
-    background-color: $grey;
+    background-color: var(--grey);
     z-index: 1;
   }
 }
@@ -53,7 +53,7 @@
   // z-index: 0;
   // justify-content: flex-start;
   // flex-wrap: wrap;
-  background-color: $light-grey;
+  background-color: var(--light-grey);
 }
 .inner-content-container {
   display: flex;
@@ -61,7 +61,7 @@
   z-index: 0;
   justify-content: flex-start;
   flex-wrap: wrap;
-  background-color: $light-grey;
+  background-color: var(--light-grey);
 }
 
 // CARDS SECTION
@@ -76,7 +76,7 @@
   margin: 10px 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: $grey;
+  background-color: var(--grey);
   flex: 1 1 auto;
   max-width: 330px;
   img {
@@ -219,19 +219,18 @@
   li {
     padding: 10px;
     margin: 0px 5px;
-    // background-color: grey;
     border-radius: 5px;
     height: 100%;
     transition: all .5s;
     a {
       text-decoration: none;
-      color:$black;
+      color:var(--black);
     }
     a:visited {
-      color: $black;
+      color: var(--black);
     }
     &:hover {
-      background-color: $dark-grey;
+      background-color: var(--dark-grey);
       cursor: pointer;
       transition: all .5s;
     }
@@ -244,7 +243,7 @@
 .demo-section {
   display: flex;
   flex-direction: column;
-  border: 3px solid $pinkurple;
+  border: 3px solid var(--pinkurple);
   margin-bottom: 10px;
   padding: 0px 10px 20px 10px;
   .card {
@@ -273,7 +272,7 @@
 .align-heading {
   text-align: center;
   margin-bottom: 10px;
-  color: $black;
+  color: var(--black);
 }
 
 .align-content {

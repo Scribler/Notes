@@ -28,7 +28,7 @@
   }
 }
 // SWAP STATIONARY NAV FOR DROPDOWN NAV (HEADER NAVIGATION)
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1040px) {
   .header-nav {
     display: flex;
     flex-direction: column;
@@ -62,29 +62,3 @@
     margin-right: 50px;
   }
 }
-
-// MAIN PAGE PROJECT NAVIGATION
-.projects {
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-  li {
-    padding: 20px 20px;
-    margin: 20px 20px;
-    background-color: $teal;
-    border-radius: 10px;
-    max-width: 160px;
-    text-align: center;
-    a {
-      color: $black;
-    }
-    img {
-      height: 90px;
-      max-width: 120px;
-    }
-    figcaption {
-      font-size: 1.2em;
-    }
-  }
-}
-

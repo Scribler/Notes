@@ -1,30 +1,28 @@
-// Sass Variables
+//
+// CSS Variables
+//
+
 :root {
+// COLORS
+  --off-white: #F9F9F9;
+  --grey: #EAEAEA;
+  --dark-grey: #939393;
+  --black: #1F1F1F;
+
   --teal: #3FF79A;
   --pinkurple: #F73F9C;
   --yellow: #F7F63F;
   --blue: #3F40F7;
-  --grey: #EAEAEA;
-  --dark-grey: #939393;
-  --black: #1F1F1F;
   // Flexbox Colors
   --white: #FFFFFF;
   --light-grey: #E4E6EB;
   --light-blue: #E7F3FF;
   --dark-blue: #1877F2;
+// FONT-SIZES
+  --hero-fs: 3.8em;
+  --h1-fs: 2.5em;
+  --h2-fs: 2.0em;
+  --h3-fs: 1.5em;
+  --h4-fs: 1.3em;
 }
-$teal: #3FF79A;
-$pinkurple: #F73F9C;
-$yellow: #F7F63F;
-$blue: #3F40F7;
-// $grey: #EAEAEA;
-$grey: #F0F2F5;
-$dark-grey: #939393;
-$black: #1F1F1F;
-
-// Flexbox Colors
-$white: #FFFFFF;
-$light-grey: #E4E6EB;
-$light-blue: #E7F3FF;
-$dark-blue: #1877F2;
-
+// Sass Variables

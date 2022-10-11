@@ -5,13 +5,13 @@
   list-style: none;
   padding: 10px 20px;
   li {
-    border: 2px solid $pinkurple;
+    border: 2px solid var(--pinkurple);
     border-radius: 10px;
     padding: 10px 15px;
     margin-bottom: 20px;
   }
   h3 {
-    text-decoration: underline 2px $pinkurple;
+    text-decoration: underline 2px var(--pinkurple);
     padding-bottom: 10px;
   }
 }
