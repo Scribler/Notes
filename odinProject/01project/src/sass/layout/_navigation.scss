@@ -3,7 +3,7 @@
 @use '../components/buttons' as *;
 
 // NAVIGATION BASE STYLES
-.nav-button, .nav-items li a {
+.nav-button, .nav-items a {
   @include menu-buttons;
 }
 .nav-button {
@@ -12,18 +12,14 @@
 
 .nav-items {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   li {
     list-style: none;
-  }
-  li a::before{
-    content: "|";
-    white-space: pre;
-    padding-right: 34px;
+    width: 100%
   }
   li a {
-    padding: 10px 0;
-    width: 144.117px;
+    padding: 30px 30px;
+    white-space: nowrap;
     text-align: center;
   }
 }
@@ -41,16 +37,15 @@
   .nav-button {
     text-align: center;
     display: block;
-    margin-left: -30px;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 30px 30px;
   }
   .nav-button:focus~.nav-items {
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-top: 40px;
-    margin-left: -30px;
+    top: 75px;
+    left: -70px;
     z-index: 1;
   }
 }
