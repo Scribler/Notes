@@ -6,17 +6,18 @@
   <link rel="stylesheet" type="text/css" href="css/flexboxMain.css">
 </head>
 <body>
-
   <header>
-    <h1 class="header-heading">The Odin Project - Dropdown Menu's</h1>
-    <nav class="header-nav">
-      <a class="nav-button" href="#">MENU</a>
-      <ul class="nav-items">
-        <li><a href="index.html">PROJECTS</a></li>
-        <li><a href="./reading.html">READING LINKS</a></li>
-        <li><a href="#">ABOUT</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <h1 class="header-heading">The Odin Project - Dropdown Menu's</h1>
+      <nav class="header-nav">
+        <a class="nav-button" href="#">MENU</a>
+        <ul class="nav-items">
+          <li><a href="index.html">PROJECTS</a></li>
+          <li><a href="./reading.html">READING LINKS</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
 
@@ -50,238 +51,29 @@
         <div class="left-menu-button">
           <h4>+ PRICE</h4>
         </div>
+        <ul class="left-menu-list">
+          <li>$0-$1,000</li>
+          <li>$1,000-$2,000</li>
+          <li>$2,000-$5,000</li>
+          <li>$5,000-$10,000</li>
+          <li>$10,000-50,000</li>
+          <li>$50,000-WTF!!!???</li>
+        </ul>
       </div>
 
       <div class="menu-item-container">
         <div class="left-menu-button">
           <h4>+ CONDITION</h4>
         </div>
+        <ul class="left-menu-list">
+          <li>Shitbox</li>
+          <li>Passable</li>
+          <li>Meh</li>
+          <li>Decent</li>
+          <li>Noice</li>
+          <li>Daaaayum, that looks brand new!</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="content-container">
-      <h2 class="cards-title">Card Floats</h2>
-      <div class="inner-content-container">
-        <div class="card">
-          <img src="./assets/flexbox-img/tophat.jpg" alt="cat in top hat">
-          <p class="img-caption">Cat</p>
-        </div>
-        <div class="card">
-          <img src="./assets/flexbox-img/baseballcap.jpg" alt="cat in baseball cap">
-          <p class="img-caption">Cat</p>
-        </div>
-        <div class="card">
-          <img src="./assets/flexbox-img/fedora.jpg" alt="cat in fedora">
-          <p class="img-caption">Cat</p>
-        </div>
-        <div class="card">
-          <img src="./assets/flexbox-img/baseballcap.jpg" alt="cat in baseball cap">
-          <p class="img-caption">Cat</p>
-        </div>
-        <div class="card">
-          <img src="./assets/flexbox-img/tophat.jpg" alt="cat in top hat">
-          <p class="img-caption">Cat</p>
-        </div>
-        <div class="card">
-          <img src="./assets/flexbox-img/fedora.jpg" alt="cat in fedora">
-          <p class="img-caption">Cat</p>
-        </div>
-      </div>
-      <!-- JUSTIFY CONTENT SECTION -->
-      <h2 class="cards-title">Justify Content</h2>
-      <div class="justify">
-        <!-- flex-start -->
-        <div class="section-container">
-          <h3>Section 1</h3>
-          <div class="inner-content-container section start">
-            <div class="one">flex</div>
-            <div class="two">-</div>
-            <div class="one">start</div>
-          </div>
-        </div>
-        <!-- flex center -->
-        <div class="section-container">
-          <h3>Section 2</h3>
-          <div class="inner-content-container section center">
-            <div class="one">***</div>
-            <div class="two">center</div>
-            <div class="three">***</div>
-          </div>
-        </div>
-        <!-- flex-end -->
-        <div class="section-container">
-          <h3>Section 3</h3>
-          <div class="inner-content-container section end">
-            <div class="one">flex</div>
-            <div class="two">-</div>
-            <div class="three">end</div>
-          </div>
-        </div>
-        <!-- space between -->
-        <div class="section-container">
-          <h3>Section 4</h3>
-          <div class="inner-content-container section between">
-            <div class="one">space</div>
-            <div class="two">-</div>
-            <div class="three">between</div>
-          </div>
-        </div>
-        <!-- space around -->
-        <div class="section-container">
-          <h3>Section 5</h3>
-          <div class="inner-content-container section around">
-            <div class="one">space</div>
-            <div class="two">-</div>
-            <div class="three">around</div>
-          </div>
-        </div>
-        <!-- space evenly -->
-        <div class="section-container">
-          <h3>Section 6</h3>
-          <div class="inner-content-container section evenly">
-            <div class="one">space</div>
-            <div class="two">-</div>
-            <div class="three">evenly</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ALIGN CONTENT SECTION -->
-      <h2 class="cards-title">Align Content</h2>
-      <div class="align">
-        <!-- align start -->
-        <div class="section-container">
-          <h3>Section 1</h3>
-          <div class="inner-content-container section align-start">
-            <div class="one">flex</div>
-            <div class="two">-</div>
-            <div class="three">start</div>
-          </div>
-        </div>
-        <div class="section-container">
-          <h3>Section 2</h3>
-          <div class="inner-content-container section align-center">
-            <div class="one">-</div>
-            <div class="two">center</div>
-            <div class="three">-</div>
-          </div>
-        </div>
-        <div class="section-container">
-          <h3>Section 3</h3>
-          <div class="inner-content-container section align-end">
-            <div class="one">flex</div>
-            <div class="two">-</div>
-            <div class="three">end</div>
-          </div>
-        </div>
-        <div class="section-container">
-          <h3>Section 4</h3>
-          <div class="inner-content-container section align-stretch">
-            <div class="one">-</div>
-            <div class="two">stretch</div>
-            <div class="three">-</div>
-          </div>
-        </div>
-        <div class="section-container">
-          <h3>Section 5</h3>
-          <div class="inner-content-container section align-baseline">
-            <div class="one">-</div>
-            <div class="two">baseline</div>
-            <div class="three">-</div>
-          </div>
-        </div>
-      </div>
-
-      <div id="demo" class="demo">
-        <header class="demo-header">
-          <h1 class="demo-heading">Cats Hats</h3>
-          <nav class="demo-nav">
-            <ul class="demo-nav-links">
-              <li><a href="#fedoras">Fedoras</a></li>
-              <div>|</div>
-              <li><a href="#baseball-caps">Baseball Caps</a></li>
-              <div>|</div>
-              <li><a href="#top-hats">Top Hats</a></li>
-            </ul>
-          </nav>
-        </header>
-
-        <section class="demo-main">
-          <section id="fedoras" class="demo-section">
-            <h3>Fedoras</h3>
-            <article>
-              <div class="card">
-                <img src="./assets/flexbox-img/fedora.jpg" alt="motorcycle">
-                <p class="img-caption">Photo by <a href="https://unsplash.com/@serejaris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sereja Ris</a> on <a href="https://unsplash.com/s/photos/funny-cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> </p>
-              </div>
-              <p>Consectetur lorem mollitia aliquam maiores deserunt Natus voluptatum accusamus adipisci sint ipsum Voluptate veritatis distinctio vel ad at sequi? Modi magnam ratione accusamus assumenda consequatur Dolorem molestias pariatur eum eveniet non neque? Deserunt voluptate deserunt perspiciatis rem eum, ipsa! Vero hic nostrum maxime voluptatibus recusandae. Consectetur maxime sapiente corporis modi quaerat sapiente Cupiditate quaerat doloremque eaque aperiam esse natus! Vel ratione eius expedita nulla illo! Eaque beatae voluptas esse iste veritatis ratione Quod dignissimos molestiae nam debitis praesentium! Sapiente expedita ipsa id veritatis consectetur A reiciendis iusto ad cumque consequatur. Alias aspernatur vitae eveniet commodi quia! Quis sed eum deleniti. 
-  Ipsum deserunt omnis ut quae esse iure. Earum voluptatibus maxime pariatur sed explicabo? Porro possimus sunt error necessitatibus deserunt. Esse eveniet iure possimus sed possimus Esse debitis totam inventore 
-  Ipsum voluptatibus magnam consectetur totam quos perferendis, facere? Molestias eius dolores ratione suscipit perspiciatis recusandae Nesciunt fugit dolor repellat inventore culpa delectus eius? Officia doloremque cupiditate neque quas atque. Ratione odit quis ipsam enim voluptates? Neque eligendi eius iusto quasi eos. Nulla quis voluptate amet repellendus corrupti. Atque tenetur inventore animi autem odit. Consequatur optio aspernatur iste nesciunt aut Incidunt cumque veritatis ea cumque perferendis neque. Quas atque delectus aliquam quam consectetur placeat. Veniam praesentium ea cum omnis expedita, hic! Sapiente consectetur aperiam nam porro quis maxime Libero quo asperiores eaque totam necessitatibus cupiditate id sapiente? Tempora nobis inventore ea praesentium voluptas autem Maiores cumque accusantium suscipit nemo ullam! Esse necessitatibus recusandae ad delectus non. Autem nostrum deserunt officiis assumenda iste iste Sequi harum illum labore aspernatur quibusdam Molestiae necessitatibus quaerat consequuntur aut dolor Ad mollitia non vel iste ratione ab! Corporis perferendis voluptates fugiat molestiae nulla Itaque eligendi eos explicabo laborum architecto, provident? Ut error delectus hic et vel Magni quas nesciunt eos culpa provident Optio voluptatem odio nam exercitationem ullam? Itaque saepe eum ut tempore architecto. Fuga neque numquam dignissimos cupiditate ratione. Architecto beatae ipsum vero sapiente necessitatibus Eaque in adipisci magni modi animi vero Autem assumenda reprehenderit quibusdam aperiam numquam Consequuntur culpa iure quia possimus sequi Ducimus quibusdam aut iure ducimus numquam? Esse delectus animi ut voluptatum corporis Perspiciatis cumque harum aliquam beatae eius doloribus Dicta nisi unde fugit vel repellendus Nemo in minus adipisci est cumque Perspiciatis nemo praesentium voluptates quidem consequuntur Harum officiis inventore nostrum quasi sed Est adipisci commodi repellat aperiam nam illo Autem sint alias voluptas labore modi? Omnis nisi odio ad at aperiam consequuntur Ipsam itaque modi consequatur porro praesentium numquam quod Consequatur distinctio repellat quae deserunt harum omnis? Fugiat cupiditate dolorem in rerum tempora ullam Adipisci sapiente fugit molestiae repellendus consequuntur.
-              </p>
-            </article>
-            <ul class="demo-nav-links" id="home-button-container">
-              <li class="home-button">
-                <a href="#demo">HOME</a>
-              </li>
-            </ul>
-          </section>
-          <section id="baseball-caps" class="demo-section">
-            <article>
-              <h3>Baseball Caps</h3>
-                <div class="card" id="baseballcap">
-                  <img src="./assets/flexbox-img/baseballcap.jpg" alt="motorcycle">
-              <p class="image-caption"> Photo by <a href="https://unsplash.com/@dariasha911?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daria Shatova</a> on <a href="https://unsplash.com/s/photos/funny-cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> </p>
-                </div>
-                <p>Sit delectus magnam necessitatibus beatae vero Animi quos rerum quo tempore voluptate Magnam harum nisi quis ratione numquam? Corporis modi id ea iusto odit Minus culpa suscipit quasi non illo. Illum aliquam minus qui enim numquam esse. Fugiat sit quas numquam dicta voluptas Officia saepe facilis aliquid nemo cumque. Reiciendis vero culpa a quasi corporis Reiciendis voluptas vel quidem vel distinctio officia? Cum sequi delectus distinctio possimus nihil Cum error ratione magni omnis obcaecati corrupti Cum illo recusandae quam qui magnam voluptates! Excepturi odio dolorum saepe quis maxime! Accusantium maiores fuga delectus quod consequuntur. Dignissimos eius aliquam suscipit rerum unde recusandae necessitatibus? At cum accusamus consequuntur consequuntur blanditiis vel. Accusamus quibusdam debitis in dolor animi, quam dolorem totam Nihil sed animi alias numquam suscipit Minima laborum iure quasi soluta asperiores Inventore facere aspernatur adipisci animi aliquam. Asperiores id consequuntur nostrum quisquam dignissimos laborum. Velit deserunt assumenda obcaecati reiciendis autem illum Ea veritatis harum eos cumque magni. Incidunt quaerat possimus temporibus minima iste. Mollitia architecto incidunt ex dolorem doloremque Fugit distinctio labore natus quos consectetur eaque reprehenderit dolorem Ratione tempora sequi laudantium porro quibusdam Quidem esse a nulla ducimus doloribus totam Quibusdam esse incidunt repudiandae est consequatur Illum obcaecati magni tempora quis deserunt iste quibusdam? Quis provident veritatis quasi corrupti tempore. Soluta deserunt adipisci laboriosam incidunt aut qui earum fugit Officia earum quidem aspernatur minima earum! Asperiores ratione animi natus excepturi commodi Ea exercitationem exercitationem dolore nihil enim! Exercitationem tenetur quibusdam amet et illum Magni rerum temporibus excepturi consequatur dolores nam nisi, iure Ab sed odio ad culpa iste eum, libero, totam Nobis pariatur aspernatur nisi molestias ratione Deserunt similique dolores veniam quos sequi dignissimos Quam alias cum non minima ut doloremque? Possimus quia architecto et libero itaque numquam Minima accusamus dolores provident incidunt est et Delectus laboriosam doloribus magni perferendis?
-                </p>
-            </article>
-            <ul class="demo-nav-links" id="home-button-container">
-              <li class="home-button">
-                <a href="#demo">HOME</a>
-              </li>
-            </ul>
-          </section>
-          <section id="top-hats" class="demo-section">
-            <article>
-              <h3>Top Hats</h3>
-                <div class="card" id="tophat">
-                  <img src="./assets/flexbox-img/tophat.jpg" alt="cat in tophat">
-                  <p class="img-caption">Photo by <a href="https://unsplash.com/@theluckyneko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">The Lucky Neko</a> on <a href="https://unsplash.com/s/photos/funny-cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> </p>
-                </div>
-                <p>Sit delectus magnam necessitatibus beatae vero Animi quos rerum quo tempore voluptate Magnam harum nisi quis ratione numquam? Corporis modi id ea iusto odit Minus culpa suscipit quasi non illo. Illum aliquam minus qui enim numquam esse. Fugiat sit quas numquam dicta voluptas Officia saepe facilis aliquid nemo cumque. Reiciendis vero culpa a quasi corporis Reiciendis voluptas vel quidem vel distinctio officia? Cum sequi delectus distinctio possimus nihil Cum error ratione magni omnis obcaecati corrupti Cum illo recusandae quam qui magnam voluptates! Excepturi odio dolorum saepe quis maxime! Accusantium maiores fuga delectus quod consequuntur. Dignissimos eius aliquam suscipit rerum unde recusandae necessitatibus? At cum accusamus consequuntur consequuntur blanditiis vel. Accusamus quibusdam debitis in dolor animi, quam dolorem totam Nihil sed animi alias numquam suscipit Minima laborum iure quasi soluta asperiores Inventore facere aspernatur adipisci animi aliquam. Asperiores id consequuntur nostrum quisquam dignissimos laborum. Velit deserunt assumenda obcaecati reiciendis autem illum Ea veritatis harum eos cumque magni. Incidunt quaerat possimus temporibus minima iste. Mollitia architecto incidunt ex dolorem doloremque Fugit distinctio labore natus quos consectetur eaque reprehenderit dolorem Ratione tempora sequi laudantium porro quibusdam Quidem esse a nulla ducimus doloribus totam Quibusdam esse incidunt repudiandae est consequatur Illum obcaecati magni tempora quis deserunt iste quibusdam? Quis provident veritatis quasi corrupti tempore. Soluta deserunt adipisci laboriosam incidunt aut qui earum fugit Officia earum quidem aspernatur minima earum! Asperiores ratione animi natus excepturi commodi Ea exercitationem exercitationem dolore nihil enim! Exercitationem tenetur quibusdam amet et illum Magni rerum temporibus excepturi consequatur dolores nam nisi, iure Ab sed odio ad culpa iste eum, libero, totam Nobis pariatur aspernatur nisi molestias ratione Deserunt similique dolores veniam quos sequi dignissimos Quam alias cum non minima ut doloremque? Possimus quia architecto et libero itaque numquam Minima accusamus dolores provident incidunt est et Delectus laboriosam doloribus magni perferendis?
-                </p>
-            </article>
-            <ul class="demo-nav-links" id="home-button-container">
-              <li class="home-button">
-                <a href="#demo">HOME</a>
-              </li>
-            </ul>
-          </section>
-        </section>
-      </div>
-    <section class="alignment">
-      <h2 class="align-heading">ALIGNMENT AND ORDER</h2>
-      <div class="align-content">
-        <div class="align-blue"><p>BLUE</p></div>
-        <div class="align-yellow"><p>YELLOW</p></div>
-        <div class="align-green"><p>GREEN</p></div>
-        <div class="align-blue"><p>BLUE</p></div>
-        <div class="align-yellow"><p>YELLOW</p></div>
-        <div class="align-green"><p>GREEN</p></div>
-        <div class="align-blue"><p>BLUE</p></div>
-        <div class="align-yellow"><p>YELLOW</p></div>
-        <div class="align-green"><p>GREEN</p></div>
-        <!-- <div class="align-blue"><p>BLUE</p></div> -->
-        <!-- <div class="align-yellow"><p>YELLOW</p></div> -->
-        <!-- <div class="align-green"><p>GREEN</p></div> -->
-        <!-- <div class="align-blue"><p>BLUE</p></div> -->
-        <!-- <div class="align-yellow"><p>YELLOW</p></div> -->
-        <!-- <div class="align-green"><p>GREEN</p></div> -->
-        <!-- <div class="align-blue"><p>BLUE</p></div> -->
-        <!-- <div class="align-yellow"><p>YELLOW</p></div> -->
-        <!-- <div class="align-green"><p>GREEN</p></div> -->
-      </div>
-    </section>
     </div>
   </main>
   <script src="js/scripts.js"></script>

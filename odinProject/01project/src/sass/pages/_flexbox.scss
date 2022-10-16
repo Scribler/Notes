@@ -1,18 +1,20 @@
 // Flexbox page specific styles
-@use '../base/reset';
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
+@use '../abstracts' as *;
+html {
+  background-color: var(--off-white);
+}
 //FLEX CONTAINER
 .main-container {
   @include reset;
   background-color: var(--grey);
   display: flex;
+  width: 100vw;
+  // margin: 0 auto;
 }
 
 // LEFT MENU AREA
 .left-menu-container {
-  background-color: var(--white);
+  background-color: var(--off-white);
   flex: 0 0 250px;
   height: 100vh;
 }
@@ -45,16 +47,6 @@
 }
 
 
-// MAIN CONTENT AREA
-.content-container {
-  width: 100%;
-  // display: flex;
-  // flex: 1;
-  // z-index: 0;
-  // justify-content: flex-start;
-  // flex-wrap: wrap;
-  background-color: var(--light-grey);
-}
 .inner-content-container {
   display: flex;
   flex: 1;
@@ -63,254 +55,4 @@
   flex-wrap: wrap;
   background-color: var(--light-grey);
 }
-
-// CARDS SECTION
-.cards-title {
-  margin: 20px;
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 10px 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: var(--grey);
-  flex: 1 1 auto;
-  max-width: 330px;
-  img {
-    padding: 8px 0;
-    width: 100%;
-    // max-width: 320px;
-  }
-  .img-caption {
-  }
-}
-
-// JUSTIFY CONTENT SECTION
-.justify, .align {
-  display: flex;
-  flex-direction: row;
-  flex-flow: row wrap;
-  width: 100%;
-}
-.section {
-  height: 150px;
-  width: 280px;
-  display: flex;
-  // justify-content: center;
-  // align-content: top;
-  border: 3px solid black;
-  margin: 10px;
-  text-align: center;
-
-  div {
-    height: 80px;
-    width: 80px;
-  }
-  .one {
-    background-color: green;
-    flex: 0 1 0;
-    font-size: 12px;
-    // margin-left: auto;
-  }
-  .two {
-    background-color: blue;
-    // if flex NOT SET TO auto, width WILL NOT BE SEEN 
-    width: 120px;
-    flex: 0 2 auto; // auto tells it to look for a width
-    font-size: 22px;
-  }
-  .three {
-    background-color: orange;
-    width: 75px;
-    flex: 0 1 auto;
-    font-size: 5px;
-    margin: auto 0;
-  }
-}
-//
-// JUSTIFY CONTENT
-//
-.start {
-  display: flex;
-  justify-content: flex-start;
-  // these do the same, if your are using normal text direction
-  // justify-content: start;
-  // justify-content: left;
-}
-.center{
-  display: flex;
-  justify-content: center;
-}
-.end {
-  display: flex;
-  justify-content: flex-end;
-  // these do the same, if your are using normal text direction
-  // justify-content: end;
-  // justify-content: right;
-}
-.between{
-  display: flex;
-  justify-content: space-between;
-}
-.around {
-  display: flex;
-  justify-content: space-around;
-}
-.evenly {
-  display: flex;
-  justify-content: space-evenly;
-}
-//
-// ALIGN CONTENT
-//
-.align .section-container .section div {
-  height: auto;
-  width: auto;
-}
-.align-start{
-  align-content: flex-start;
-}
-.align-center {
-  align-content: center;
-}
-.align-end {
-  align-content: flex-end;
-}
-.align-stretch {
-  align-content: stretch;
-}
-.align-baseline {
-  align-content: baseline;
-}
-//
-// DEMO SITE - cats hats
-//
-.demo-main {
-  padding: 10px;
-}
-
-.demo {
-  width: 100%;
-  // height: 500px;
-  border: 1px solid blue;
-}
-
-.demo-header {
-  display: flex;
-  border-bottom: none;
-  box-shadow: none;
-  background-color: #C2C2C2;
-  margin: 2px;
-  border-radius: 10px;
-  height: 40px;
-}
-.demo-heading {
-  margin: auto 0 auto 20px;
-}
-.demo-nav {
-  margin: auto 0 auto auto;
-}
-.demo-nav-links {
-  display: flex;
-  list-style: none;
-  li {
-    padding: 10px;
-    margin: 0px 5px;
-    border-radius: 5px;
-    height: 100%;
-    transition: all .5s;
-    a {
-      text-decoration: none;
-      color:var(--black);
-    }
-    a:visited {
-      color: var(--black);
-    }
-    &:hover {
-      background-color: var(--dark-grey);
-      cursor: pointer;
-      transition: all .5s;
-    }
-  }
-  div {
-    margin: auto 0;
-  }
-}
-
-.demo-section {
-  display: flex;
-  flex-direction: column;
-  border: 3px solid var(--pinkurple);
-  margin-bottom: 10px;
-  padding: 0px 10px 20px 10px;
-  .card {
-    float: right;
-  }
-  #baseballcap {
-    float: left;
-  }
-  h3 {
-    padding: 10px 0;
-  }
-}
-#home-button-container {
-    margin: 20px auto 0px auto;
-}
-//
-// ALIGNMENT
-//
-.alignment {
-  margin-top: 5px;
-  padding: 10px;
-  border: 1px solid blue;
-  min-height: 500px;
-}
-
-.align-heading {
-  text-align: center;
-  margin-bottom: 10px;
-  color: var(--black);
-}
-
-.align-content {
-  display: flex;
-  height: 100%;
-  // height: 400px;
-  // flex-direction: column;
-  // justify-content: space-evenly;
-  flex-wrap: wrap;
-  // gap: 20px;
-}
-// lobotomised owl selector (not working)
-// SHOULD EFFECT EVERY DIV BUT THE FIRST
-.align-content > * + * {
-  margin-left: 20px;
-}
-@mixin align-block {
-  height: 80px;
-  width: 90px;
-  display: flex;
-  p {
-    margin: auto auto;
-  }
-}
-.align-blue {
-  @include align-block;
-  background-color: blue;
-  // order: 2;
-}
-.align-yellow{
-  @include align-block;
-  background-color: yellow;
-  // order: 1;
-}
-.align-green{
-  @include align-block;
-  background-color: green;
-}
-
-
 
