@@ -1,8 +1,6 @@
 // Flexbox page specific styles
 @use '../abstracts' as *;
-html {
-  background-color: var(--off-white);
-}
+
 //FLEX CONTAINER
 .main-container {
   @include reset;
