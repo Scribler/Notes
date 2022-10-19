@@ -1,9 +1,20 @@
 console.log("test");
 const ageOutput = document.getElementById('ageOutput');
-const age = document.getElementById('age').innerText;
+var age;
+window.onkeyup = keypress;
 
-const old = age > 50
-  ? self = `You're ${age} years old! You're old!`
-  : self = "You're not old";
+function keypress () {
+  age = document.getElementById('age').value;
+  var old;
+  
+  // const old = age > 50
+  //   ? `You're ${age} years old! You're old!`
+  //   : "You're not old";
+  // ageOutput.innerText = old;
+  if (age >= 80) {
+    old = "You're old";
+  } else if (age >= 60 && age < 80) {
+  }
+  ageOutput.innerText = old;
+}
 
-ageOutput.innerText = old;
