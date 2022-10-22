@@ -1,0 +1,74 @@
+DATABASES
+
+RESEARCH TOPICS
+  - Pallelizable (Parallell databases.)
+  - testing database
+  - 'history' - most databases DON'T remember old data after change
+  - localization (so that your website will work with different languages > will substitue words for users language)
+  - Big Data
+
+security
+  - sql injection
+  - cross site scripting
+
+SQL databases (relational)
+- can make RULES
+  - rules stop you from putting invalid information into a section.
+  - has more security issues.
+  - transactions (secure changes?)
+  - relational queries
+
+NOSQL databases
+- 
+
+GraphQL (query language - not a database)
+  - good for people who don't want to learn a lot about databases.
+
+
+1) open source VS closed sourced
+2) Oracle > Biggest
+
+
+
+
+SQLight > doesn't fallow all the standards
+  - tiny
+  - easy to learn
+  - can embed in your app (You don't need a server running somewhere else)
+  - If you don't know what you need (USE THIS)
+  - If you need more (PostgresQL is great)
+
+
+
+
+
+REDIS (for making things fast)
+  - #1 > for 'key value lookups' EXTREMELY fast.
+  - doesn't write to disk (for caching localy)
+ACID (for SQL)
+- Atomicity
+- Consistancy
+- Isolation
+- Durability.
+
+When using CAP theorem (really big stuff)
+BASE (for no SQL)
+- Basically Available
+- Soft state
+- Eventually Consistant
+
+Postgres vs MySQL
+
+Postgres
+  - relational
+  - richer environment
+  - store map data, json, xml, tables, etc. and retern in any of the other data styles.
+  - 
+    
+
+MySQL
+  - bought by oracle
+  - maria(opensource version)
+
+MongoDB
+  - 
