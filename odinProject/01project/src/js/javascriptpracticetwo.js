@@ -2,6 +2,10 @@ console.log("test");
 const ageOutput = document.getElementById('ageOutput');
 var age;
 window.onkeyup = keypress;
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+const mynav = document.getElementsByName('a');
+const hone = document.querySelector('h1');
 
 function keypress () {
   age = document.getElementById('age').value;
@@ -27,3 +31,13 @@ function keypress () {
   ageOutput.innerText = old;
 }
 
+function themeChange (bcolor, tcolor) {
+  html.style.backgroundColor = bcolor;
+  body.style.backgroundColor = bcolor;
+  mynav.each.style.backgroundColor = bcolor;
+
+  // mynav.style.color = tcolor;
+  body.style.color = tcolor;
+  hone.style.color = tcolor;
+}
+themeChange('black', 'green');
