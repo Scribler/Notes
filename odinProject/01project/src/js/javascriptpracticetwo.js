@@ -1,15 +1,23 @@
+//
+// Variables
+//
+
 console.log("test");
-const ageOutput = document.getElementById('ageOutput');
 var age;
-window.onkeyup = keypress;
+var old;
+window.onkeyup = youOld;
+const ageOutput = document.getElementById('ageOutput');
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const mynav = document.getElementsByName('a');
 const hone = document.querySelector('h1');
 
-function keypress () {
+//
+// Age checking scripts
+//
+
+function youOld () {
   age = document.getElementById('age').value;
-  var old;
   
   // const old = age > 50
   //   ? `You're ${age} years old! You're old!`
@@ -26,8 +34,57 @@ function keypress () {
   } else if(age >=47 && age < 50) {
     old = `You're ${age}. You're not old.`;
   } else {
-    old = `You're $(age), You're Young!`;
+    old = `You're ${age}, You're Young!`;
   }
   ageOutput.innerText = old;
 }
+
+//
+// theme changeing
+//
+
+// GOALS FOR THIS SECTION
+//
+// *** Make everything beautiful ***
+// *** USE HSL COLORS ***
+//
+// 1) button that toggles part of theme
+// 2) dropdown that selects different themes
+// 3) radio button that selects themes
+// 4) check boxes that select themes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

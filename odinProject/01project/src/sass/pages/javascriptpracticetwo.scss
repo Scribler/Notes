@@ -1,10 +1,19 @@
 @use '../abstracts' as *;
+@use '../components/buttons' as *;
+
 h1 {
   color: var(--black);
   text-align: center;
   padding: 10px;
 }
-.theme-container {
+.section-container{
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid var(--dark-grey);
+  background-color: var(--light-grey);
+}
+.changeTheme {
+  @include standard-button;
 }

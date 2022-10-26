@@ -1,15 +1,20 @@
 // Buttons
 @use '../abstracts/variables' as *;
+@mixin standard-button {
+  padding: 20px 40px;
+  background-color: var(--blue);
+  color: var(--off-white);
+}
 @mixin menu-buttons { 
   // background matched button
   // dark-grey on hover
   color: var(--black);
   display: block;
   height: 100%;
-  background-color: var(--off-white);
+  background-color: var(--light-grey);
   padding: 50px;
   &:hover {
-    background-color: var(--grey);
+    background-color: var(--off-white);
   }
   &:visited {
     color: var(--black);
