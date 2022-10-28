@@ -43,6 +43,24 @@ function youOld () {
 // theme changeing
 //
 
+const changeTheme_button = document.getElementById('changeTheme');
+const changeTheme_container = document.getElementById('themeChangerContainer');
+let clicknum = 0;
+changeTheme_button.addEventListener('click', changeTheme);
+function changeTheme () {
+  if (changeTheme_container.style.backgroundColor === 'var(--dark-grey)') {
+    changeTheme_container.style.backgroundColor = 'var(--light-grey)';
+    changeTheme_container.style.padding = '20px';
+  } else {
+    changeTheme_container.style.backgroundColor = 'var(--dark-grey)';
+    changeTheme_container.style.padding = '40px';
+  }
+  console.log("Button 'clicked' " + ++clicknum + " times.");
+  let numAtFive = clicknum % 5 === 0;
+  if (numAtFive) {
+    console.log("You have clicked the button 5 times!");
+  }
+}
 // GOALS FOR THIS SECTION
 //
 // *** Make everything beautiful ***
