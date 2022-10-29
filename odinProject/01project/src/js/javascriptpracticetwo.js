@@ -99,14 +99,19 @@ function changeTheme () {
 //
 // Ask User For Input and Check it.
 //
+
+//
 // check for numbers over 5
+//
 const askNumButton = document.getElementById('askNum');
 askNumButton.addEventListener('click', numberCheck);
 function numberCheck() {
   let userAnswer = prompt("What number comes after 5?");
   alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
 }
+//
 // check for proper name of javascript
+//
 const askJsButton = document.getElementById('askJs');
 askJsButton.addEventListener('click', nameCheck);
 function nameCheck () {
@@ -120,6 +125,79 @@ function nameCheck () {
     console.log(userAnswer);
   }
 }
+//
+// Check if a number is positive, negative, or 0.
+//
+
+const numTest = document.getElementById('numTest');
+numTest.addEventListener('click', posNegNue);
+
+function posNegNue () {
+  const userAnswer = prompt("Enter any number for testing");
+  if (userAnswer < 0) {
+    alert(-1);
+  } else if (userAnswer > 0) {
+    alert(+1);
+  } else {
+    alert(0);
+  }
+}
+
+//
+// Check if the two numbers given add up 'to', 'above', or 'below' the number 4
+//
+
+const numLevel = document.getElementById('numLevel');
+numLevel.addEventListener('click', checkLevel);
+
+function checkLevel () {
+  alert("Give two numbers that will be added and tested to see if combined they are more, less, or equal to the number '4'.")
+  const a = +prompt("What is your first number");
+  const b = +prompt("What is your second number");
+  const combined = a + b;
+  console.log(combined);
+  // PROPER WAY
+  // let result;
+  // if (combined < 4) {
+    // result = 'Below';
+  // } else if (combined > 4) {
+    // result = 'Above';
+  // } else {
+    // result = 'Same';
+  // }
+  // QUESTION MARK NOTATION WAY (DON'T DO THIS FOR MORE THAN 2 NEEDED RESULTS)
+  let result = combined < 4
+    ? 'Below'
+    : combined > 4
+    ? 'Above'
+    : 'Equal'
+  alert(result);
+}
+
+
+
+// Using if..else, write the code which gets a number via prompt and then shows in alert:
+//
+    // 1, if the value is greater than zero,
+    // -1, if less than zero,
+    // 0, if equals zero.
+//
+// In this task we assume that the input is always a number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,39 +211,3 @@ function nameCheck () {
 // 2) dropdown that selects different themes
 // 3) radio button that selects themes
 // 4) check boxes that select themes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
