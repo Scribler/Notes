@@ -17,3 +17,7 @@ h1 {
 #changeTheme {
   @include standard-button;
 }
+.standard-button {
+  @include standard-button;
+  border-radius: 20px;
+}
