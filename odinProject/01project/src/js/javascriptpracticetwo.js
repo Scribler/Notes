@@ -1,4 +1,26 @@
 //
+// CONSOLE CODE START
+//
+
+
+// 'string 0' vs 'num 0'
+// "0" is true, because it is a string
+if ("0") {
+  console.log("'0' as a string")
+}
+// 0 as a number is falsy so since if statements only evaluate if the condition is true, it does not run.
+if (0) {
+  console.log("Should not print");
+} else {
+  console.log("This runs because 0 is falsy");
+}
+
+//
+// CONSOLE CODE END
+//
+
+
+//
 // Variables
 //
 
@@ -16,16 +38,16 @@ const hone = document.querySelector('h1');
 // Age checking scripts
 //
 
-function youOld () {
+function youOld () { // optional methods commented out.
   age = document.getElementById('age').value;
  
-  // Using a ternary opperation
+  // USING A TERNARY OPPERATION
   // const old = age > 50
   //   ? `You're ${age} years old! You're old!`
   //   : "You're not old";
   // ageOutput.innerText = old;
 
-  // USING 'else if' STATEMENTS
+  // USING 'else if' STATEMENTS (PREFERED)
   // if (age >= 80) {
     // old = `You're ${age}. You're very old.`;
   // } else if (age >= 70 && age < 80) {
@@ -42,13 +64,11 @@ function youOld () {
   // ageOutput.innerText = old;
   
   // USING CHAINED TERNARY OPPERATIONS
-
   const oldness = age < 5
     ? `You're ${age}, only a baby.`
     : age < 10
     ? `You're ${age}, still VERY young.`
     : "you're old.";
-
   ageOutput.innerText = oldness;
 }
 
@@ -79,14 +99,30 @@ function changeTheme () {
 //
 // Ask User For Input and Check it.
 //
-
-const askButton = document.getElementById('ask');
-askButton.addEventListener('click', versionCheck);
-
-function versionCheck () {
+// check for numbers over 5
+const askNumButton = document.getElementById('askNum');
+askNumButton.addEventListener('click', numberCheck);
+function numberCheck() {
   let userAnswer = prompt("What number comes after 5?");
-  alert(userAnswer == '6' ? "That's Right!" : "Try Again...");
+  alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
 }
+// check for proper name of javascript
+const askJsButton = document.getElementById('askJs');
+askJsButton.addEventListener('click', nameCheck);
+function nameCheck () {
+  let userAnswer = prompt("What is the official name of javascript?");
+  // '.toLowerCase()' ensures capitalization doesn't interfere with checking.
+  if (userAnswer.toLowerCase() == "ECMAscript".toLowerCase()) {
+    alert("That's Correct!");
+    console.log(userAnswer);
+  } else {
+    alert("I don't know what that is. :P");
+    console.log(userAnswer);
+  }
+}
+
+
+
 
 // GOALS FOR THIS SECTION
 //
