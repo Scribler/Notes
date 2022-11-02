@@ -30,6 +30,7 @@
       <h2>Age Test</h2>
       <input type="text" name="age" id="age">
       <p id="ageOutput">Am I old?</p>
+      <button id="ageTest" class="standard-button">Check Age</button>
     </div>
 
     <!-- theme changer -->
@@ -39,10 +40,21 @@
     </div>
 
     <div class="section-container">
-      <button id="askNum" class="standard-button">ASK numbers after 5</button>
-      <button id="askJs" class="standard-button">ASK js name</button>
-      <button id="numTest" class="standard-button">Test My Number</button>
-      <button id="numLevel" class="standard-button">Above or Below?</button>
+      <div class="button-area">
+        <button id="askNum" class="standard-button">ASK numbers after 5</button>
+        <button id="askJs" class="standard-button">ASK js name</button>
+        <button id="numTest" class="standard-button">Test My Number</button>
+        <button id="numLevel" class="standard-button">Above or Below?</button>
+      </div>
+      <div id="inCont" class="input-container">
+        <label id="inLabel" for="buttonAreaInput">PlaceHolder</label>
+        <input type="text" name="button-area-input" id="buttonAreaInput">
+        <button id="checkAnswer" class="standard-button">Check Answer</button>
+      </div>
+      <div id="outCont" class="output-container">
+        <h3 id="outLabel">Output Placeholder</h3>
+        <p id="out">output</p>
+      </div>
     </div>
 
   </main>

@@ -21,6 +21,27 @@ h1 {
   border-width: 5px;
   border-color: var(--off-white);
 }
+.button-area {
+  padding-bottom: 20px;
+}
+.input-container {
+  display: none;
+  padding: 20px;
+  margin: 0 auto;
+  p {
+    display: inline-block;
+    background-color: yellow;
+  }
+}
+.output-container {
+  display: none;
+  padding: 50px;
+  margin: 0 auto;
+  p {
+    display: inline-block;
+    background-color: orange;
+  }
+}
 
 #askNum {
   background-color: green;

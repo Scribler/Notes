@@ -23,16 +23,30 @@ if (0) {
 //
 // Variables
 //
-
-console.log("test");
-var age;
-var old;
-window.onkeyup = youOld;
+// General Variables
 const ageOutput = document.getElementById('ageOutput');
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const mynav = document.getElementsByName('a');
 const hone = document.querySelector('h1');
+let runNum = 1;
+
+// Age Test Variables
+var age;
+var old;
+var ageTest = document.getElementById('ageTest');
+ageTest.addEventListener('click', youOld);
+
+// Button Area Variables
+const inCont = document.getElementById('inCont');
+const inLabel = document.getElementById('inLabel');
+const outCont= document.getElementById('outCont');
+const outLabel = document.getElementById('outLabel');
+const inArea = document.getElementById('buttonAreaInput');
+const out = document.getElementById('out');
+const checkAnswer = document.getElementById('checkAnswer');
+
+
 
 //
 // Age checking scripts
@@ -70,6 +84,7 @@ function youOld () { // optional methods commented out.
     ? `You're ${age}, still VERY young.`
     : "you're old.";
   ageOutput.innerText = oldness;
+  console.log(runNum++);
 }
 
 //
@@ -97,17 +112,42 @@ function changeTheme () {
 }
 
 //
+//
+//
+//
+//
+//
+// *** BUTTONS AREA ***
+//
 // Ask User For Input and Check it.
 //
+//
+//
+//
+//
+// const in-cont= document.getElementById('in-cont');
+// const in-label = document.getElementById('in-label');
+// const out-cont= document.getElementById('out-cont');
+// const out-label = document.getElementById('out-label');
 
 //
 // check for numbers over 5
 //
+checkAnswer.addEventListener('click', checking);
+function checking () {
+  outCont.style.display = 'block'
+  out.innerHTML = +inArea.value >= 6 ? "That's right!" : "Try Again...";
+  // make it so that output area disappears when there is no text in the input box
+  if (out)
+}
 const askNumButton = document.getElementById('askNum');
 askNumButton.addEventListener('click', numberCheck);
 function numberCheck() {
-  let userAnswer = prompt("What number comes after 5?");
-  alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
+  inCont.style.display = 'block';
+  inLabel.innerHTML = "What number comes after 5?";
+  // let userAnswer = prompt("What number comes after 5?");
+
+  // alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
 }
 //
 // check for proper name of javascript
@@ -174,7 +214,7 @@ function checkLevel () {
   alert(result);
 }
 
-console.log(new Date().getDate());
+console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
 
 
