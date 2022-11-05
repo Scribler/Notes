@@ -125,21 +125,25 @@ function changeTheme () {
 //
 //
 //
-// const in-cont= document.getElementById('in-cont');
-// const in-label = document.getElementById('in-label');
-// const out-cont= document.getElementById('out-cont');
-// const out-label = document.getElementById('out-label');
 
 //
 // check for numbers over 5
 //
 checkAnswer.addEventListener('click', checking);
 function checking () {
-  outCont.style.display = 'block'
+  inner = inArea.innerHTML;
+  console.log(inner);
+
+  if (inArea.innerHTML.value == undefined) {
+    outCont.style.display == 'none';
+  } else {
+    outCont.style.display = 'block'
+  }
+  console.log(out.innerHTML.value);
   out.innerHTML = +inArea.value >= 6 ? "That's right!" : "Try Again...";
   // make it so that output area disappears when there is no text in the input box
-  if (out)
 }
+
 const askNumButton = document.getElementById('askNum');
 askNumButton.addEventListener('click', numberCheck);
 function numberCheck() {

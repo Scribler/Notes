@@ -1,0 +1,22 @@
+lexical analyzer = analyzes character by character
+
+
+
+Turtle Language
+> start with 'Grammar'.
+
+
+ASTBuilder = Abstract Syntax Tree Builder
+  - builds syntax from string
+
+Web Assembly - low level js
+
+
+If you add syntax you must change it in...
+> grammer
+> abstract syntax tree
+> symantics
+
+
+beautifulsoup > web scraping
+
