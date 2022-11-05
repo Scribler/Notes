@@ -49,9 +49,8 @@ const checkAnswer = document.getElementById('checkAnswer');
 
 
 //
-// Age checking scripts
+// Age checking script START
 //
-
 function youOld () { // optional methods commented out.
   age = document.getElementById('age').value;
  
@@ -77,18 +76,31 @@ function youOld () { // optional methods commented out.
   // }
   // ageOutput.innerText = old;
   
-  // USING CHAINED TERNARY OPPERATIONS
+  // USING CHAINED TERNARY OPPERATIONS (don't do this)
   const oldness = age < 5
     ? `You're ${age}, only a baby.`
     : age < 10
     ? `You're ${age}, still VERY young.`
+    : age < 20
+    ? `You're ${age}, still young.`
+    : age < 47
+    ? `You're ${age}. You're in your prime!`
+    : age < 55
+    ? `You're ${age}. You're well primed! :P`
+    : age < 70
+    ? `You're ${age}. You're very well primed! :P`
+    : age < 95
+    ? `You're ${age}. Ok... now you're a bit old`
     : "you're old.";
   ageOutput.innerText = oldness;
   console.log(runNum++);
 }
+//
+// Age checking script END
+//
 
 //
-// theme changeing
+// Theme Changeing START
 //
 
 const changeTheme_button = document.getElementById('changeTheme');
@@ -110,24 +122,21 @@ function changeTheme () {
     console.log("You have clicked the button 5 times!");
   }
 }
+//
+// Theme Changeing END
+//
 
 //
 //
-//
-//
-//
-//
-// *** BUTTONS AREA ***
+// *** BUTTONS AREA (START) ***
 //
 // Ask User For Input and Check it.
 //
 //
 //
-//
-//
 
 //
-// check for numbers over 5
+// (1) check for numbers over 5 START
 //
 checkAnswer.addEventListener('click', checking);
 function checking () {
@@ -154,7 +163,11 @@ function numberCheck() {
   // alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
 }
 //
-// check for proper name of javascript
+// (1) check for numbers over 5 END
+//
+
+//
+// (2)check for proper name of javascript START
 //
 const askJsButton = document.getElementById('askJs');
 askJsButton.addEventListener('click', nameCheck);
@@ -170,7 +183,11 @@ function nameCheck () {
   }
 }
 //
-// Check if a number is positive, negative, or 0.
+// (2)check for proper name of javascript END
+//
+
+//
+// (3) Check if a number is positive, negative, or 0. START
 //
 
 const numTest = document.getElementById('numTest');
@@ -186,9 +203,12 @@ function posNegNue () {
     alert(0);
   }
 }
+//
+// (3) Check if a number is positive, negative, or 0. END
+//
 
 //
-// Check if the two numbers given add up 'to', 'above', or 'below' the number 4
+// (4) Check if the two numbers given add up 'to', 'above', or 'below' the number 4 START
 //
 
 const numLevel = document.getElementById('numLevel');
@@ -220,7 +240,18 @@ function checkLevel () {
 
 console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
+//
+// (4) Check if the two numbers given add up 'to', 'above', or 'below' the number 4 END
+//
 
+//
+//
+// *** BUTTONS AREA (END) ***
+//
+// Ask User For Input and Check it.
+//
+//
+//
 
 
 
