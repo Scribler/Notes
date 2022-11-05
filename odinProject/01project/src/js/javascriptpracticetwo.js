@@ -140,11 +140,9 @@ function changeTheme () {
 //
 checkAnswer.addEventListener('click', checking);
 function checking () {
-  inner = inArea.innerHTML;
-  console.log(inner);
-
-  if (inArea.innerHTML.value == undefined) {
-    outCont.style.display == 'none';
+  if (inArea.value < 6 || isNaN(inArea.value)) {
+    outCont.style.display = 'none';
+    inArea.value = "Try again";
   } else {
     outCont.style.display = 'block'
   }
@@ -163,10 +161,6 @@ function numberCheck() {
   // alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
 }
 //
-// (1) check for numbers over 5 END
-//
-
-//
 // (2)check for proper name of javascript START
 //
 const askJsButton = document.getElementById('askJs');
@@ -183,13 +177,8 @@ function nameCheck () {
   }
 }
 //
-// (2)check for proper name of javascript END
-//
-
-//
 // (3) Check if a number is positive, negative, or 0. START
 //
-
 const numTest = document.getElementById('numTest');
 numTest.addEventListener('click', posNegNue);
 
@@ -203,10 +192,6 @@ function posNegNue () {
     alert(0);
   }
 }
-//
-// (3) Check if a number is positive, negative, or 0. END
-//
-
 //
 // (4) Check if the two numbers given add up 'to', 'above', or 'below' the number 4 START
 //
@@ -239,25 +224,6 @@ function checkLevel () {
 }
 
 console.log(`%c ${new Date().getDate()}`, 'background-color:red');
-
-//
-// (4) Check if the two numbers given add up 'to', 'above', or 'below' the number 4 END
-//
-
-//
-//
-// *** BUTTONS AREA (END) ***
-//
-// Ask User For Input and Check it.
-//
-//
-//
-
-
-
-
-
-
 
 
 
