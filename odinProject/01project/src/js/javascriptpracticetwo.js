@@ -45,6 +45,7 @@ const outLabel = document.getElementById('outLabel');
 const inArea = document.getElementById('buttonAreaInput');
 const out = document.getElementById('out');
 const checkAnswer = document.getElementById('checkAnswer');
+const closeQuestion = document.getElementById('closeQuestion');
 
 
 
@@ -136,44 +137,73 @@ function changeTheme () {
 //
 
 //
-// (1) check for numbers over 5 START
+// (0) REUSABLE FUNCTIONS
 //
+
+// CURRENT QUESTION PLACEHOLDER (ACTIVATED BY CLICKING BUTTON)
+let currentQuestion = null;
+
+// Close 'Question area' & 'Answer Area'
+closeQuestion.addEventListener('click', closeQuest);
+function closeQuest () {
+  inCont.style.display = 'none';
+  outCont.style.display = 'none';
+}
+
+// SHOW Question Area
+function showQuestion (question) {
+  inCont.style.display = 'block';
+  inLabel.innerHTML = question;
+}
+// (1) currently checks answer only for #1
 checkAnswer.addEventListener('click', checking);
 function checking () {
+  if (currentQuestion == 1) {
+    afterFive();
+  } else if (currentQuestion == 2) {
+    nameCheck();
+  } else {
+    console.error("No Question Selected")
+  }
+  // make it so that output area disappears when there is no text in the input box
+}
+
+//
+// (1) check for numbers over 5 START
+//
+const askNumButton = document.getElementById('askNum');
+askNumButton.addEventListener('click', numberCheckButton);
+function numberCheckButton() {
+  currentQuestion = 1;
+  showQuestion("What number comes after 5?");
+}
+// Question One
+function afterFive() {
   if (inArea.value < 6 || isNaN(inArea.value)) {
     outCont.style.display = 'none';
     inArea.value = "Try again";
   } else {
-    outCont.style.display = 'block'
+    outCont.style.display = 'block';
+    out.innerHTML = "That's right!";
   }
-  console.log(out.innerHTML.value);
-  out.innerHTML = +inArea.value >= 6 ? "That's right!" : "Try Again...";
-  // make it so that output area disappears when there is no text in the input box
-}
-
-const askNumButton = document.getElementById('askNum');
-askNumButton.addEventListener('click', numberCheck);
-function numberCheck() {
-  inCont.style.display = 'block';
-  inLabel.innerHTML = "What number comes after 5?";
-  // let userAnswer = prompt("What number comes after 5?");
-
-  // alert(userAnswer >= '6' ? "That's Right!" : "Try Again...");
+  // console.log(out.innerHTML.value);
 }
 //
 // (2)check for proper name of javascript START
 //
 const askJsButton = document.getElementById('askJs');
-askJsButton.addEventListener('click', nameCheck);
+askJsButton.addEventListener('click', nameCheckButton);
+function nameCheckButton () {
+  currentQuestion == 2;
+  showQuestion("What is the official name of javascript?")
+}
 function nameCheck () {
-  let userAnswer = prompt("What is the official name of javascript?");
-  // '.toLowerCase()' ensures capitalization doesn't interfere with checking.
-  if (userAnswer.toLowerCase() == "ECMAscript".toLowerCase()) {
-    alert("That's Correct!");
-    console.log(userAnswer);
+  if (inArea.value.toLowerCase() == "ECMAscript".toLowerCase()) {
+    outCont.style.display = 'block';
+    out.innerHTML = "That's Correct!";
   } else {
-    alert("I don't know what that is. :P");
-    console.log(userAnswer);
+    outCont.style.display = 'none';
+    inArea.value = "I don't know what that is. :P";
   }
 }
 //
