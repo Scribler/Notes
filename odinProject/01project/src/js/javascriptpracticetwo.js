@@ -149,11 +149,19 @@ function closeQuest () {
   inCont.style.display = 'none';
   outCont.style.display = 'none';
 }
+var names = ['hat', 'cat', 'sat'];
+
+for(name of names){
+  console.log(name);
+}
 
 // SHOW Question Area
-function showQuestion (question) {
+function showQuestion (...question) {
   inCont.style.display = 'block';
-  inLabel.innerHTML = question;
+  for (q of question) {
+    document.createElement("label");
+    inLabel.innerHTML = question;
+  }
 }
 // (1) currently checks answer only for #1
 checkAnswer.addEventListener('click', checking);
@@ -162,10 +170,13 @@ function checking () {
     afterFive();
   } else if (currentQuestion == 2) {
     nameCheck();
+  } else if (currentQuestion == 3) {
+    posNegNue();
+  } else if (currentQuestion == 4) {
+    checkLevel();
   } else {
     console.error("No Question Selected")
   }
-  // make it so that output area disappears when there is no text in the input box
 }
 
 //
@@ -186,7 +197,6 @@ function afterFive() {
     outCont.style.display = 'block';
     out.innerHTML = "That's right!";
   }
-  // console.log(out.innerHTML.value);
 }
 //
 // (2)check for proper name of javascript START
@@ -194,7 +204,7 @@ function afterFive() {
 const askJsButton = document.getElementById('askJs');
 askJsButton.addEventListener('click', nameCheckButton);
 function nameCheckButton () {
-  currentQuestion == 2;
+  currentQuestion = 2;
   showQuestion("What is the official name of javascript?")
 }
 function nameCheck () {
@@ -203,23 +213,28 @@ function nameCheck () {
     out.innerHTML = "That's Correct!";
   } else {
     outCont.style.display = 'none';
-    inArea.value = "I don't know what that is. :P";
+    inArea.value = "NOPE! :P";
   }
 }
 //
 // (3) Check if a number is positive, negative, or 0. START
 //
-const numTest = document.getElementById('numTest');
-numTest.addEventListener('click', posNegNue);
-
+const numTestButton = document.getElementById('numTest');
+numTestButton.addEventListener('click', posNegNueButton);
+function posNegNueButton () {
+  currentQuestion = 3;
+  showQuestion("Enter any number for testing");
+}
 function posNegNue () {
-  const userAnswer = prompt("Enter any number for testing");
-  if (userAnswer < 0) {
-    alert(-1);
-  } else if (userAnswer > 0) {
-    alert(+1);
+  if (inArea.value < 0) {
+    outCont.style.display = 'block';
+    out.innerHTML = "-1";
+  } else if (inArea.value  > 0) {
+    outCont.style.display = 'block';
+    out.innerHTML = "+1";
   } else {
-    alert(0);
+    outCont.style.display = 'block';
+    out.innerHTML = "0";
   }
 }
 //
@@ -227,14 +242,17 @@ function posNegNue () {
 //
 
 const numLevel = document.getElementById('numLevel');
-numLevel.addEventListener('click', checkLevel);
+numLevel.addEventListener('click', checkLevelButton);
+function checkLevelButton () {
+  currentQuestion = 4;
+  const q = "Give two numbers that will be added and tested to see if combined they are more, less, or equal to the number '4'.";
+
+  const qOne = "What is your first number";
+  const qTwo = "What is your second number";
+  showQuestion(q, qOne, qTwo);
+}
 
 function checkLevel () {
-  alert("Give two numbers that will be added and tested to see if combined they are more, less, or equal to the number '4'.")
-  const a = +prompt("What is your first number");
-  const b = +prompt("What is your second number");
-  const combined = a + b;
-  console.log(combined);
   // PROPER WAY
   // let result;
   // if (combined < 4) {
