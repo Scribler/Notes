@@ -1,7 +1,10 @@
 //
 // CONSOLE CODE START
 //
-
+const myarr = [1, 2, 3];
+console.log(myarr.shift());
+console.log(myarr.shift());
+console.log(myarr.shift());
 
 // 'string 0' vs 'num 0'
 // "0" is true, because it is a string
@@ -43,6 +46,7 @@ const inLabel = document.getElementById('inLabel');
 const outCont= document.getElementById('outCont');
 const outLabel = document.getElementById('outLabel');
 const inArea = document.getElementById('buttonAreaInput');
+const inQCont = document.getElementById('inputQuestionContainer');
 const out = document.getElementById('out');
 const checkAnswer = document.getElementById('checkAnswer');
 const closeQuestion = document.getElementById('closeQuestion');
@@ -154,13 +158,44 @@ var names = ['hat', 'cat', 'sat'];
 for(name of names){
   console.log(name);
 }
+function createMainQuestion (mainQ) {
+  const questionElement = document.createElement("h4");
+  const content = document.createTextNode(mainQ);
+  questionElement.appendChild(content);
+  inQCont.appendChild(questionElement);
+}
+function createInput (newInput, inputId) {
+  // Create Label and insert before Check Answer Button
+  const label= document.createElement("label");
+  label.setAttribute("id", inputId);
+  label.setAttribute("for", `buttonAreaInput${inputId}`);
+  label.innerText = newInput;
+  inQCont.appendChild(label);
+  // Create Label and insert before Check Answer Button
+  const input = document.createElement("input");
+  input.setAttribute("id", `buttonAreaInput${inputId}`);
+  input.setAttribute("type", "text");
+  input.setAttribute("onfocus", "this.value=''");
+  input.setAttribute("name", `buttonAreaInput${inputId}`);
+  inQCont.appendChild(input);
+  console.log(input.id);
+  const inArea = document.getElementById('buttonAreaInput');
+}
 
 // SHOW Question Area
 function showQuestion (...question) {
   inCont.style.display = 'block';
+  const inputIdNames = ["One", "Two", "Three"];
   for (q of question) {
+    if (q.includes("?")) {
+      console.log(`Input Label is: ${q}`);
+      createInput(q, inputIdNames.shift());
+    } else {
+      console.log(`Question is: ${q}`);
+      createMainQuestion(q);
+    }
     document.createElement("label");
-    inLabel.innerHTML = question;
+    // inLabel.innerHTML = question;
   }
 }
 // (1) currently checks answer only for #1
@@ -186,7 +221,8 @@ const askNumButton = document.getElementById('askNum');
 askNumButton.addEventListener('click', numberCheckButton);
 function numberCheckButton() {
   currentQuestion = 1;
-  showQuestion("What number comes after 5?");
+  let question = "What number comes after 5?"
+  showQuestion(question);
 }
 // Question One
 function afterFive() {
@@ -205,7 +241,8 @@ const askJsButton = document.getElementById('askJs');
 askJsButton.addEventListener('click', nameCheckButton);
 function nameCheckButton () {
   currentQuestion = 2;
-  showQuestion("What is the official name of javascript?")
+  let question = "What is the official name of javascript?";
+  showQuestion(question);
 }
 function nameCheck () {
   if (inArea.value.toLowerCase() == "ECMAscript".toLowerCase()) {
@@ -223,7 +260,8 @@ const numTestButton = document.getElementById('numTest');
 numTestButton.addEventListener('click', posNegNueButton);
 function posNegNueButton () {
   currentQuestion = 3;
-  showQuestion("Enter any number for testing");
+  let question = "Enter any number for testing";
+  showQuestion(question);
 }
 function posNegNue () {
   if (inArea.value < 0) {
@@ -243,32 +281,36 @@ function posNegNue () {
 
 const numLevel = document.getElementById('numLevel');
 numLevel.addEventListener('click', checkLevelButton);
+// Show question
 function checkLevelButton () {
   currentQuestion = 4;
-  const q = "Give two numbers that will be added and tested to see if combined they are more, less, or equal to the number '4'.";
-
-  const qOne = "What is your first number";
-  const qTwo = "What is your second number";
-  showQuestion(q, qOne, qTwo);
+  // Define Main question
+  const question = "Give two numbers that will be added and tested to see if combined they are more, less, or equal to the number '4'.";
+  // Define input labels
+  const firstLabel = "What is your first number?";
+  const secondLabel = "What is your second number?";
+  showQuestion(question, firstLabel, secondLabel);
+  // showQuestion(question, firstLabel);
 }
-
+// Question Logic
 function checkLevel () {
   // PROPER WAY
-  // let result;
-  // if (combined < 4) {
-    // result = 'Below';
-  // } else if (combined > 4) {
-    // result = 'Above';
-  // } else {
-    // result = 'Same';
-  // }
-  // QUESTION MARK NOTATION WAY (DON'T DO THIS FOR MORE THAN 2 NEEDED RESULTS)
-  let result = combined < 4
-    ? 'Below'
-    : combined > 4
-    ? 'Above'
-    : 'Equal'
-  alert(result);
+  const first = document.getElementById('buttonAreaInputOne');
+  const second = document.getElementById('buttonAreaInputTwo');
+  console.log(first.value);
+  console.log(second.value);
+  const combined = +first.value + +second.value;
+  console.log(combined);
+  let result;
+  if (combined < 4) {
+    result = 'Below';
+  } else if (combined > 4) {
+    result = 'Above';
+  } else {
+    result = 'Same';
+  }
+  outCont.style.display = "block"
+  out.innerHTML = result;
 }
 
 console.log(`%c ${new Date().getDate()}`, 'background-color:red');
