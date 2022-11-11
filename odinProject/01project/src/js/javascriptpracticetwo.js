@@ -315,8 +315,70 @@ function checkLevel () {
 
 console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
+//
+// Calculator
+//
 
+// CALCULATOR VARIABLES
+const firstInput = document.getElementById('firstIn');
+const secondInput = document.getElementById('secondIn');
+const opperator = document.getElementById('opperator');
+const equalsButton = document.getElementById('equals');
+const calcAnswer = document.getElementById('calcAnswer');
+const calcClear = document.getElementById('calcClear');
+calcClear.addEventListener('click', calculatorClear);
+equalsButton.addEventListener('click', calculator); 
+//
 
+// CALCULATOR CLEAR FUNCTION
+function calculatorClear () {
+  calcAnswer.innerHTML = "";
+}
+
+// CALCULATOR FUNCTION
+function calculator() {
+  const first = +firstInput.value;
+  const second = +secondInput.value;
+  const opp = opperator.value;
+  let result;
+
+  // addition
+  if (opp== '+' || opp== 'plus') {
+    console.log('addition');
+    result = first + second;
+    console.log(`${first} + ${second} = ${result}`);
+
+  // subtraction
+  } else if (opp== '-' || opp== '_' || opp== 'minus') {
+    console.log('subtraction');
+    result = first - second;
+    console.log(`${first} - ${second} = ${result}`);
+
+  // multiplication
+  } else if (opp == 'x' || opp == '*' || opp == 'X' || opp == 'multiply') {
+    console.log('multiplication');
+    result = first * second;
+    console.log(`${first} X ${second} = ${result}`);
+
+  // division
+  } else if (opp == '/' || opp == 'divide') {
+    console.log('division');
+    result = first / second;
+    console.log(`${first} % ${second} = ${result}`);
+
+  // error log
+  } else {
+    console.error("That isn't a recognized mathimatical opperator")
+  }
+
+  // SHOW ANSWER
+  calcAnswer.innerHTML = result;
+}
+
+calculator(1,2,'x');
+calculator(1,2,'+');
+calculator(1,2,'-');
+calculator(1,2,'/');
 
 
 
@@ -329,3 +391,9 @@ console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 // 2) dropdown that selects different themes
 // 3) radio button that selects themes
 // 4) check boxes that select themes
+
+
+
+
+
+

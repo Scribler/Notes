@@ -37,7 +37,7 @@ h1 {
   padding: 20px 0px 50px;
 }
 .output-container {
-  display: none;
+  // display: none;
   padding: 50px;
   margin: 0 auto;
   p, div {
@@ -59,3 +59,16 @@ h1 {
 #numTest {
   background-color: purple;
 }
+
+// CALCULATOR
+
+.calcIn {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  font-size: 2em;
+}
+
+
+
+

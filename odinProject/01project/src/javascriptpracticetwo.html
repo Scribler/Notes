@@ -73,6 +73,21 @@
       </div>
     </div>
 
+    <div class="section-container">
+      <h3>Calculator</h3>
+      <div id="calculator" class="calculator">
+        <!-- <label for="firstIn" id="inLabel">First Input</label> -->
+        <input type="text" onfocus="this.value=''" name="firstIn" id="firstIn" value="First Number" class="calcIn">
+        <input type="text" onfocus="this.value=''" name="opperator" id="opperator" value="Opperator(+,-,x,/)" class="calcIn">
+        <input type="text" onfocus="this.value=''" name="secondIn" id="secondIn" value="Second Number" class="calcIn">
+        <button id="equals" class="standard-button">=</button>
+        <button id="calcClear" class="standard-button">CLEAR</button>
+      </div>
+      <div id="calcout" class="output-container">
+        <div id="calcAnswer">Answer</div>
+      </div>
+    </div>
+
   </main>
 
   <script src="./js/javascriptpracticetwo.js"></script>
