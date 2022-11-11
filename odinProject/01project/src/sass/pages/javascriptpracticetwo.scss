@@ -11,7 +11,6 @@ h1 {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  border-bottom: 3px solid var(--dark-grey);
   background-color: var(--light-grey);
 }
 
@@ -22,9 +21,19 @@ h1 {
   border-color: var(--off-white);
 }
 .button-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   padding-bottom: 20px;
+  .standard-button {
+    font-size: 1.6em;
+    font-weight: bold;
+    min-width: 380px;
+    min-height: 80px;
+  }
 }
 .input-container {
+  border-top: 3px solid var(--dark-grey);
   display: none;
   padding: 20px;
   margin: 0 auto;
@@ -48,16 +57,28 @@ h1 {
     font-size: 3em;
   }
 }
-
-#askNum {
-  background-color: green;
+#ageTest {
+  background-color: yellow;
+  color: var(--black);
 }
-#askJs {
+#changeTheme {
   background-color: orange;
   color: var(--black);
 }
-#numTest {
+#askNum {
+  background-color: darkred;
+}
+#askJs {
   background-color: purple;
+}
+#numTest {
+  background-color: teal;
+}
+#numLevel {
+  background-color: green;
+}
+#calculator {
+  background-color: violet;
 }
 
 // CALCULATOR

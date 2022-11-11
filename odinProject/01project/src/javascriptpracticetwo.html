@@ -23,43 +23,32 @@
   </header>
 
   <main>
-    <!-- age tester -->
-    <div class="section-container">
-      <h2>Age Test</h2>
-      <input type="text" name="age" id="age">
-      <p id="ageOutput">Am I old?</p>
-      <button id="ageTest" class="standard-button">Check Age</button>
-    </div>
-
-    <!-- theme changer -->
-    <div id="themeChangerContainer" class="section-container">
-      <button id="changeTheme" class="standard-button">Change Theme</button>
-      <!-- onclick="changeTheme()" -->
-    </div>
-
     <div class="section-container">
 <!--  -->
       <!-- BUTTONS -->
 <!--  -->
       <div class="button-area">
-        <!-- (1) check for numbers over 5 START -->
+        <!-- (1) check age-->
+        <button id="ageTest" class="standard-button">Check Age</button>
+        <!-- (2) change theme -->
+        <button id="changeTheme" class="standard-button">Change Theme</button>
+        <!-- (3) check for numbers over 5 START -->
         <button id="askNum" class="standard-button">ASK numbers after 5</button>
-        <!-- (2)check for proper name of javascript START -->
+        <!-- (4)check for proper name of javascript START -->
         <button id="askJs" class="standard-button">ASK js name</button>
-        <!-- (3) Check if a number is positive, negative, or 0. START -->
+        <!-- (5) check if a number is positive, negative, or 0. START -->
         <button id="numTest" class="standard-button">Test My Number</button>
-        <!-- (4) Check if the two numbers given add up 'to', 'above', or 'below' the number 4 START -->
+        <!-- (6) check if the two numbers given add up 'to', 'above', or 'below' the number 4 START -->
         <button id="numLevel" class="standard-button">Above or Below?</button>
+        <!-- (7) calculator -->
+        <button id="calculator" class="standard-button">Calculator</button>
       </div>
 
 <!--  -->
       <!-- INPUTS -->
 <!--  -->
       <div id="inCont" class="input-container">
-        <div id="inputQuestionContainer">
-          <!-- <label id="inLabel" for="buttonAreaInput">PlaceHolder</label> -->
-          <!-- <input type="text" onfocus="this.value=''" name="button-area-input" id="buttonAreaInput"> -->
-        </div>
+        <div id="inputQuestionContainer">placeholder</div>
         <button id="checkAnswer" class="standard-button">Check Answer</button>
         <button id="closeQuestion" class="standard-button">Close Question</button>
       </div>
@@ -70,21 +59,6 @@
         <!-- <h3 id="outLabel">Output</h3> -->
         <div id="out">output</div>
         <!-- <p id="out">output</p> -->
-      </div>
-    </div>
-
-    <div class="section-container">
-      <h3>Calculator</h3>
-      <div id="calculator" class="calculator">
-        <!-- <label for="firstIn" id="inLabel">First Input</label> -->
-        <input type="text" onfocus="this.value=''" name="firstIn" id="firstIn" value="First Number" class="calcIn">
-        <input type="text" onfocus="this.value=''" name="opperator" id="opperator" value="Opperator(+,-,x,/)" class="calcIn">
-        <input type="text" onfocus="this.value=''" name="secondIn" id="secondIn" value="Second Number" class="calcIn">
-        <button id="equals" class="standard-button">=</button>
-        <button id="calcClear" class="standard-button">CLEAR</button>
-      </div>
-      <div id="calcout" class="output-container">
-        <div id="calcAnswer">Answer</div>
       </div>
     </div>
 

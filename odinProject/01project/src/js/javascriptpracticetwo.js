@@ -1,29 +1,4 @@
 //
-// CONSOLE CODE START
-//
-const myarr = [1, 2, 3];
-console.log(myarr.shift());
-console.log(myarr.shift());
-console.log(myarr.shift());
-
-// 'string 0' vs 'num 0'
-// "0" is true, because it is a string
-if ("0") {
-  console.log("'0' as a string")
-}
-// 0 as a number is falsy so since if statements only evaluate if the condition is true, it does not run.
-if (0) {
-  console.log("Should not print");
-} else {
-  console.log("This runs because 0 is falsy");
-}
-
-//
-// CONSOLE CODE END
-//
-
-
-//
 // Variables
 //
 // General Variables
@@ -58,46 +33,20 @@ const closeQuestion = document.getElementById('closeQuestion');
 //
 function youOld () { // optional methods commented out.
   age = document.getElementById('age').value;
- 
-  // USING A TERNARY OPPERATION
-  // const old = age > 50
-  //   ? `You're ${age} years old! You're old!`
-  //   : "You're not old";
-  // ageOutput.innerText = old;
-
-  // USING 'else if' STATEMENTS (PREFERED)
-  // if (age >= 80) {
-    // old = `You're ${age}. You're very old.`;
-  // } else if (age >= 70 && age < 80) {
-    // old = `You're ${age}. You're old.`;
-  // } else if (age >= 60 && age < 70) {
-    // old = `You're ${age}. You're a little old.`;
-  // } else if (age >= 50 && age < 60) {
-    // old = `You're ${age}. You're barely old.`;
-  // } else if(age >=47 && age < 50) {
-    // old = `You're ${age}. You're not old.`;
-  // } else {
-    // old = `You're ${age}, You're Young!`;
-  // }
-  // ageOutput.innerText = old;
-  
-  // USING CHAINED TERNARY OPPERATIONS (don't do this)
-  const oldness = age < 5
-    ? `You're ${age}, only a baby.`
-    : age < 10
-    ? `You're ${age}, still VERY young.`
-    : age < 20
-    ? `You're ${age}, still young.`
-    : age < 47
-    ? `You're ${age}. You're in your prime!`
-    : age < 55
-    ? `You're ${age}. You're well primed! :P`
-    : age < 70
-    ? `You're ${age}. You're very well primed! :P`
-    : age < 95
-    ? `You're ${age}. Ok... now you're a bit old`
-    : "you're old.";
-  ageOutput.innerText = oldness;
+  if (age >= 80) {
+    old = `You're ${age}. You're very old.`;
+  } else if (age >= 70 && age < 80) {
+    old = `You're ${age}. You're old.`;
+  } else if (age >= 60 && age < 70) {
+    old = `You're ${age}. You're a little old.`;
+  } else if (age >= 50 && age < 60) {
+    old = `You're ${age}. You're barely old.`;
+  } else if(age >=47 && age < 50) {
+    old = `You're ${age}. You're not old.`;
+  } else {
+    old = `You're ${age}, You're Young!`;
+  }
+  ageOutput.innerText = old;
   console.log(runNum++);
 }
 //
@@ -194,8 +143,6 @@ function showQuestion (...question) {
       console.log(`Question is: ${q}`);
       createMainQuestion(q);
     }
-    document.createElement("label");
-    // inLabel.innerHTML = question;
   }
 }
 // (1) currently checks answer only for #1
@@ -364,7 +311,7 @@ function calculator() {
   calcout.style.display = "inline-block"
   calcAnswer.style.display = "inline-block";
   calcAnswer.innerHTML = result;
-  console.log(result);
+  // console.log(result);
 }
 
 
@@ -381,5 +328,28 @@ function calculator() {
 
 
 
+//
+// CONSOLE CODE START
+//
+const myarr = [1, 2, 3];
+console.log(myarr.shift());
+console.log(myarr.shift());
+console.log(myarr.shift());
+
+// 'string 0' vs 'num 0'
+// "0" is true, because it is a string
+if ("0") {
+  console.log("'0' as a string")
+}
+// 0 as a number is falsy so since if statements only evaluate if the condition is true, it does not run.
+if (0) {
+  console.log("Should not print");
+} else {
+  console.log("This runs because 0 is falsy");
+}
+
+//
+// CONSOLE CODE END
+//
 
 
