@@ -326,6 +326,7 @@ const opperator = document.getElementById('opperator');
 const equalsButton = document.getElementById('equals');
 const calcAnswer = document.getElementById('calcAnswer');
 const calcClear = document.getElementById('calcClear');
+const calcOut = document.getElementById('calcout');
 calcClear.addEventListener('click', calculatorClear);
 equalsButton.addEventListener('click', calculator); 
 //
@@ -333,6 +334,10 @@ equalsButton.addEventListener('click', calculator);
 // CALCULATOR CLEAR FUNCTION
 function calculatorClear () {
   calcAnswer.innerHTML = "";
+  firstInput.value = "";
+  secondInput.value = "";
+  opperator.value = "";
+  calcAnswer.style.display = 'none';
 }
 
 // CALCULATOR FUNCTION
@@ -341,45 +346,26 @@ function calculator() {
   const second = +secondInput.value;
   const opp = opperator.value;
   let result;
-
   // addition
   if (opp== '+' || opp== 'plus') {
-    console.log('addition');
     result = first + second;
-    console.log(`${first} + ${second} = ${result}`);
-
-  // subtraction
-  } else if (opp== '-' || opp== '_' || opp== 'minus') {
-    console.log('subtraction');
-    result = first - second;
-    console.log(`${first} - ${second} = ${result}`);
-
   // multiplication
   } else if (opp == 'x' || opp == '*' || opp == 'X' || opp == 'multiply') {
-    console.log('multiplication');
     result = first * second;
-    console.log(`${first} X ${second} = ${result}`);
-
   // division
   } else if (opp == '/' || opp == 'divide') {
-    console.log('division');
     result = first / second;
-    console.log(`${first} % ${second} = ${result}`);
-
   // error log
   } else {
     console.error("That isn't a recognized mathimatical opperator")
   }
 
   // SHOW ANSWER
+  calcout.style.display = "inline-block"
+  calcAnswer.style.display = "inline-block";
   calcAnswer.innerHTML = result;
+  console.log(result);
 }
-
-calculator(1,2,'x');
-calculator(1,2,'+');
-calculator(1,2,'-');
-calculator(1,2,'/');
-
 
 
 // GOALS FOR THIS SECTION
