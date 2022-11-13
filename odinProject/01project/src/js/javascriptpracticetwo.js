@@ -115,7 +115,7 @@ function createMainQuestion (mainQ) {
 }
 function createInput (newInput, inputId) {
   // Create Label and insert before Check Answer Button
-  const label= document.createElement("label");
+  const label = document.createElement("label");
   label.setAttribute("id", inputId);
   label.setAttribute("for", `buttonAreaInput${inputId}`);
   label.innerText = newInput;
@@ -262,58 +262,18 @@ function checkLevel () {
 
 console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
-//
-// Calculator
-//
+// NEW TEST
+const newTest = document.getElementById('newTest');
+newTest.addEventListener('click', demo);
 
-// CALCULATOR VARIABLES
-const firstInput = document.getElementById('firstIn');
-const secondInput = document.getElementById('secondIn');
-const opperator = document.getElementById('opperator');
-const equalsButton = document.getElementById('equals');
-const calcAnswer = document.getElementById('calcAnswer');
-const calcClear = document.getElementById('calcClear');
-const calcOut = document.getElementById('calcout');
-calcClear.addEventListener('click', calculatorClear);
-equalsButton.addEventListener('click', calculator); 
-//
-
-// CALCULATOR CLEAR FUNCTION
-function calculatorClear () {
-  calcAnswer.innerHTML = "";
-  firstInput.value = "";
-  secondInput.value = "";
-  opperator.value = "";
-  calcAnswer.style.display = 'none';
+// draw circles
+function demo () {
+  const circlesContainer = document.createElement('canvas');
+  circlesContainer.setAttribute('id', 'circlesCanvas');
+  outCont.style.display = 'inline-block';
+  outCont.appendChild(circlesContainer);
+  console.log("should be showing circles Container")
 }
-
-// CALCULATOR FUNCTION
-function calculator() {
-  const first = +firstInput.value;
-  const second = +secondInput.value;
-  const opp = opperator.value;
-  let result;
-  // addition
-  if (opp== '+' || opp== 'plus') {
-    result = first + second;
-  // multiplication
-  } else if (opp == 'x' || opp == '*' || opp == 'X' || opp == 'multiply') {
-    result = first * second;
-  // division
-  } else if (opp == '/' || opp == 'divide') {
-    result = first / second;
-  // error log
-  } else {
-    console.error("That isn't a recognized mathimatical opperator")
-  }
-
-  // SHOW ANSWER
-  calcout.style.display = "inline-block"
-  calcAnswer.style.display = "inline-block";
-  calcAnswer.innerHTML = result;
-  // console.log(result);
-}
-
 
 // GOALS FOR THIS SECTION
 //
@@ -351,5 +311,13 @@ if (0) {
 //
 // CONSOLE CODE END
 //
+
+
+//
+// FUNCTIONS RUN
+//
+
+
+
 
 
