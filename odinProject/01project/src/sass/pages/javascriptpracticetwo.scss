@@ -86,9 +86,36 @@ h1 {
 #newTest {
   background-color: darkblue;
 }
+#calendar {
+  background-color: #72DEC2;
+}
+#mazeGame{
+  background-color: #DE728E;
+}
+#alarm{
+  background-color: #C4DE72;
+  color: var(--black);
+}
+#motorcycleOracle{
+  background-color: #8C72DE;
+}
+#trueFalse{
+  background-color: #8FEC2D;
+}
+#colorPicker {
+  background-color: #8A2DEC;
+}
+#websiteTheme {
+  background-color: #EC2D2F;
+}
+#ticTacToe {
+  background-color: #2DECEA;
+
+}
 
 // NEW TEST
-#circlesCanvas {
+#outputCanvas {
+  display: none;
   background-color: yellow;
   height: 300px;
   width: 300px;

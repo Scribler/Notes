@@ -264,14 +264,15 @@ console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
 // NEW TEST
 const newTest = document.getElementById('newTest');
+const outputCanvas = document.getElementById('outputCanvas');
 newTest.addEventListener('click', demo);
 
 // draw circles
 function demo () {
-  const circlesContainer = document.createElement('canvas');
-  circlesContainer.setAttribute('id', 'circlesCanvas');
+  // const circlesContainer = document.createElement('canvas');
+  // circlesContainer.setAttribute('id', 'circlesCanvas');
   outCont.style.display = 'inline-block';
-  outCont.appendChild(circlesContainer);
+  outputCanvas.style.display = 'inline-block';
   console.log("should be showing circles Container")
 }
 
