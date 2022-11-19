@@ -29,10 +29,18 @@ const closeQuestion = document.getElementById('closeQuestion');
 
 
 //
-// Age checking script START
+// (0) RE-USABLE SCRIPTS
+//
+
+// create input question
+// create inputs (number of inputs)
+// create outputs (number of inputs)
+
+//
+// (1) Age checking script START
 //
 function youOld () { // optional methods commented out.
-  age = document.getElementById('age').value;
+  age = document.getelementById('age').value;
   if (age >= 80) {
     old = `You're ${age}. You're very old.`;
   } else if (age >= 70 && age < 80) {
@@ -49,14 +57,10 @@ function youOld () { // optional methods commented out.
   ageOutput.innerText = old;
   console.log(runNum++);
 }
-//
-// Age checking script END
-//
 
 //
-// Theme Changeing START
+// (2) Theme Changeing START
 //
-
 const changeTheme_button = document.getElementById('changeTheme');
 const changeTheme_container = document.getElementById('themeChangerContainer');
 let clicknum = 0;
@@ -97,16 +101,12 @@ function changeTheme () {
 let currentQuestion = null;
 
 // Close 'Question area' & 'Answer Area'
-closeQuestion.addEventListener('click', closeQuest);
+// closeQuestion.addEventListener('click', closeQuest);
 function closeQuest () {
   inCont.style.display = 'none';
   outCont.style.display = 'none';
 }
-var names = ['hat', 'cat', 'sat'];
 
-for(name of names){
-  console.log(name);
-}
 function createMainQuestion (mainQ) {
   const questionElement = document.createElement("h4");
   const content = document.createTextNode(mainQ);
@@ -146,7 +146,7 @@ function showQuestion (...question) {
   }
 }
 // (1) currently checks answer only for #1
-checkAnswer.addEventListener('click', checking);
+// checkAnswer.addEventListener('click', checking);
 function checking () {
   if (currentQuestion == 1) {
     afterFive();
@@ -241,7 +241,6 @@ function checkLevelButton () {
 }
 // Question Logic
 function checkLevel () {
-  // PROPER WAY
   const first = document.getElementById('buttonAreaInputOne');
   const second = document.getElementById('buttonAreaInputTwo');
   console.log(first.value);
@@ -260,65 +259,72 @@ function checkLevel () {
   out.innerHTML = result;
 }
 
-console.log(`%c ${new Date().getDate()}`, 'background-color:red');
 
-// NEW TEST
-const newTest = document.getElementById('newTest');
-const outputCanvas = document.getElementById('outputCanvas');
-newTest.addEventListener('click', demo);
+// (8) Canvas Play 
+// canvas button
+const canvasPlay = document.getElementById('canvasPlay');
+canvasPlay.addEventListener('click', drawCanvas);
+const canvas = document.getElementById('outputCanvas');
+// 2d context
+const ctx = canvas.getContext('2d');
+// newTest.addEventListener('click', demo);
+let WIDTH = '5';
+let HEIGHT = '200';
 
-// draw circles
-function demo () {
-  // const circlesContainer = document.createElement('canvas');
-  // circlesContainer.setAttribute('id', 'circlesCanvas');
-  outCont.style.display = 'inline-block';
-  outputCanvas.style.display = 'inline-block';
-  console.log("should be showing circles Container")
+//draw Canvas
+
+function drawCanvas() {
+  if (outCont.style.display == 'inline-block') {
+    outCont.style.display = 'none';
+    canvas.style.display = 'none';
+  } else if (outCont.style.display == 'none' || outCont.style.display == ""){
+    outCont.style.display = 'inline-block';
+    canvas.style.display = 'inline-block';
+    console.log(outCont.style.display);
+  } else {
+    console.log(outCont.style.display);
+    console.error("Something Went wrong");
+  }
+  drawInCanvas();
 }
 
-// GOALS FOR THIS SECTION
-//
-// *** Make everything beautiful ***
-// *** USE HSL COLORS ***
-//
-// 1) button that toggles part of theme
-// 2) dropdown that selects different themes
-// 3) radio button that selects themes
-// 4) check boxes that select themes
+// function(number) {
+  // return Math.floor(Math.random()*number)
+// }
 
+function drawInCanvas() {
+  ctx.beginPath();
+  ctx.lineWidth = "1";
+  ctx.strokeStyle = 'green';
+  ctx.moveTo(5, 50);
+  ctx.lineTo(200, 50);
+  ctx.stroke();
 
-
-
-//
-// CONSOLE CODE START
-//
-const myarr = [1, 2, 3];
-console.log(myarr.shift());
-console.log(myarr.shift());
-console.log(myarr.shift());
-
-// 'string 0' vs 'num 0'
-// "0" is true, because it is a string
-if ("0") {
-  console.log("'0' as a string")
-}
-// 0 as a number is falsy so since if statements only evaluate if the condition is true, it does not run.
-if (0) {
-  console.log("Should not print");
-} else {
-  console.log("This runs because 0 is falsy");
+  console.log('This function should draw in the canvas')
 }
 
-//
-// CONSOLE CODE END
-//
-
-
-//
-// FUNCTIONS RUN
-//
 
 
 
+
+
+
+// (000) CONSOLE CODE START
+function tenNum () {
+  let cnt = 0;
+  while (cnt < 5) {
+    let base = Math.random()*10;
+    let floor = Math.floor(base + 1);
+    // let round= Math.round(base);
+    console.log(`%c-----${cnt + 1}-----`, 'background-color:red')
+    // console.log(`Without floor: ${base}`);
+    console.log(`%cWith floor: ${floor}`, 'background-color:yellow');
+    // console.log(`With round: ${round}`);
+    // console.log('-----------')
+    cnt ++;
+  }
+}
+
+tenNum();
 
 
