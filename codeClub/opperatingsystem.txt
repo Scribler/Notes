@@ -1,0 +1,13 @@
+implements file system
+may - offer graphical environment.
+drivers that talk to hardware
+isolates programs from eachother.
+provides virtual memory.
+
+
+KERNAl - options
+  - is shel part of it or separate
+  - is drivers part of it?
+
+
+PLAN9 - opperating system > check it out

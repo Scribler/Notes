@@ -9,5 +9,6 @@ assets/
 assets/**/*
 *.pdf
 *.zip
+*.vim
 mainOpen
 supportingOpen
