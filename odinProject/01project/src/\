@@ -1,40 +1,28 @@
 //
 // (0) RE-USABLE SCRIPTS
 //
-let inputQuestionContainer = document.getElementById('inputQuestionContainer');
-
 function drawQuestion(question) {
   let inputContainer = document.getElementById('inCont');
   let inputQuestionContainer = document.getElementById('inputQuestionContainer');
-  if (inputContainer.style.display == 'flex') {
+  if (inputContainer.style.display == 'inline-block') {
     inputContainer.style.display = 'none';
     inputQuestionContainer.innerHTML = "";
   } else {
     inputContainer.style.display = 'inline-block';
-    // inputContainer.style.flexDirection = 'column';
     inputQuestionContainer.innerHTML = `<p>${question}</p>`;
   }
 
 }
-
 function drawInput(inNum, buttonPresent) {
-  // draw inputs
-  for (i = 0; i < inNum; i++) {
-    let input = document.createElement('input');
-    input.style.display = 'block';
-    input.style.margin = '10px';
-    inputQuestionContainer.appendChild(input);
-    input.innerHTML = "testing";
-  }
-  // draw button
   let button = document.getElementById('checkAnswer');
-  if (buttonPresent == 'button' || buttonPresent == 'yes' || buttonPresent == 1 || buttonPresent == '1') { // any second input will display button.
+  if (buttonPresent == 'button' || buttonPresent == 'yes') { // any second input will display button.
     button.style.display = 'inline-block';
   } else if (buttonPresent == '0' || buttonPresent == 0 || buttonPresent == 'no'){
     button.style.display = 'none';
   } else {
     console.error("I don't understand that input")
   }
+  console.log(`Draw ${inNum} inputs.`);
 }
 
 //
@@ -46,7 +34,7 @@ ageTest.addEventListener('click', agism);
 function agism() { // optional methods commented out.
   const question = "What is your age?"
   drawQuestion(question);
-  drawInput(1, 'yes') 
+  drawInput(2, 'yes') 
   
   // if (age >= 80) {
     // old = `You're ${age}. You're very old.`;
@@ -64,5 +52,3 @@ function agism() { // optional methods commented out.
   // ageOutput.innerText = old;
   // console.log(runNum++);
 }
-
-

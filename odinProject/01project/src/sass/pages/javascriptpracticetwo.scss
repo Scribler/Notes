@@ -13,12 +13,14 @@ h1 {
   padding: 20px;
   background-color: var(--light-grey);
 }
-
 .standard-button {
   @include standard-button;
   border-radius: 20px;
   border-width: 5px;
   border-color: var(--off-white);
+}
+#checkAnswer {
+  display: none;
 }
 .button-area {
   display: flex;
@@ -33,18 +35,21 @@ h1 {
   }
 }
 .input-container {
-  border-top: 3px solid var(--dark-grey);
+  // border-top: 3px solid var(--dark-grey);
+  border: 3px solid var(--dark-grey);
+  border-radius: 30px;
   display: none;
   padding: 20px;
   margin: 0 auto;
+  background-color: hsl(60, 100%, 80%);
   p {
     display: inline-block;
-    background-color: yellow;
+    // background-color: hsl(60, 100%, 50%);
   }
 }
-#inputQuestionContainer {
-  padding: 20px 0px 50px;
-}
+// #inputQuestionContainer {
+  // padding: 20px 0px 50px;
+// }
 .output-container {
   display: none;
   padding: 50px;
