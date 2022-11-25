@@ -34,6 +34,12 @@ h1 {
     min-height: 80px;
   }
 }
+.programArea {
+  border: 3px solid var(--dark-grey);
+  border-radius: 30px;
+  padding: 10px;
+}
+
 .input-container {
   // border-top: 3px solid var(--dark-grey);
   border: 3px solid var(--dark-grey);
@@ -52,14 +58,17 @@ h1 {
 // }
 .output-container {
   display: none;
-  padding: 50px;
-  margin: 0 auto;
+  padding: 20px;
+  margin: 10px auto;
+  // width: 300px;
   p, div {
     padding: 20px;
     margin: 30px;
+    border: 3px solid var(--dark-grey);
+    border-radius: 30px;
     display: inline-block;
     background-color: orange;
-    font-size: 3em;
+    font-size: 1.7em;
   }
   .out {
     display: none;
