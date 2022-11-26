@@ -4,6 +4,14 @@
 
 // RE-USABLE VARIABLES DECLARATION *** START ***
 // RE-USABLE VARIABLES DECLARATION *** END ***
+function clearDefault() {
+  const defArea = document.getElementById('default');
+  defArea.style.display = 'none';
+}
+function showDefault() {
+  const defArea = document.getElementById('default');
+  defArea.style.display = 'block';
+}
 function drawQuestion(question) {
   let inputContainer = document.getElementById('inCont');
   let inputQuestionContainer = document.getElementById('inputQuestionContainer');
@@ -13,7 +21,9 @@ function drawQuestion(question) {
     inputQuestionContainer.innerHTML = "";
     outputContainer.innerHTML = "";
     outputContainer.style.display = 'none';
+    showDefault();
   } else {
+    clearDefault();
     inputContainer.style.display = 'inline-block';
     // inputContainer.style.flexDirection = 'column';
     inputQuestionContainer.innerHTML = `<p>${question}</p>`;

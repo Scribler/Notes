@@ -4,20 +4,20 @@
 
 :root {
 // COLORS
-  --off-white: #F9F9F9; //main background color
-  --grey: #EAEAEA; // main button hover color
-  --dark-grey: #939393;
-  --black: #1F1F1F;
+  --off-white: hsl(0, 0%, 94%, 1); //main background color
+  --light-grey: hsl(0, 0%, 91%);
+  --grey: hsl(0, 0%, 95%); // main button hover color
+  --dark-grey: hsla(0, 0%, 70%, 1);
+  --black: hsl(0, 0%, 12%);
 
-  --teal: #3FF79A;
-  --pinkurple: #F73F9C;
-  --yellow: #F7F63F;
-  --blue: #3F40F7;
+  --teal: hsl(150, 92%, 61%);
+  --pinkurple: hsl(330, 92%, 61%);
+  --yellow: hsl(60, 92%, 61%);
+  --blue: hsl(240, 92%, 61%);
   // Flexbox Colors
-  --white: #FFFFFF;
-  --light-grey: #E4E6EB;
-  --light-blue: #E7F3FF;
-  --dark-blue: #1877F2;
+  --white: hsl(0, 0%, 100%);
+  --light-blue: hsl(210, 100%, 95%);
+  --dark-blue: hsl(214, 89%, 52%);
 // FONT-SIZES
   --hero-fs: 2em;
   --h1-fs: 2.5em;
