@@ -1,0 +1,18 @@
+ANIMATION
+
+web dev >>> mdn.io/<search word>   <<<< type this into google
+
+CSS animations
+>svg - has dom, can move stuff around
+>canvas 
+
+canvas animations. > use p5.js libraryA
+> 
+
+
+
+webGL > 3D web animations.
+
+function draw() {
+  ambientlight(#, #)
+}
