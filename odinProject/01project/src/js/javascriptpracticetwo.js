@@ -160,3 +160,13 @@ function themeChange(){
 // }
 //
 // console.log(array5num()[2]);
+//
+
+let first = "first declaration";
+console.log(first);
+console.log(printVar());
+function printVar() {
+  let first = "second declaration";
+  return first;
+}
+
