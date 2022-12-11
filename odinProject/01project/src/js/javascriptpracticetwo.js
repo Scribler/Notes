@@ -162,11 +162,11 @@ function themeChange(){
 // console.log(array5num()[2]);
 //
 
-let first = "first declaration";
-console.log(first);
-console.log(printVar());
-function printVar() {
-  let first = "second declaration";
-  return first;
+function count5() {
+  let i = 0;
+  while(i < 5){
+    i++;
+    console.log("'i' is currently: " + i);
+  }
 }
-
+count5();
