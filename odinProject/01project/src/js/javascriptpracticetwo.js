@@ -167,6 +167,11 @@ function count5() {
   while(i < 5){
     i++;
     console.log("'i' is currently: " + i);
+    if(i == 5){
+      console.log("This is the last itteration");
+    } else {
+      console.log("Next...");
+    }
   }
 }
 count5();
