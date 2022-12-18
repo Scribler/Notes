@@ -151,6 +151,7 @@ function themeChange(){
   }
 }
 
+console.log("test3");
 
 // TESTING
 
@@ -166,12 +167,16 @@ function count5() {
   let i = 0;
   while(i < 5){
     i++;
+    console.log("test2");
     console.log("'i' is currently: " + i);
     if(i == 5){
+      console.log("test1");
       console.log("This is the last itteration");
     } else {
       console.log("Next...");
+      console.log("test4");
     }
   }
 }
+console.log("test5");
 count5();
