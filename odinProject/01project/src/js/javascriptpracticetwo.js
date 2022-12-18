@@ -154,27 +154,3 @@ function themeChange(){
 
 // TESTING
 
-// function array5num() {
-  // let myArr = [5, 4, 3, 1]
-  // return myArr;
-// }
-//
-// console.log(array5num()[2]);
-//
-function adding(elementss) {
-  console.log("Answer is: " + (elementss + 5));
-}
-adding(9);
-
-function count5() {
-  let i = 0;
-  while(i < 5){
-    i++;
-    console.log("'i' is currently: " + i);
-    if(i == 5){
-      console.log("This is the last itteration");
-    } else {
-    }
-  }
-}
-count5();
