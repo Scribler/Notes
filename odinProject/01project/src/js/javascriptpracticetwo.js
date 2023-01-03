@@ -151,6 +151,12 @@ function themeChange(){
   }
 }
 
-
 // TESTING
 
+const myname = "Jobles"
+
+function aboutUser(myname) {
+  console.log(myname + " Is a person.");
+  console.log("We don't talk about...uhh...", myname + ".");
+}
+aboutUser(myname);
