@@ -48,40 +48,41 @@ h1 {
       margin: 50px auto;
     }
   }
-  .input-container {
-    // border-top: 3px solid var(--dark-grey);
+}
+.programArea .input-container {
+  // border-top: 3px solid var(--dark-grey);
+  border: 3px solid var(--dark-grey);
+  border-radius: 30px;
+  display: none;
+  padding: 20px;
+  margin: 5px auto;
+  background-color: hsl(60, 100%, 80%);
+  p {
+    display: inline-block;
+    // background-color: hsl(60, 100%, 50%);
+  }
+}
+.programArea .output-container {
+  display: none;
+  // padding: 20px;
+  // margin: 10px auto;
+  margin: 5px auto;
+  // width: 300px;
+  p, div {
+    padding: 20px;
+    // margin: 30px;
     border: 3px solid var(--dark-grey);
     border-radius: 30px;
-    display: none;
-    padding: 20px;
-    margin: 5px auto;
-    background-color: hsl(60, 100%, 80%);
-    p {
-      display: inline-block;
-      // background-color: hsl(60, 100%, 50%);
-    }
+    display: inline-block;
+    background-color: orange;
+    font-size: 1.7em;
   }
-  .output-container {
+  .out {
     display: none;
-    // padding: 20px;
-    // margin: 10px auto;
-    margin: 5px auto;
-    // width: 300px;
-    p, div {
-      padding: 20px;
-      // margin: 30px;
-      border: 3px solid var(--dark-grey);
-      border-radius: 30px;
-      display: inline-block;
-      background-color: orange;
-      font-size: 1.7em;
-    }
-    .out {
-      display: none;
-    }
   }
 }
 
+// button colors
 #ageTest {
   background-color: yellow;
   color: var(--black);
@@ -132,7 +133,6 @@ h1 {
 }
 #ticTacToe {
   background-color: #2DECEA;
-
 }
 
 // NEW TEST

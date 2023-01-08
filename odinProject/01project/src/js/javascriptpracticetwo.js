@@ -51,7 +51,6 @@ function initProgArea(initialContent, progIdent) {
     inputContainer.style.display = 'inline-block';
     inputQuestionContainer.innerHTML = `<p>${initialContent}</p>`;
   }
-
 }
 // (0-4) DRAW INPUTS [(1)How many?,(2)Is there a button?,(3)Button text,(4)Button ID]
 function drawInput(inNum, buttonPresent, buttonText) {
@@ -160,3 +159,5 @@ function aboutUser(myname) {
   console.log("We don't talk about...uhh...", myname + ".");
 }
 aboutUser(myname);
+
+

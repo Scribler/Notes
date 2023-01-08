@@ -1,0 +1,31 @@
+// colors
+
+
+// this contains each program as a whole
+.section-container {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  border: solid 1px var(--black);
+}
+
+// FUNCTION AREA
+.funcAreaHeader {
+  padding: 10px 0;
+  text-align: center;
+  border: solid 1px var(--pinkurple);
+}
+
+.infoArea {
+  padding: 10px 0;
+  text-align: center;
+  border: solid 1px var(--dark-blue);
+}
+
+.funcArea {
+  height: 500px;
+  width: 500px;
+  background-color: var(--light-yellow);
+  border: solid 1px var(--blue);
+  margin: 30px auto;
+}
