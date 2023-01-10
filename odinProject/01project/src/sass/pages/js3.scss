@@ -38,7 +38,21 @@
 .programSelect {
   padding: 5px 10px;
 }
-
+.selectFunc {
+  display: flex;
+  flex-wrap: wrap;
+}
+// BUTTONS START 
+#dispIn {
+  background-color: var(--teal);
+}
+#addIn {
+  background-color: var(--dark-yellow);
+  color: var(--off-white);
+}
+#calc {
+  background-color: var(--pinkurple);
+}
 // OUTPUT AREA
 .outPutt {
   height: 500px;
