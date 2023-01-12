@@ -37,21 +37,27 @@
   padding: 5px 10px;
   background-color: var(--blue);
   border-radius: 10px;
+  color: var(--off-white);
 }
 .selectFunc {
   display: flex;
   flex-wrap: wrap;
 }
 // BUTTONS START 
+#dispChecklist {
+  background-color: var(--light-yellow);
+}
 #dispIn {
   background-color: var(--teal);
 }
 #addIn {
-  background-color: var(--dark-yellow);
-  color: var(--off-white);
+  background-color: var(--yellow);
 }
 #calc {
   background-color: var(--pinkurple);
+}
+#canvasArea {
+  background-color: var(--dark-grey);
 }
 // OUTPUT AREA
 .outPutt {

@@ -17,6 +17,7 @@ const infoArea = document.getElementById('infoArea');
 const outPutt = document.getElementById('outPutt');
 const goalsArr = [
   // TODO automate the adding of the underline span to the first word of each string.
+  "<span class='ul'>ADD</span> 'RESET' button.",
   "<span class='ul'>STORE</span> goals in a 'JS OBJECT' with the 'KEY' as the 'HEADING &nbsp; CHECKBOX' and 'VALUES' the 'lower lvl checkboxes",
   "<span class='ul'>CASCADING</span> CHECK LIST - when all items 'CHECKED' check &nbsp; &nbsp; the heading checkbox.",
   "<span class='ul'>Clear</span> Question",
@@ -35,7 +36,10 @@ function resetAll() {
 }
 
 // Project Goals Check List
-window.onload = projGoals(goalsArr);
+// window.onload = projGoals(goalsArr);
+const checkButt = document.getElementById('checklistButton'); 
+                                    // storing the function below in another function or the 'click' event will fire on page load
+checkButt.addEventListener("click", function() {projGoals(goalsArr)});
 function projGoals(goalsArr) {
   // INSERT '<h3>' TAG 
   outPutt.insertAdjacentHTML("beforeend", `<h3 class="clFuncGoals">Check List Functionality Goals</h3>`)
