@@ -1,6 +1,3 @@
-// colors
-
-
 // MAIN CONTAINER
 .section-container {
   width: 1000px;
@@ -27,6 +24,7 @@
   border: solid 1px var(--black);
   border-radius: 20px;
   margin: 5px;
+  padding: 5px;
   height: 70px;
   width: 200px;
   text-align: center;
@@ -37,6 +35,8 @@
 }
 .programSelect {
   padding: 5px 10px;
+  background-color: var(--blue);
+  border-radius: 10px;
 }
 .selectFunc {
   display: flex;
@@ -56,8 +56,33 @@
 // OUTPUT AREA
 .outPutt {
   height: 500px;
-  width: 500px;
+  width: 800px;
   background-color: var(--light-yellow);
   border: solid 1px var(--blue);
   margin: 30px auto;
+}
+.goal-list {
+  padding-bottom: 0 0 10px 10px;
+}
+.lvl-1-goal-item {
+  margin-left: 10px;
+}
+.lvl-2-goal-item {
+  margin-left: 30px;
+  // height: 30px;
+}
+// .lvl-2-goal-item:first-of-type {
+  // transform: translateY(-20px);
+  // height: 30px;
+// }
+.lvl-2-goal-item-label {
+  margin: 0 10px 10px 10px;
+  display: inline-block;
+  max-width: 300px;
+}
+.clFuncGoals {
+  padding: 15px 5px;
+}
+.ul {
+  text-decoration: underline;
 }
