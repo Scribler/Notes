@@ -34,13 +34,18 @@ function resetAll() {
   outPutt.innerHTML = `Page Reset Placeholder Ran`;
   console.log("Page Reset Ran");
 }
+const resetButt = document.getElementById('reset'); 
+resetButt.addEventListener('click', resetAll);
 
 // Project Goals Check List
 // window.onload = projGoals(goalsArr);
 const checkButt = document.getElementById('checklistButton'); 
-                                    // storing the function below in another function or the 'click' event will fire on page load
-checkButt.addEventListener("click", function() {projGoals(goalsArr)});
-function projGoals(goalsArr) {
+// storing the function below in another function or the 'click' event will fire on page load >> (IF function is fed a variable)
+//
+// checkButt.addEventListener("click", function() {projGoals(goalsArr)});
+checkButt.addEventListener("click", projGoals);
+function projGoals() {
+  resetAll();
   // INSERT '<h3>' TAG 
   outPutt.insertAdjacentHTML("beforeend", `<h3 class="clFuncGoals">Check List Functionality Goals</h3>`)
 

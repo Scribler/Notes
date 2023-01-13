@@ -12,9 +12,23 @@
 .funcAreaHeader {
   padding: 10px 0;
   text-align: center;
-  border: solid 1px var(--pinkurple);
+  // border: solid 1px var(--pinkurple);
 }
 // DISPLAY THE QUESTION'S CONTENT AND ANY REQUIRED BUTTONS AND INPUT FIELDS
+.programsIntro {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px;
+}
+.programs-header {
+  display: inline-block;
+}
+.reset {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
 .infoArea { 
   padding: 10px 0;
   text-align: center;
