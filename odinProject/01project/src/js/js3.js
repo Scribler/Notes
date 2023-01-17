@@ -17,39 +17,40 @@ const infoArea = document.getElementById('infoArea');
 const outPutt = document.getElementById('outPutt');
 const goalsArr = [
   // TODO automate the adding of the underline span to the first word of each string.
-  "<span class='ul'>ADD</span> 'RESET' button.",
   "<span class='ul'>STORE</span> goals in a 'JS OBJECT' with the 'KEY' as the 'HEADING &nbsp; CHECKBOX' and 'VALUES' the 'lower lvl checkboxes",
   "<span class='ul'>CASCADING</span> CHECK LIST - when all items 'CHECKED' check &nbsp; &nbsp; the heading checkbox.",
-  "<span class='ul'>Clear</span> Question",
-  "<span class='ul'>Clear</span> Inputs",
-  "<span class='ul'>Clear</span> Question Button",
-  "<span class='ul'>Clear</span> Run / Start Button",
-  "<span class='ul'>Clear</span> Question Box Contents(& border?)"
 ]
-
+//
 // RESET FUNCTION
-window.onload = resetAll(); 
+//
+window.onload = projGoals(); 
 function resetAll() {
-  infoArea.innerHTML = '<div class="question">Question</div>'
-  outPutt.innerHTML = `Page Reset Placeholder Ran`;
+  // infoArea.innerHTML = '<div class="question">Question</div>'
+  // outPutt.innerHTML = `Page Reset Placeholder Ran`;
+  // console.log("Page Reset Ran");
+  infoArea.style.display = 'none';
+  outPutt.innerHTML = ''
   console.log("Page Reset Ran");
 }
 const resetButt = document.getElementById('reset'); 
 resetButt.addEventListener('click', resetAll);
 
-// Project Goals Check List
-// window.onload = projGoals(goalsArr);
-const checkButt = document.getElementById('checklistButton'); 
-// storing the function below in another function or the 'click' event will fire on page load >> (IF function is fed a variable)
 //
-// checkButt.addEventListener("click", function() {projGoals(goalsArr)});
+// PROJECT GOALS CHECK LIST
+//
+// *** NOTE > try using separate objects for setting goals as Main, or Sub goal ***
+//
+//
+//
+const checkButt = document.getElementById('checklistButton'); 
 checkButt.addEventListener("click", projGoals);
 function projGoals() {
+  // Reset question and result area.
   resetAll();
-  // INSERT '<h3>' TAG 
+  // insert '<h3>' tag 
   outPutt.insertAdjacentHTML("beforeend", `<h3 class="clFuncGoals">Check List Functionality Goals</h3>`)
 
-  // INSERT OPENING '<form>' TAG
+  // insert opening '<form>' tag
   outPutt.insertAdjacentHTML("beforeend", `<form class="goal-list" name="goal-list">`)
   for (let i = 0; i < goalsArr.length; i ++) {
     let goalNum = i + 1; // for setting id and class name numbers (so each line has a unique identifier)
@@ -58,13 +59,9 @@ function projGoals() {
     outPutt.insertAdjacentHTML("beforeend", `
       <input id="check${goalNum}" class="lvl-2-goal-item" type="checkbox" name="goal${goalNum}" value="${goal}">
       <label id="goal${goalNum}" class="lvl-2-goal-item-label" for="goal${goalNum}">${goal}</label><br>`);
-      // <label id="goal${goalNum}" class="lvl-2-goal-item-label" for="goal${goalNum}">${goalNum}.) - ${goal}</label><br>
     let lvl2goal = document.querySelector(`#goal${goalNum}`);
     let checkBox = document.querySelector(`#check${goalNum}`);
     let goalHeight = lvl2goal.offsetHeight;
-    // let checkHeight = checkBox.offsetHeight;
-    // console.log(`Goal Height: ${goalHeight}`);
-    // console.log(`Checkbox Height: ${checkHeight}`);
 
     // fix alignment of checkbox to first line of goal. (default pushes checkbox to the bottom line if it has multiple lines)
     if (goalHeight > 19) {
@@ -72,10 +69,59 @@ function projGoals() {
       checkBox.setAttribute('style', `transform:translateY(${offset}px);`); 
     }
   }
-  // INSERT CLOSING '</form>' TAG
+  // insert closing '</form>' tag
   outPutt.insertAdjacentHTML("beforeend", `</form>`);
 }
 
-// TESTING AREA
+//
+// FAVICON MAKER AREA
+//
+const faviconMaker = document.getElementById('faviconMaker');
+faviconMaker.addEventListener('click', favicon);
+function favicon() {
+  resetAll();
+}
 
+
+//
+// TESTING AREA
+//
+
+// divide testing content from main
+console.log("*\n*\n*\nTESTING AREA\n*\n*\n*");
+
+//
+// RANDOM NUMBER GENERATION START
+//
+function randomNum(isFloat, min, max) {
+  max = max + 1;
+  let floatStatus;
+  if(isFloat < 0 || isFloat > 1) {
+    console.log('Invalid input!');
+  } else if(isFloat == 1) {
+    console.log('Is float');
+    floatStatus = true;
+  } else {
+    console.log('Not a float');
+    floatStatus = false;
+  }
+  console.log(`lowest number: ${min}, highest number: ${max}`);
+  for(i=0; i<10; i++){
+    if(floatStatus) {
+      console.log(`Cycle ${i + 1}: `, Math.random() * (max - min) + min);
+    } else {
+      console.log(`Cycle ${i + 1}: `, Math.floor(Math.random() * (max - min) + min));
+    }
+  }
+    return Math.random() * (max + 1);
+}
+//
+// RANDOM NUMBER GENERATION END
+//
+
+
+//
+// TESTING RUN
+//
+console.log(randomNum(0, 3, 15));
 
