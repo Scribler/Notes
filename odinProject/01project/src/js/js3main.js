@@ -1,22 +1,8 @@
-// TODO items 
-//    * ADD: 'clear program' button to reset site.
-  //      Question
-    //      - clear question
-    //      - clear question input
-    //      - clear question button
-  //        - clear question area outline
-  //      Outputt
-    //      - clear outPutt area
-    //      - reprint default list
-    //      - log finished if complete.
-    //      - attempt to log previous information (alert: FAILURE)> if previous info present.
-//    * AUTOMATE the adding of the underline span to the first word of each string.
-//    * STYLE goal list
 
+// set variables
 const infoArea = document.getElementById('infoArea');
 const outPutt = document.getElementById('outPutt');
 const goalsArr = [
-  // TODO automate the adding of the underline span to the first word of each string.
   "<span class='ul'>STORE</span> goals in a 'JS OBJECT' with the 'KEY' as the 'HEADING &nbsp; CHECKBOX' and 'VALUES' the 'lower lvl checkboxes",
   "<span class='ul'>CASCADING</span> CHECK LIST - when all items 'CHECKED' check &nbsp; &nbsp; the heading checkbox.",
 ]
