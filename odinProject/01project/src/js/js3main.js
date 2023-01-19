@@ -1,4 +1,3 @@
-
 // set variables
 const infoArea = document.getElementById('infoArea');
 const outPutt = document.getElementById('outPutt');
@@ -11,9 +10,6 @@ const goalsArr = [
 //
 window.onload = projGoals(); 
 function resetAll() {
-  // infoArea.innerHTML = '<div class="question">Question</div>'
-  // outPutt.innerHTML = `Page Reset Placeholder Ran`;
-  // console.log("Page Reset Ran");
   infoArea.style.display = 'none';
   outPutt.innerHTML = ''
   console.log("Page Reset Ran");
@@ -63,11 +59,13 @@ function projGoals() {
 // FAVICON MAKER AREA
 //
 const faviconMaker = document.getElementById('faviconMaker');
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 faviconMaker.addEventListener('click', favicon);
 function favicon() {
   resetAll();
+  outPutt.innerHTML = `<canvas id="canvasArea"></canvas>`
 }
-
 
 //
 // TESTING AREA
