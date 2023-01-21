@@ -5,6 +5,7 @@ const goalsArr = [
   "<span class='ul'>STORE</span> goals in a 'JS OBJECT' with the 'KEY' as the 'HEADING &nbsp; CHECKBOX' and 'VALUES' the 'lower lvl checkboxes",
   "<span class='ul'>CASCADING</span> CHECK LIST - when all items 'CHECKED' check &nbsp; &nbsp; the heading checkbox.",
 ]
+
 //
 // RESET FUNCTION
 //
@@ -26,6 +27,8 @@ resetButt.addEventListener('click', resetAll);
 //
 const checkButt = document.getElementById('checklistButton'); 
 checkButt.addEventListener("click", projGoals);
+
+//print out 'project goals' form 'goalsArr'
 function projGoals() {
   // Reset question and result area.
   resetAll();
@@ -59,12 +62,12 @@ function projGoals() {
 // FAVICON MAKER AREA
 //
 const faviconMaker = document.getElementById('faviconMaker');
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
 faviconMaker.addEventListener('click', favicon);
 function favicon() {
   resetAll();
   outPutt.innerHTML = `<canvas id="canvasArea"></canvas>`
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
 }
 
 //
@@ -90,7 +93,7 @@ function randomNum(isFloat, min, max) {
     floatStatus = false;
   }
   console.log(`lowest number: ${min}, highest number: ${max}`);
-  for(i=0; i<10; i++){
+  for(i=0; i<3; i++){
     if(floatStatus) {
       console.log(`Cycle ${i + 1}: `, Math.random() * (max - min) + min);
     } else {
@@ -103,9 +106,54 @@ function randomNum(isFloat, min, max) {
 // RANDOM NUMBER GENERATION END
 //
 
+//
+// PLAYING WITH NESTED OBJECTS >>>> USE THIS FOR MAKING NESTED LISTS FOR REFERENCE SITE START
+//
+const gitTasks = {
+  objectTitle: "GIT",
+  checkout: "<code>git checkout <name of repository branch></code>",
+  commit: `<code>git commit -m "<message for commit>"</code>`
+}
+const nvim = {
+  // exitInsert: 'jk',
+  nvimTree: {
+    openVsplit: "<C-v>",
+    openHsplit: "<C-x>"
+  },
+  // something: "test",
+  // otherthg: "another Test"
+}
+
+//
+// PLAYING WITH NESTED OBJECTS >>>> USE THIS FOR MAKING NESTED LISTS FOR REFERENCE SITE END
+//
+
 
 //
 // TESTING RUN
 //
 console.log(randomNum(0, 3, 15));
+console.log("TEST");
+console.log(nvim.nvimTree.openVsplit);
+
+for (const key in nvim) {
+  console.log(`key: ${key}`)
+  let value = nvim[key];
+  for (const key in value) {
+    if (value.hasOwnProperty(key)) {
+      const element = value[key];
+      console.log(`second key: ${key}`)
+    }
+  }
+  console.log(`value: ${value}`)
+  // console.log(`value: ${value}`)
+}
+
+
+
+
+
+
+
+
 
