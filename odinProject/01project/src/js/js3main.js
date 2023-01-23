@@ -1,3 +1,5 @@
+// const { init } = require("browser-sync");
+
 // set variables
 const infoArea = document.getElementById('infoArea');
 const outPutt = document.getElementById('outPutt');
@@ -63,11 +65,32 @@ function projGoals() {
 //
 const faviconMaker = document.getElementById('faviconMaker');
 faviconMaker.addEventListener('click', favicon);
+function random(number) {
+    return Math.floor(Math.random()*number);
+}
 function favicon() {
   resetAll();
   outPutt.innerHTML = `<canvas id="canvasArea"></canvas>`
+  // let WIDTH = document.documentElement.clientWidth;
+  // let HEIGHT = document.documentElement.clientHeight;
   const canvas = document.querySelector('canvas');
+  let WIDTH = canvas.width;
+  let HEIGHT = canvas.height;
   const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  for (let i = 0; i < 10; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(10), 0, 2*Math.PI);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(0,255,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(30), 0, 2*Math.PI);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,255,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(30), 0, 2*Math.PI);
+    ctx.fill();
+    console.log(ctx);
+  }
 }
 
 //
@@ -123,6 +146,24 @@ const nvim = {
   // something: "test",
   // otherthg: "another Test"
 }
+let Honda3 = ["cb350", "st1300", "cb500"];
+let Yamaha3 = ["yama1", "yama2", "R7"];
+let Suzuki3 = ["Katana", "Busa", "SV650"];
+
+let soup3 = ["potato", "pumpkin", "French Onion"];
+let salad3 = ["romaine", "chicken", "egg"];
+let pizza3 = ["Hawaian", "4cheese", "Peperoni"];
+
+let big3 = ["St. Bernard", "Rotwieler", "Mastif"];
+let medium3 = ["husky", "German Shephard", "Golden Retriever"];
+let small3 = ["Chiwawa", "Pomeranian", "Bichon"];
+
+let bikes2 = [Honda3, Yamaha3, Suzuki3];
+let foods2 = [soup3, salad3, pizza3];
+let dogs2 = [big3, medium3, small3];
+
+let lvl1 = [bikes2, foods2, dogs2]
+
 
 //
 // PLAYING WITH NESTED OBJECTS >>>> USE THIS FOR MAKING NESTED LISTS FOR REFERENCE SITE END
@@ -150,6 +191,7 @@ for (const key in nvim) {
 }
 
 
+console.log(lvl1);
 
 
 
