@@ -166,5 +166,15 @@ function fullName(first = "[No first name given.]", last = "[No last name given]
   }
 }
 
+function showMsg(text) {
+  if (text === undefined) {
+    text = 'No message given';
+  }
+  console.log(text);
+}
+
+showMsg("Hello World");
+showMsg();
+
 fullName('Dave');
 fullName('Thomas', 'Ives');
