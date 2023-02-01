@@ -109,6 +109,16 @@ function runSumGenerator() {
 
 
 // TESTING AREA
+let colors = {
+  blue: "blue",
+  green: "green",
+  yellow: "yellow"
+};
+let rimSizes = {
+  twenty1: '21"',
+  twenty2: '22"',
+  twenty3: '23"'
+};
 let taurusDetails = {
   colorOptions: ["red", "green", "yellow"],
   trims: ["sport", "regular", "power"],
@@ -126,7 +136,16 @@ let cars = {
 console.log(cars.ford.taurus.trims[2]);
 cars.ford.taurus.trims.push("sho");
 console.log(cars.ford.taurus.trims[3]);
-cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`))
-cars.ford.taurus.wheelOptions.push("spinners");
+cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
+let spinners = {
+  color: colors,
+  size: rimSizes
+};
+cars.ford.taurus.wheelOptions.push(spinners);
+console.log(cars.ford.taurus.wheelOptions[3].color.blue);
+console.log(cars.ford.taurus.wheelOptions[3].size.twenty1);
 console.log(" ");
-cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`))
+cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
+
+
+
