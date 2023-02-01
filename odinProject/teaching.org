@@ -1,0 +1,24 @@
+* TEACHING SUBJECTS
+  * git
+  * nvim 
+  * node
+    - [ ] npm
+      - [ ] npm start (running your own server)
+    - [ ] yarn
+    - [ ] sass
+    - [ ] package.json
+  * sass
+    - [ ] modular file structures
+    - [ ] modules
+    - [ ] mixins
+    - [ ] variables
+    - [ ] @use
+    - [ ] index.scss (grouping files and exporting together)
+* Group Project Ideas
+  * Multi page website
+    - Each person picks an idea to work on and that is their page.
+  * Single/few page website
+    - Each person gets a section with which to build what they want.
+    - Team works together to decide a theme, and has a limited amount of extra they can add to that.
+    - Organize how you will label colors, etc.
+
