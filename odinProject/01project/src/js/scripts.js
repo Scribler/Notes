@@ -131,21 +131,40 @@ let fmodels = {
 let cars = {
   ford: fmodels,
 };
+let spinners = {
+  color: colors,
+  size: rimSizes
+};
 
 // TESTING RUN
 console.log(cars.ford.taurus.trims[2]);
 cars.ford.taurus.trims.push("sho");
 console.log(cars.ford.taurus.trims[3]);
 cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
-let spinners = {
-  color: colors,
-  size: rimSizes
-};
+
+
 cars.ford.taurus.wheelOptions.push(spinners);
 console.log(cars.ford.taurus.wheelOptions[3].color.blue);
 console.log(cars.ford.taurus.wheelOptions[3].size.twenty1);
 console.log(" ");
+
 cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
+console.log(" ");
 
+function fullName(first = "[No first name given.]", last = "[No last name given]") {
+  console.log(`First name: ${first}, Second name: ${last}.`);
+  let fulln;
+  if (first == "[No first name given.]" || last == "[No last name given]") {
+    fulln = 'invalid';
+  } else {
+    fulln = `${first} ${last}`;
+  }
+  if (fulln == 'invalid') {
+    console.log('Invalid Entry')
+  } else {
+    console.log(`Your full name is ${fulln}`);
+  }
+}
 
-
+fullName('Dave');
+fullName('Thomas', 'Ives');
