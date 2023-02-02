@@ -238,3 +238,28 @@ console.log(`rest: ${rest}`);
 const together = [...rando, ...rest]; // concatonate two arrays using 'spread' syntax
 console.log(together);
 together.map(x => console.log(`together array item #${together.indexOf(x)+1}: ${x}`));
+
+let newUser;
+const users = [
+  {id: 1, name: 'Dod'},
+  {id: 2, name: 'Dale'},
+  {id: 3, name: 'Frank'}
+]
+newUser = {id: 4, name: 'Marigold'}
+let updatedUsers = [...users, newUser]
+users.map(x => console.log(`User Id: ${x.id}, User Name: ${x.name}`));
+updatedUsers.map(x => console.log(`User Id: ${x.id}, User Name: ${x.name}`));
+
+let list = [1, 2, [3, 4], 5];
+let secList = [...list];
+console.log(list);
+secList.pop();
+console.log(list);
+console.log(secList);
+
+console.log(employee);
+let emp2 = {...employee};
+console.log(emp2);
+
+
+
