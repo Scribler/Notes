@@ -233,3 +233,8 @@ const {
 console.log(empName, age, occupation, `, Father's first name: ${fafirstName} ,`, `Father's last name: ${falastName}`);
 // console.log(employee.name);
 
+console.log(`Rando: ${rando}`);
+console.log(`rest: ${rest}`);
+const together = [...rando, ...rest]; // concatonate two arrays using 'spread' syntax
+console.log(together);
+together.map(x => console.log(`together array item #${together.indexOf(x)+1}: ${x}`));
