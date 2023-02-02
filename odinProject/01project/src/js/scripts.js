@@ -136,45 +136,100 @@ let spinners = {
   size: rimSizes
 };
 
-// TESTING RUN
-console.log(cars.ford.taurus.trims[2]);
-cars.ford.taurus.trims.push("sho");
-console.log(cars.ford.taurus.trims[3]);
-cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
 
 
-cars.ford.taurus.wheelOptions.push(spinners);
-console.log(cars.ford.taurus.wheelOptions[3].color.blue);
-console.log(cars.ford.taurus.wheelOptions[3].size.twenty1);
-console.log(" ");
 
-cars.ford.taurus.wheelOptions.map((x, index) => console.log(`wheel option ${index + 1}: ${x}`));
-console.log(" ");
 
-function fullName(first = "[No first name given.]", last = "[No last name given]") {
-  console.log(`First name: ${first}, Second name: ${last}.`);
-  let fulln;
-  if (first == "[No first name given.]" || last == "[No last name given]") {
-    fulln = 'invalid';
+// AGE CHECK
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else if (age == true) {
+    return true;
+  } else if (age == false){
+    return;
   } else {
-    fulln = `${first} ${last}`;
+    return confirm('Do you have permission from your parents?');
   }
-  if (fulln == 'invalid') {
-    console.log('Invalid Entry')
-  } else {
-    console.log(`Your full name is ${fulln}`);
+}
+function showMovie(age) {
+  if ( !checkAge(age) ) {
+    return;
+  }
+  alert( "Showing you the movie" );
+}
+
+// let age = prompt('How old are you?'); // prompt for age
+// if ( checkAge(age) ) { // check for age (deny if too young or no permission)
+//   age = true;
+//   alert( 'Access granted' );
+// } else {
+//   age = false;
+//   alert( 'Access denied' );
+// }
+// showMovie(age) // show if of age, ask if has permission if not.
+
+// CAR AND COLORS (rest parameters >>> ex. '...possibleColors' )
+function car(carName, ...possibleColors) { // '...possibleColors' makes an array out of every additional argument
+  console.log(`Car: ${carName}`);          //  called 'possibleColors'.
+  console.log(`possibleColors: ${possibleColors.length}`)
+  possibleColors.map(color => console.log(`Car Color ${possibleColors.indexOf(color) + 1}: ${color}`));
+}
+car("Mustang", "blue", "green", "yellow", "orange", "purple"); // print car name, # of possible colors, and colors
+
+function numSort(...nums) {
+  let sorted = nums.sort((a, b) => a - b);
+  console.log(sorted);
+}
+
+numSort(1, 5, 3, 88, 23, 4, 77, 3, 44);
+
+function argSort() {
+  argArr = []
+  for(let i=0; i < arguments.length; i++) {
+    argArr.push(arguments[i]);
+  }
+  let sorted = argArr.sort((a,b) => a - b);
+  sorted.map(element => console.log(`Element ${sorted.indexOf(element) + 1}: ${element}`));
+}
+function t(car, name, thing) {
+  console.log(car, name, thing);
+}
+argSort(1, 99, 34, 2, 8, 37);
+console.log(argSort.length);
+console.log(car.length);
+t("this", "that", "the other");
+console.log(t.length); 
+let c = [55];
+let a, b, rest;
+[a, b, ...rest] = [1, 2, 3, 5, 6, 22, 656, 44, 2];
+console.log(a);
+console.log(b);
+console.log(rest);
+
+let [u, y, carr, ...rando] = [86, 96, "ford probe", "apple", 76, "bello"];
+console.log(u);
+console.log(y);
+console.log(carr);
+rando.map(x => console.log(`rando # ${rando.indexOf(x) + 1}: ${x}`));
+
+const employee = {
+  name: "Joe",
+  age: 33,
+  occupation: "Plumber",
+  father: {
+    fafirstName: "Dale",
+    falastName: "Carpenter"
   }
 }
 
-function showMsg(text) {
-  if (text === undefined) {
-    text = 'No message given';
-  }
-  console.log(text);
-}
+const {
+  name: empName,
+  age,
+  occupation,
+  father: {fafirstName, falastName}
+} = employee;
 
-showMsg("Hello World");
-showMsg();
+console.log(empName, age, occupation, `, Father's first name: ${fafirstName} ,`, `Father's last name: ${falastName}`);
+// console.log(employee.name);
 
-fullName('Dave');
-fullName('Thomas', 'Ives');
