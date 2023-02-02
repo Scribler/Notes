@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
+h1 {
+  color: blue;
+}
+
+.buttone {
+  @include menu-buttons;
+  &:hover {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+  }
+  &:active {
+    color: var(--light-blue);
+    background-color: var(--darker-grey);
+  }
+}

@@ -3,7 +3,7 @@
 // @use 'abstracts' as *;
 // @use 'abstracts/functions';
 // @use 'abstracts/mixins';
-@use './vendors';
+// @use './vendors';
 // @use 'vendors/bootstrap';
 // @use 'vendors/jquery-ui';
 @use './base';
@@ -25,5 +25,4 @@
 // @use 'themes/admin';
 
 // PAGES
-@use './pages/home';
 @use './pages/calendar';

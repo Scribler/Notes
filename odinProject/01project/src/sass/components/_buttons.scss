@@ -8,11 +8,13 @@
 @mixin menu-buttons { 
   // background matched button
   // dark-grey on hover
-  color: var(--black);
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+  font-weight: bold;
   display: block;
   height: 100%;
-  background-color: var(--light-grey);
-  padding: 50px;
+  padding: 10px 20px;
+  border-radius: 5px;
   &:hover {
     background-color: var(--off-white);
   }

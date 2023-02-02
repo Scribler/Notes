@@ -1,0 +1,81 @@
+* CURRENT CODING PROJECTS
+** TODO References Site
+  * [ ] Git references
+  * [ ] Orgmode
+    + [ ] promote heading
+    + [ ] promote element
+  * [ ] Emmet snippets
+  * [ ] NeoVim
+   + [ ] config
+    - [ ] fuzzyfind
+    - [ ] leader/modification keys
+   + [ ] LSP bindings
+    - [ ] show line diagnostics 'gl'
+    - [ ] hover information 'K'
+   + [ ] jump points
+   + [ ] quick movement
+   + [ ] moving code
+   + [ ] inserting code to specific line number
+   + [ ] search & replace
+   + [ ] regex
+   + [ ] nvimtree
+    - [ ] create folder
+    - [ ] create file
+    - [ ] create file & folder
+    - [ ] open in vsplit
+    - [ ] open in hsplit
+    - [ ] open in tab
+** TODO THE ODIN PROJECT
+  * [ ] Javscript Developer Tools
+    + [ ] Complete content
+    + [ ] Build own project in javascriptpracticeTwo
+    + [ ] this
+    + [ ] 
+** TODO NEOVIM FROM SCRATCH
+  * [X] 1)  - options
+  * [X] 2)  - keymaps
+  * [X] 3)  - plugins
+  * [X] 4)  - colorscheme
+  * [ ] 5)  - completion
+  * [ ] 6)  - LSP
+  * [ ] 7)  - Telescope
+  * [ ] 8)  - treesitter
+  * [ ] 9)  - autopairs
+  * [ ] 10) - comments
+  * [ ] 11) - gitsigns
+  * [ ] 12) - nvimtree
+  * [ ] 13) - bufferline.lua
+  * [ ] 14) - null.ls
+  * [ ] 15) - lualine.lua
+  * [ ] 16) - toggleterm
+  * [ ] 17) - project
+  * [ ] 18) - impatient
+  * [ ] 19) - indentline
+  * [ ] 20) - alpha
+  * [ ] 21) - whichkey
+  * [ ] 22) - autocommands
+  * [ ] 23) - revert-237-fix-gitsigns
+
+* Syllabus - SC4RP3R's School of Web Developement
+** TODO IDE
+  * [X] Understand > "git checkout", && , "git merge"
+  * [X] NeoVim From Scratch Setup
+  * [ ] NeoVim From Scratch (COMPLETE LESSONS)
+  * [ ] Basic Lua (to better understand neovim customization)
+  * [ ] LunarVim - neovim all in one ide
+** TODO WEB DEVELOPEMENT
+* LUNAR VIM OPTIONS TO SET
+** TODO options
+  * lineNumbers - relative
+
+  * bindings
+    + jk - for exiting insert mode (DO NOT USE 'kj' > It conflicts with 'orgmode')
+    + <leader>/ - Comment line
+
+* Org Mode bindings (https://github.com/nvim-orgmode/orgmode)
+** *NOTE* '<Leader>' == ' ' || '<space>'
+** *NOTE* '<CR>' == 'RETURN' || 'ENTER'
+  - <leader> oih   "open header after header and content"
+  - <leader> <CR>  "create new item below"
+  - <leader> oiT   "insert new 'TODO' heading after current line"
+  - <leader> oit   "insert new 'TODO' heading after current heading & it's content"
