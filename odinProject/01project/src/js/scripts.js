@@ -185,12 +185,15 @@ function numSort(...nums) {
 numSort(1, 5, 3, 88, 23, 4, 77, 3, 44);
 
 function argSort() {
-  argArr = []
-  for(let i=0; i < arguments.length; i++) {
-    argArr.push(arguments[i]);
-  }
+  // let argArr = [];
+  // for(let i=0; i < arguments.length; i++) {
+  //   argArr.push(arguments[i]);
+  // }
+  // const argArr = [].slice.call(arguments); // this does the same as the above code
+  const argArr = Array.from(arguments); // this does the same as the above code
+
   let sorted = argArr.sort((a,b) => a - b);
-  sorted.map(element => console.log(`Element ${sorted.indexOf(element) + 1}: ${element}`));
+  sorted.map(element => console.log(`\"argSort\" Element ${sorted.indexOf(element) + 1}: ${element}`));
 }
 function t(car, name, thing) {
   console.log(car, name, thing);
