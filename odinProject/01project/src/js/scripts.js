@@ -38,7 +38,7 @@ function conNumType(array) {
         console.error("Invalid Entry");
         break;
     }
-  });
+  }); // test
   console.log(returnArray);
   return returnArray;
 }
@@ -292,7 +292,9 @@ console.log(Object.hasOwn(joe, "greet")); // false
 
 
 
-
+function function(params) {
+  
+}
 
 
 
