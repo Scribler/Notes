@@ -264,5 +264,66 @@ console.log(employee);
 let emp2 = {...employee};
 console.log(emp2);
 
+//
+// objects and prototypes
+//
+
+const personProto = { // THIS IS A 'prototype'
+  greet() {
+    console.log(`Hello, ${this.name}. How are you today?`);
+  },
+  statusCheck() {
+    console.log(this.stats);
+  }
+};
+
+function Person(name, stats) { // THIS IS A 'constructor'
+  this.name = name;
+  this.stats = stats;
+}
+
+Object.assign(Person.prototype, personProto); // Assign 'Person', the 'personProto' prototype.
+
+const joe = new Person("Joe", "A lil' gassy"); // initialize a new person
+joe.greet();
+joe.statusCheck();
+console.log(Object.hasOwn(joe, "name")); // true
+console.log(Object.hasOwn(joe, "greet")); // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
