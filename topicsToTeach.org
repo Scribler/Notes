@@ -1,0 +1,11 @@
+* Regex
+  - [ ] parsing items
+* NVIM
+  - [ ] Basic Bindings
+  - [ ] Visual Mode
+  - [ ] Insert Mode
+  - [ ] Normal Mode
+  - [ ] git integration
+* npm
+  - [ ] SASS integration and hosting
+
