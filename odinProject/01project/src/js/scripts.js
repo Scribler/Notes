@@ -303,20 +303,20 @@ let negTwo = [-1, -1, 1, 1, 0, 0, 0]; // = 4
 let negThree = [-1, -1, -1, 1, 0, 1, 1, 0, 0, 0]; // = 7
 let negFour = [-1, -1, 1, 1, 0, 1]; // = 5
 
-const indexOfZeroTotal = function(nums) {
+const indexOfZeroTotal = function(nums) { // find pivot of arrays with total of '0'
   let total = 0;
-  for(let i = nums.length - 1; i >= 0; i--) {
+  for(let i = nums.length - 1; i >= 0; i--) { // descending from last item in array
     let element = nums[i];
-    total =  total - element;
+    total =  total - element; // non-zero result indicates element before zero index
     if(total != 0) {
       return i + 1;
     } else {
-      if(i == 0) {
+      if(i == 0) { // If at beginning of array, return index[0]
         return i;
       }
     }
   }
-  return "borked";
+  return "indexOfZeroTotal failed";
 }
 
 
