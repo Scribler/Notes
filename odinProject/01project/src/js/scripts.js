@@ -309,48 +309,67 @@ let negTwo = [-1, -1, 1, 1, 0, 0, 0]; // = 4
 let negThree = [-1, -1, -1, 1, 0, 1, 1, 0, 0, 0]; // = 7
 let negFour = [-1, -1, 1, 1, 0, 1]; // = 5
 
-var pivotIndex = function(array) {
-  let total = 0;
-  let totalStart = 0;
-  let totalEnd = 0;
-  let rollingTotal = 0;
-  for (let i = 0; i < array.length; i++) {
-    total += array[i];
-    if(i >= 1) {
-      totalEnd += array[i];
-    }
-    if(i < array.length - 1) {
-      totalStart += array[i];
-    }
-  }
 
-  for (let i = 0; i < array.length; i++) {
-    rollingTotal += array[i];
-    if(totalEnd == 0) {
-      return 0;
-    } else if(totalStart == 0) {
-      if(array[array.length -2] != 0) {
-        return array.length - 1;
-      }
-      for (let i = array.length - 1; i >= 0; i--) {
-        const element = array[i];
-        if(element != 0) {
-          if(i == array.length - 1) {
-            return i;
-          }
-          return i + 1;
-        }
-      }
-    } else {
-      if(rollingTotal == (total - (array[i+1] + rollingTotal))) {
-        return i + 1;
-      } else if(i == array.length - 1) {
-          return -1;
-      }
-    }
+// var pivotIndex = function(array) {
+//   let total = 0;
+//   let totalStart = 0;
+//   let totalEnd = 0;
+//   let rollingTotal = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     total += array[i];
+//     if(i >= 1) {
+//       totalEnd += array[i];
+//     }
+//     if(i < array.length - 1) {
+//       totalStart += array[i];
+//     }
+//   }
+//
+//   for (let i = 0; i < array.length; i++) {
+//     rollingTotal += array[i];
+//     if(totalEnd == 0) {
+//       return 0;
+//     } else if(totalStart == 0) {
+//       if(array[array.length -2] != 0) {
+//         return array.length - 1;
+//       }
+//       for (let i = array.length - 1; i >= 0; i--) {
+//         const element = array[i];
+//         if(element != 0) {
+//           if(i == array.length - 1) {
+//             if(array.length % 2 == 0) {
+//               return -1;
+//             }
+//             return i;
+//           }
+//           return i + 1;
+//         }
+//       }
+//     } else {
+//       if(rollingTotal == (total - (array[i+1] + rollingTotal)) || rollingTotal == 0) {
+//         return i + 1;
+//       } else if(i == array.length - 1) {
+//           return -1;
+//       }
+//     }
+//   }
+// };
+
+let total = (arr) => {
+  let arrTot = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    arrTot += parseInt(element);
   }
+  return arrTot;
 };
 
+console.log(`total = ${total(nums)}`);
+
+var pivotIndex = function(array) {
+  let index;
+  return index;
+};
 console.log(`nums(3) = ${pivotIndex(nums)}`);
 console.log(`zeroNums(0) = ${pivotIndex(zeroNums)}`);
 console.log(`wrongNums(-1) = ${pivotIndex(wrongNums)}`);
@@ -362,60 +381,28 @@ console.log(`negThree(7) = ${pivotIndex(negThree)}`);
 console.log(`negFour(5) = ${pivotIndex(negFour)}`);
 
 
-// var pivotIndex = function(array) {
-//       let total = 0;
-//       let rollingTotal = 0;
-//       array.map(x => total += x);
+
+
+
+// ARRAY SORT
+
+// let names = ["Mary","John","Emma"];
+// let heights = [180,165,170];
+// let paired = [];
+// let sorted = [];
 //
-//       for (let i = 0; i < array.length; i++) {
-//         rollingTotal += [i];
-//         // console.log(i + 1);
-//         if(rollingTotal == (total - array[i+1]) / 2) {
-//           console.log(i + 1);
-//           if(i == array.length) {
-//             return i;
-//           } else {
-//           return i + 1;
-//           }
-//         } else if ((i == array.length - 1) && (rollingTotal != (total - array[i+1]) / 2)) {
-//           console.log(-1);
-//         } 
-//       }
+// var sortPeople = function(names, heights) {
+//   for (let i = 0; i < names.length; i++) {
+//     const name = names[i];
+//     const height = heights[i];
+//     paired.push({name: name, height: height});
+//   }
+//   paired.sort((a, b) => {return b.height - a.height});
+//               console.log(paired);
+//   return(paired.map(x => x.name));
 // };
-let names = ["Mary","John","Emma"];
-let heights = [180,165,170];
-let paired = [];
-let sorted = [];
-
-var sortPeople = function(names, heights) {
-  for (let i = 0; i < names.length; i++) {
-    const name = names[i];
-    const height = heights[i];
-    paired.push({name: name, height: height});
-  }
-  // sorted = paired.sort((a, b) => {return a.height - b.height});
-  paired.sort((a, b) => {return b.height - a.height});
-  console.log(paired);
-  return(paired.map(x => x.name));
-};
-
-sortPeople(names, heights);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let i = 0; i < array.length; i++) {
+//   const element = array[i];
+//   
+// }
+// sortPeople(names, heights);
