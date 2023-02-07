@@ -292,12 +292,6 @@ console.log(Object.hasOwn(joe, "greet")); // false
 
 
 
-// let runNum = []
-//
-// var runningSum = function(nums) {
-//   for 
-//
-// }
 
 let zeroNums = [0,0,0,0,0,0,0]; // = 0
 let nums = [1, 7, 3, 6, 5, 6]; // = '3'
@@ -309,100 +303,41 @@ let negTwo = [-1, -1, 1, 1, 0, 0, 0]; // = 4
 let negThree = [-1, -1, -1, 1, 0, 1, 1, 0, 0, 0]; // = 7
 let negFour = [-1, -1, 1, 1, 0, 1]; // = 5
 
-
-// var pivotIndex = function(array) {
-//   let total = 0;
-//   let totalStart = 0;
-//   let totalEnd = 0;
-//   let rollingTotal = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     total += array[i];
-//     if(i >= 1) {
-//       totalEnd += array[i];
-//     }
-//     if(i < array.length - 1) {
-//       totalStart += array[i];
-//     }
-//   }
-//
-//   for (let i = 0; i < array.length; i++) {
-//     rollingTotal += array[i];
-//     if(totalEnd == 0) {
-//       return 0;
-//     } else if(totalStart == 0) {
-//       if(array[array.length -2] != 0) {
-//         return array.length - 1;
-//       }
-//       for (let i = array.length - 1; i >= 0; i--) {
-//         const element = array[i];
-//         if(element != 0) {
-//           if(i == array.length - 1) {
-//             if(array.length % 2 == 0) {
-//               return -1;
-//             }
-//             return i;
-//           }
-//           return i + 1;
-//         }
-//       }
-//     } else {
-//       if(rollingTotal == (total - (array[i+1] + rollingTotal)) || rollingTotal == 0) {
-//         return i + 1;
-//       } else if(i == array.length - 1) {
-//           return -1;
-//       }
-//     }
-//   }
-// };
-
-let total = (arr) => {
-  let arrTot = 0;
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    arrTot += parseInt(element);
+const indexOfZeroTotal = function(nums) {
+  let total = 0;
+  for(let i = nums.length - 1; i >= 0; i--) {
+    let element = nums[i];
+    total =  total - element;
+    if(total != 0) {
+      return i + 1;
+    } else {
+      if(i == 0) {
+        return i;
+      }
+    }
   }
-  return arrTot;
-};
+  return "borked";
+}
 
-console.log(`total = ${total(nums)}`);
 
-var pivotIndex = function(array) {
-  let index;
-  return index;
-};
-console.log(`nums(3) = ${pivotIndex(nums)}`);
+
+const pivotIndex = function(nums) { // main pivot finder function
+  let total = 0;
+  nums.map(x => total += x);
+  if(total == 0) {
+    return indexOfZeroTotal(nums);
+  }
+}
+
+
+
+
+// console.log(`nums(3) = ${pivotIndex(nums)}`);
 console.log(`zeroNums(0) = ${pivotIndex(zeroNums)}`);
-console.log(`wrongNums(-1) = ${pivotIndex(wrongNums)}`);
-console.log(`negNums(5) = ${pivotIndex(negNums)}`);
-console.log(`twoOneNums(0) = ${pivotIndex(twoOneNums)}`);
+// console.log(`wrongNums(-1) = ${pivotIndex(wrongNums)}`);
+// console.log(`negNums(5) = ${pivotIndex(negNums)}`);
+// console.log(`twoOneNums(0) = ${pivotIndex(twoOneNums)}`);
 console.log(`negOne(4) = ${pivotIndex(negOne)}`);
 console.log(`negTwo(4) = ${pivotIndex(negTwo)}`);
 console.log(`negThree(7) = ${pivotIndex(negThree)}`);
-console.log(`negFour(5) = ${pivotIndex(negFour)}`);
-
-
-
-
-
-// ARRAY SORT
-
-// let names = ["Mary","John","Emma"];
-// let heights = [180,165,170];
-// let paired = [];
-// let sorted = [];
-//
-// var sortPeople = function(names, heights) {
-//   for (let i = 0; i < names.length; i++) {
-//     const name = names[i];
-//     const height = heights[i];
-//     paired.push({name: name, height: height});
-//   }
-//   paired.sort((a, b) => {return b.height - a.height});
-//               console.log(paired);
-//   return(paired.map(x => x.name));
-// };
-// for (let i = 0; i < array.length; i++) {
-//   const element = array[i];
-//   
-// }
-// sortPeople(names, heights);
+// console.log(`negFour(5) = ${pivotIndex(negFour)}`);
