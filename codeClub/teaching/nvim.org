@@ -1,0 +1,147 @@
+****** INTRO TO VIM ******
+
+
+* START HERE
+  type: 'vimtutor' into your terminal to begin the tutorial for vim
+** Vim Motions Playlist 
+   - https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R
+** NVIM Installation Instructions
+   - Installation Instructions - https://github.com/neovim/neovim/wiki/Installing-Neovim
+   - Windows install help - https://www.youtube.com/watch?v=0ukltzeamKk
+** Neovim From Scratch Playlist 
+   - https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+
+* Useful commands
+** Modes
+***  1) Normal (COMMAND MODE)
+       - <ESC> enter normal mode
+       - <CTRL> [
+***  2) Insert ([i / I], [a / A], [o, O])
+      - (i) Enter insert mode before current character.
+      - (I) Enter insert mode at BEGINNING of line.
+      - (a) Enter insert mode after current character.
+      - (a) Enter insert mode at END of line.
+      - (o) Enter insert mode on new line BELOW current line
+      - (O) Enter insert mode on new line ABOVE current line
+***  3) Visual (v, V, <ctrl> v)
+       - (v) enter VISUAL mode
+       - (V) enter VISUAL LINE mode
+       - (<ctrl> v) enter VISUAL BLOCK mode
+***  4) Command-Line (:<command>)
+****   (main commands)
+       - (:w) save(write)
+       - (:q) quit without saving
+       - (:q!) force quit without saving (will lose changes in buffers)
+       - (:e <filename>) open <filename>
+       - (:%s/old/new/g) 'search' - will search and replace all occurances of 'old' with 'new'
+       - (:split <filename>) open <filename> in horizontal split.
+       - (:vsplit <filename>) open <filename> in vertical split.
+       - (:w) save(write)
+       - (:wq) write and quit
+       - (:ls / :ls b) list open buffers and corresponding numbers
+       - (:b <buffer #>) ex. :b 6 >> opens buffer #6
+       - (:bn) next buffer
+       - (:bp) previous buffer
+***  5) Replace (R) like insert mode  but writes over text instead of pushing it.
+       - (R) enter replace mode
+***  6) Binary ($ vim -b) [use -b flag when opening vim to open file in 'Binary Mode']
+       - for editing binary files
+  
+
+
+* General Commands (add a number before a command to repeat it that many times)
+** NORMAL (COMMAND MODE)
+  - (i) Enter insert mode before current character.
+  - (I) Enter insert mode at BEGINNING of line.
+  - (a) Enter insert mode after current character.
+  - (a) Enter insert mode at END of line.
+  - (~) capitalize character under cursor and step to next character
+  - (y) yank selected (copy selected)
+  - (Y) yank line
+  - (d) delete selected
+  - (D) delete line
+  - (p) paste after (character or line)
+  - (P) paste before (character or line)
+
+** VISUAL MODE
+  - visual(u) Change highlighted to lowercase.
+  - visual(U) Change highlighted to uppercase.
+
+* MOVEMENTS *
+*** use # before movement commands to repeat command 
+       - ex. '5w', move forward by 5 words.
+** General Movements (add)
+*** Window Movements
+  - (<ctrl> w [number?]<direction key>) move 'number?' of windows in <direction key> direction.
+*** Basic
+  - (h) move left one character
+  - (j) move down one character
+  - (k) move up one character
+  - (l) move right one character
+  - (g<movement key>) move within wrapped line
+  - (H) move to top of page
+  - (L) move to bottom of page
+  - (M) move to middle of page
+  - (zz) center screen on cursor
+*** Intermediate
+  - (<ctrl> u) jump up half a page
+  - (<ctrl> d) jump down half a page
+  - (<ctrl> f) jump down a page
+  - (<ctrl> b) jump up a page
+  - (w) move forwards by first chracter of word
+  - (e) move forwards by last chracter of word
+  - (b) move backwards by first chracter of word
+  - (ge) move backwards by last chracter of word
+  - (%) jump to matching bracket below cursor
+*** Advanced
+  - (0) move to VERY beginning of line
+  - (^ || _) move to first character of line
+  - ($) move to last character of line
+  - '{' move to beginning of paragraph
+  - '}' move to end of paragraph
+  - '(' move to beginning of sentence 
+  - ')' move to end of sentence
+  // for 'f' jumps use ',' to repeat jump backwards and ';' to repeat jump forwards
+  - (f<character to jump to) jump to that character on current line
+  - (t<character to jump to) jump to character before next instance of that character on current line
+  - (F<character to jump to) jump to that character on current line
+  - (T<character to jump to) jump backwards to character after next instance of that character on current line
+  - (m<key to mark>) mark the position of cursor
+  - ('<marked key>) or (`<marked key>) jump to mark position
+  - ('') or (``) jump to previous mark 
+  - (:marks <mark1, mark2, ...) will show details about the line those marks are on.
+
+
+
+****** CHORDS
+       - (yf<character>) yank to character
+       - (y2f<character>) yank to second occurance of <character> 
+       - (df<character>) delete to character
+
+
+
+* GENERAL
+*** misc things to note
+  - line numbers (absolute, relative, hybrid) - https://jeffkreeftmeijer.com/vim-number/
+    - :set number, :set nonumber // :set nu, :set nonu
+    - :set relative, :set norelative // :set rnu, :set nornu
+    - :set number relative, :set nonumber norelative // :set nu rnu, :set nonu nornu
+  - :version (show information and file directorys, $PATH's for .vimrc, etc)
+  - vimrc (~/.vimrc) OPEN from vim >> (:e $MYVIMRC)
+  - load source ~/.vimrc
+    - :source ~/.vimrc
+    - :so ~/.vimrc
+    - :so $MYVIMRC
+    - :so % (if .vimrc is the current file)
+  - buffers
+    - :ls b (list buffers)
+  - changing colors (colorscheme <color>), (colorscheme <TAB>) // tab cycles colorschemes
+  - text replacement
+  - mks / mks! (save your vim session)
+******* plugins *******
+   - emmet
+   - lsp
+   - orgmode
+***** Windows / Mac *****
+   - homebrew - mac
+
