@@ -341,3 +341,51 @@ console.log(`negOne(4) = ${pivotIndex(negOne)}`);
 console.log(`negTwo(4) = ${pivotIndex(negTwo)}`);
 console.log(`negThree(7) = ${pivotIndex(negThree)}`);
 // console.log(`negFour(5) = ${pivotIndex(negFour)}`);
+
+
+
+const first = "egg";
+const second = "add";
+
+const pairsArr = [];
+
+
+
+var isIsomorphic = function(s, t) {
+  let answer = "unsolved";
+  let first = s.split('');
+  let second = t.split('');
+
+  for (let i = 0; i < first.length; i++) {
+    const element = first[i];
+    const secondEll = second[i];
+    pairsArr.push([element, secondEll])
+  }
+  console.log(pairsArr[0]);
+  console.log(pairsArr[1]);
+  console.log(pairsArr[2]);
+
+  // console.log(obj);
+  return answer;
+};
+
+
+console.log(isIsomorphic(first, second));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
