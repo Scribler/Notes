@@ -344,43 +344,68 @@ console.log(`negThree(7) = ${pivotIndex(negThree)}`);
 
 
 
-const first = "egg";
-const second = "add";
-
-const pairsArr = [];
 
 
 
-var isIsomorphic = function(s, t) {
-  let answer = "unsolved";
-  let first = s.split('');
-  let second = t.split('');
+let n = 4;
+let numss = [1,2,3,4,4,3,2,1];
 
-  for (let i = 0; i < first.length; i++) {
-    const element = first[i];
-    const secondEll = second[i];
-    pairsArr.push([element, secondEll])
-  }
-  console.log(pairsArr[0]);
-  console.log(pairsArr[1]);
-  console.log(pairsArr[2]);
-
-  // console.log(obj);
-  return answer;
+var shuffle = function(array, n) {
+  let newArr = [];
+  for (let i = 0; i < array.length - n; i++) {
+    newArr.push(array[i], array[i + n]);
+    // const element1 = array[i];
+    // const element2 = array[n + i];
+    // newArr.push(element1);
+    // newArr.push(element2);
+  };
+  console.log(newArr);
 };
 
+console.log(" ");
+console.log("Shuffle Nums");
+shuffle(numss, n); // Output: [1,4,2,3,3,2,4,1]
 
+
+
+const first = "egg";
+const second = "add";
+const pairsArr = []; // Stores the nested array of 'first', and 'second'
+
+
+function comp(arrPos1, arrPos2){
+  return arrPos1 == arrPos2 ? true : false;
+}
+console.log(`a == b?: ${comp(first[1], first[2])}`);
+console.log(`a == b?: ${comp(first[0], first[1])}`);
+
+var isIsomorphic = function(s, t) { // s and t are strings we are checking to see if they're isomorphic.
+  let answer = "unsolved";
+  for (let i = 1; i < s.length; i++) {
+    const sItem1 = s[i];
+    const sItem2= s[i - 1];
+    const tItem1= t[i];
+    const tItem2= t[i - 1];
+    
+    
+  }
+
+
+  // Logic to solve
+  //A> a, b, b
+  //B> d, e, e
+  
+  // b == a?
+  // yes >> e == d? (yes == moveToA[prev]/True) (no == fail)
+  // no >> e == d? (yes == fail) (no == MoveToA[prev])
+  // Once beginning of array, move to next item of array
+  
+
+  return answer;
+};
+console.log(" ");
+console.log("Isomorphic ???");
 console.log(isIsomorphic(first, second));
-
-
-
-
-
-
-
-
-
-
 
 
 
