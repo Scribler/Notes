@@ -367,47 +367,54 @@ console.log("Shuffle Nums");
 shuffle(numss, n); // Output: [1,4,2,3,3,2,4,1]
 
 
-
+// 205 Isomorphic Strings
+// "foo", "bar" >> false
+// "paper", "title" >> true
+//
+// foo
+// bar
+//
+// paper
+// title
 const first = "egg";
 const second = "add";
-const pairsArr = []; // Stores the nested array of 'first', and 'second'
 
-
-function comp(arrPos1, arrPos2){
-  return arrPos1 == arrPos2 ? true : false;
-}
-console.log(`a == b?: ${comp(first[1], first[2])}`);
-console.log(`a == b?: ${comp(first[0], first[1])}`);
+function buildMap(map, a1, a2) {
+  for (let i = 0; i < a1.length; i++) {
+    let element1 = a1[i];
+    if(map.has(element1)) {
+      element1 = element1 + `${i}`;
+    }
+    let element2 = a2[i];
+    map.set(element1, element2);
+  }
+};
 
 var isIsomorphic = function(s, t) { // s and t are strings we are checking to see if they're isomorphic.
-  let answer = "unsolved";
-  for (let i = 1; i < s.length; i++) {
-    const sItem1 = s[i];
-    const sItem2= s[i - 1];
-    const tItem1= t[i];
-    const tItem2= t[i - 1];
-    
+  const pairsMap = new Map(); // map of the two words key value pairs. Doubles have the number of their position annexed to their key name
+  let answer = "unsolved"; // set default answer
+  buildMap(pairsMap, s, t); // build pairsMap with given strings.
+  
+  for (let i = 0; i < pairsMap.length; i++) {
+    const element = pairsMap[i].key;
+    console.log(element);
+    if(element.length > 1) {
+      console.log(`doubled element: ${element}`);
+    }
     
   }
-
-
-  // Logic to solve
-  //A> a, b, b
-  //B> d, e, e
-  
-  // b == a?
-  // yes >> e == d? (yes == moveToA[prev]/True) (no == fail)
-  // no >> e == d? (yes == fail) (no == MoveToA[prev])
-  // Once beginning of array, move to next item of array
-  
-
+  console.log(pairsMap);
   return answer;
 };
 console.log(" ");
 console.log("Isomorphic ???");
 console.log(isIsomorphic(first, second));
 
-
+const testMap = new Map();
+buildMap(testMap, first, second);
+console.log(testMap);
+console.log(`testMap has e?: ${testMap.has('e')}`);
+console.log(`testMap e?: ${testMap.index[1]}`);
 
 
 
