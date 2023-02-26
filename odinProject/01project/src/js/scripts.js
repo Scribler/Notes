@@ -1,96 +1,86 @@
-// 205 Isomorphic Strings
-
-// "foo", "bar" >> false
-// "paper", "title" >> true
+// // 205 Isomorphic Strings
 //
-// foo
-// bar
+// // Accessing HTML
+// const runProg = document.getElementById("runProg");
+// runProg.addEventListener('click', isIsomorphic);
 //
-// paper
-// title
+// // TEST CASES START
+// const casesMap = new Map();
+// casesMap.set('foo', 'bar');
+// casesMap.set('bazc', 'baba');
+// casesMap.set('paper', 'title');
+// // TEST CASES END
+//
+// function loadPairs(k, v, map) { // to use with 'map.forEach' to enter cases into html
+//   // console.log(`string1: ${k}, value: ${v}`);
+//   for (let i = 1; i < map.size; i++) {
+//     let name = 'case' + i;
+//     // name = String(name);
+//     console.log(name);
+//     let c = document.getElementById(name);
+//     c.innerHTML = (`First String: ${k}, Second String: ${v}`);
+//   }
+// }
+//
+// function isIsomorphic() { // check test cases to see if they are isomorphic
+//   // console.log(casesMap);
+//   casesMap.forEach(loadPairs);
+// };
+//
+//
+// console.log("Isomorphic ???");
+// // isIsomorphic();
+// //
+//
 
-const first = "foo";
-const second = "bar";
 
-// const first = "bazc";
-// const second = "baba";
-// const first = "paper";
-// const second = "title";
+// FIZZ BUZZ
+// Write a program that takes a user’s input and prints the numbers from one to the number the user entered. However, for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz
 
-function buildMap(map, a1, a2) { // build map from two strings and store in given empty map
-  for (let i = 0; i < a1.length; i++) {
-    let element1 = a1[i];
-    if(map.has(element1)) {
-      element1 = element1 + `${i}`;
-    }
-    let element2 = a2[i];
-    map.set(element1, element2);
-  }
-};
+// Print numbers from 1 > USER_INPUT
 
-function checkDuplicates(key, value, map) {
-  if (key.length > 1) { // if not the first occurance, compare values
-    let keyToCheck = key[0];
-    console.log(`value to check against: ${value}`);
-    console.log(`key to check: ${keyToCheck}`);
-    console.log(`key : ${key}`);
-    console.log(`key's value to compare: ${map.get(keyToCheck)}`);
-    if(value != map.get(keyToCheck) && key[0] == keyToCheck) {
-      console.log("false");
-      return false;
-    }
-    return true;
+// sub multiples of 3 for 'Fizz'.
+
+// sub multiples of 5 for 'Buzz'.
+
+// sub multiples of 5 & 3 for 'FizzBuzz'.
+
+// Sudo Code
+// When 'Run Program' button pressed >>
+  // get input and store in userIn AS INTEGER
+  // initiate loop from 1 > 'userIn'
+    // use individual functions to run the checks? or Switch statement?
+    // run fizbuzz check,
+    // run fizz check,
+    // run buzz check,
+    // print answer
+
+const input = document.getElementById('progIn');
+const button = document.getElementById('runProg');
+const result = document.getElementById('output');
+button.addEventListener('click', fizzBuzz);
+
+function fbCheck (fb) { // check if divisible by 5 & 3
+  let answer;
+  if (fb % 5 == 0 && fb % 3 == 0) {
+    answer = 'fizzbuzz';
+  } else if (fb % 3 == 0) {
+    answer = 'fizz';
+  } else if (fb % 5 == 0) {
+    answer = 'buzz';
+  } else {
+    answer = fb;
   };
-  // pairsMap.forEach(checkPrevValues);
-}
-function checkPrev(value, key, map) {
-  console.log(map);
-  console.log(value, key);
-}
-
-function checkPrevValues(k, v, map, key, t, f) {
-  map.forEach(checkPrev);
-  result = true;
-  let key2 = key;
-  if (map.get(key2) == map.get(k) && key2 != k) {
-    console.log("false result");
-    f ++;
-    answer = false;
-    console.log(`value main: ${map.get(key2)}`)
-    console.log(`value checking: ${v}`)
-    console.log(`key main: ${key2}`)
-    console.log(`key checking: ${map.get(k)}`)
-    return false;
-  }
-  console.log("true result");
-  t ++;
-}
-
-var isIsomorphic = function(s, t) { // s and t are strings we are checking to see if they're isomorphic.
-  const pairsMap = new Map(); // declare empty map
-  buildMap(pairsMap, s, t); // build pairsMap with given strings.
-  let answer = "unsolved"; // set default answer
-  let keyIter = pairsMap.keys(); // set iterator for keys
-  let valueIter = pairsMap.values(); // set iterator for values
-  let fcount = 0; // set count of false answers.
-  let tcount = 0; // set count of true answers.
-
-
-  for (let i = 0; i < pairsMap.size; i++) {
-    const key = keyIter.next().value; // take next key from iterator
-    const value = valueIter.next().value; // take next value from iterator
-    answer = checkDuplicates(key, value, pairsMap);
-    answer = checkPrevValues(key, value, pairsMap, key, tcount, fcount);
-  };
-
-  // final answer
-  console.log(answer);
   return answer;
 };
 
 
-console.log("Isomorphic ???");
-isIsomorphic(first, second);
+function fizzBuzz() { // application function
+  const userVal = parseInt(input.value);
+  for (let i = 1; i <= userVal; i++) {
+    result.innerHTML += `<h4>Loop #${i}: ${fbCheck(i)}</h4>`;
+  };
+};
 
 
 
@@ -101,28 +91,6 @@ isIsomorphic(first, second);
 
 
 
-
-
-
-
-
-
-
-
-// console.log(" ");
-// console.log("Testing Map");
-// const testMap = new Map();
-// buildMap(testMap, first, second);
-// console.log(`get value for key 'e': ${testMap.get('e')}`);
-//
-// console.log(testMap);
-// console.log(`testMap has e?: ${testMap.has('e')}`);
-// console.log(`testMap e: ${testMap.get('e')}`);
-//
-// let iter = testMap.keys()
-// console.log(iter.next().value);
-// console.log(iter.next().value);
-// console.log(iter.next().value[0]);
 
 
 
