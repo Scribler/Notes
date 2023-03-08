@@ -1,1 +1,21 @@
 
+******** LEARNING GOALS ********
+
+** JAVASCRIPT
+  - [ ] Loops / Statements
+    - [ ] for 
+    - [ ] while loops
+    - [ ] do while
+    - [ ] break
+    - [ ] continue
+    - [ ] for...in
+    - [ ] for...of
+  - [ ] Maps (possibly faster than objects?)
+  - [ ] Objects
+** NPM / NVM
+
+** JEST (javascript testing)
+  - [ ] >
+
+** Speed testing
+  - [ ] >

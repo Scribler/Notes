@@ -83,15 +83,26 @@ function fizzBuzz() { // application function
 };
 
 
+let eS = 6;
+let ns = [3, 2, 4];
+let a = [1, 2];
 
+function findLoc(nums, endsum) {
+  // let answer = [];
+  let answer;
+  for(i = 0; i < nums.length; i++){
+    answer = checkpair(i, nums, endsum);
+  };
+  console.log(answer);
+}
+function checkPairs(startIndex, array, totalNum) {
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    return element;
+  }
+}
 
-
-
-
-
-
-
-
+findLoc(ns, eS);
 
 
 
