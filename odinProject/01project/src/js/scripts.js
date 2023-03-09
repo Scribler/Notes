@@ -22,18 +22,16 @@ function showArray () { // format array data into HTML and display in 'output' d
 function addtags(value) { // "CALLED ON EACH ARRAY ITEM" - adds li tags to each item
   out += "<li>" + value + "</li>";
 }
-function remove () {
-  if (inputData.value == '') {
+function remove () { // run when 'Remove Item' button clicked
+  let itemLoc = inputDataArray.indexOf(inputData.value);
+  if (inputData.value == '') { // if no input, pop item off array
     inputDataArray.pop();
   } else {
-    // output.innerHTML = `<p>Would you like to remove: ${inputData.value} ?`;
-    let response = confirm(`<p>Would you like to remove: ${inputData.value} ?`);
-    if (response) {
-      output.innerHTML = `<p>Deleting ${inputData.value}.`;
+    if (itemLoc == -1) {
+      alert("That is not an item in the array");
     } else {
-      output.innerHTML = `<p>Not Deleting ${inputData.value}.`;
+      inputDataArray.splice(itemLoc, 1);
     }
-    return;
   }
 }
 
@@ -43,3 +41,16 @@ function remove () {
   // - add each item with an <li> before, and </li> after
   // - add a closing /ul tag
 // 3)(optional) displayed items will be in a chart with columns and rows.
+
+
+// Testing
+
+let testArr = ["ting", "bing", "sing", "blorp"];
+console.log(`Index Of: ${testArr.indexOf('bin')}`);
+
+
+
+
+
+
+
