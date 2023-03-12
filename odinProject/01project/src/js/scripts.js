@@ -6,23 +6,33 @@ const runProg = document.getElementById('runProg'); // RUN PROGRAM button
 const ouput = document.getElementById('output'); // OUTPUT field
 let out; // HTML formatted array content
 addItem.addEventListener('click', addToArray); // onclick add value to array
+
+// Add ability to press 'ENTER keycode:13' to add items
+
+
 removeItem.addEventListener('click', remove); // onclick display new array items
 runProg.addEventListener('click', showArray); // onclick display new array items
-
+const resetInput = function () {
+  inputData.value = '';
+}
 function addToArray () { // add inputData value to Array and clear input field.
   inputDataArray.push(inputData.value);
-  inputData.value = '';
+  resetInput();
+  // inputData.value = '';
 }
 function showArray () { // format array data into HTML and display in 'output' div.
   out = "<ul>";
   inputDataArray.forEach(addtags)
   out += "</ul>";
   output.innerHTML = out;
+  resetInput();
 }
 function addtags(value) { // "CALLED ON EACH ARRAY ITEM" - adds li tags to each item
   out += "<li>" + value + "</li>";
 }
-function remove () { // run when 'Remove Item' button clicked
+
+// TODO - make sure this functions removes ALL instances of duplicate items in the array.
+function remove () { // run when 'Remove Item' button clicked 
   let itemLoc = inputDataArray.indexOf(inputData.value);
   if (inputData.value == '') { // if no input, pop item off array
     inputDataArray.pop();
