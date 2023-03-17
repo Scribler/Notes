@@ -44,13 +44,22 @@ function remove () { // run when 'Remove Item' button clicked
     }
   }
 }
-
 // 1) pressing 'Add Item' button will add whatever is in the text box to the array and clear the textbox.
 // 2) pressiong 'Run Program' Will display the array items below.
   // - add an opening ul tag
   // - add each item with an <li> before, and </li> after
   // - add a closing /ul tag
 // 3)(optional) displayed items will be in a chart with columns and rows.
+
+
+// JAVASCRIPT 30 STUFF (DRUM KIT)
+const divs = document.querySelectorAll('div');
+
+const logText = function (e) {
+  console.log(this.classList.value);
+}
+
+divs.forEach(div => div.addEventListener('click', logText))
 
 
 // Testing
