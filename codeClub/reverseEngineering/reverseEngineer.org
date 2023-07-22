@@ -1,0 +1,9 @@
+* REVERSE ENGINEERING
+** Every website has an api
+
+*** reverse engineering a website ***
+****** What to look for?
+    - What framework is it using?
+        - check the head
+** things to access
+   - search

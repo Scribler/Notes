@@ -110,6 +110,7 @@
   - ('<marked key>) or (`<marked key>) jump to mark position
   - ('') or (``) jump to previous mark 
   - (:marks <mark1, mark2, ...) will show details about the line those marks are on.
+  - COPY AND PASTE REGISTERS >> ??????
 
 
 
